@@ -1,0 +1,16 @@
+extends components/tpl/_layout.pug
+
+block variables
+  -
+    var title = 'Главная страница'
+    var description = 'Главная страница'
+    var index = true
+
+block content 
+  include sections/intro/intro.pug
+  include sections/promotion/promotion-slider.pug
+  include sections/products/products-main.pug
+  include sections/catalog/catalog-main.pug
+  include sections/scheme/scheme.pug
+  include sections/about/about.pug
+  include sections/cta/cta.pug
