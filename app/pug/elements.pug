@@ -1,0 +1,32 @@
+extends ./tpl/_layout.pug
+
+block variables
+  -
+    var title = 'Элементы'
+    var description = ''
+    var index = false
+
+include ./components/buttons/_btn-arrow
+include ./components/buttons/_btn
+include ./components/fields/_check
+
+block content 
+    .container
+        br
+        br
+        +btn-arrow('СМОТРЕТЬ КОЛЛЕКЦИЮ')
+        br 
+        br
+        +btn('ДОБАВИТЬ В КОРЗИНУ', '#', 'btn--active btn--cart')
+        br
+        br
+        +check('Я согласен на обработку персональных данных', 'pdn', 'pdn')
+        br
+        br 
+        a(href="tel:+74951008000") Тел: +7 495 100-80-00
+        br
+        br
+        a.l-arrow(href="#") 
+            span Смотреть
+            svg.l-arrow__icon
+                use(xlink:href="img/sprite.svg#arrow-right")

@@ -1,0 +1,22 @@
+.header-top.row
+    .cols-4
+        include ../../components/socials.pug
+    .cols-4
+        .logo-wrap
+            a.logo.logo--header(href="/")
+                img.logo__img(src="img/logo.svg")
+    .cols-4
+        .h-links                     
+            a.h-links__item(href="#")
+                svg.h-links__item-icon 
+                    use(xlink:href="img/sprite.svg#search")
+            a.h-links__item(href="#")
+                svg.h-links__item-icon 
+                    use(xlink:href="img/sprite.svg#like")
+            a.h-links__item(href="#")
+                svg.h-links__item-icon 
+                    use(xlink:href="img/sprite.svg#user")
+            a.h-links__item(href="#")
+                svg.h-links__item-icon 
+                    use(xlink:href="img/sprite.svg#bag")
+// END header-top

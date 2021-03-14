@@ -1,9 +1,28 @@
-@import 'sprite'
-@import 'animation'
-@import "fonts"
-@import "mixins"
-@import "variables"
-@import "general"
-@import "main"
-@import "media"
+// @import 'sprite'
+// @import 'animation'
+// @import "fonts"
+// @import "mixins"
+// @import "variables"
+// @import "general"
+// @import "main"
+// @import "media"
 
+
+// 1. Configurations 
+@import './abstracts/_mixins'
+@import './abstracts/_variables'
+
+// 2. Base 
+@import './base/_fonts'
+@import './base/_general'
+@import './base/_grid'
+
+// 3. Layout-related sections
+@import './layout/_header'
+
+// 4. Components
+@import './components/_buttons'
+@import './components/_fields'
+@import './components/_socials'
+@import './components/_h-links'
+@import './components/_menu'

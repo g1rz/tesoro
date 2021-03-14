@@ -1,0 +1,5 @@
+mixin btn-arrow(title, link = '#')
+    a.btn.btn--transp(href=link) 
+        span !{title}
+        svg.btn__arrow
+            use(xlink:href="img/sprite.svg#arrow-right")

@@ -11,21 +11,15 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1')
 
   link(rel='stylesheet' href='css/libs.css')
-  link(rel='stylesheet' href='css/jquery.fancybox.min.css')
   link(rel='stylesheet' href='css/style.css')
 body(class=index ? 'main-page' : 'inner')
   
   
-  include ../../sections/header/header.pug
+  include ../sections/header/header
     
   main.main-content
     block content
   
-  include ../../sections/footer/footer.pug
-
-  include ../modal/callback.pug
-  include ../modal/thanks.pug
-  include ../modal/order-custom.pug
 
   script(src='js/libs.min.js')
   script(src='js/scripts.js')

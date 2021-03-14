@@ -1,0 +1,45 @@
+.btn
+    display: inline-block
+    padding: 14px 25px 
+    border: 1px solid 
+    font-size: 14px
+    font-weight: 400
+    line-height: 24px
+    cursor: pointer
+    transition: 0.3s ease
+    text-decoration: none
+    text-transform: uppercase
+    text-align: center
+    &::after 
+        display: none
+    &__arrow
+        margin-left: 13px
+        width: 30px
+        height: 10px
+        transition: 0.3s ease
+    &--transp 
+        color: $black
+        border-color: $black
+        .btn__arrow 
+            fill: $black
+        &:hover 
+            color: $activeColor
+            border-color: $activeColor
+            .btn__arrow 
+                fill: $activeColor
+    &--active 
+        border-color: $activeColor  
+        background-color: $activeColor 
+        color: #fff
+        &:hover 
+            border-color: $activeColorLight
+            background-color: $activeColorLight
+    &--cart 
+        min-width: 267px
+    &--disabled 
+        border-color: $disableColor !important
+        color: $disableColor !important
+        cursor: no-drop
+        .btn__arrow 
+            fill: $disableColor !important
+            

@@ -88,7 +88,7 @@ gulp.task('css-libs', ['sass'], function() {
 gulp.task('watch', ['browser-sync', 'css-libs', 'scripts', 'svgSprite', 'imgSprite', 'pug'], function() {
     gulp.watch('app/sass/**/*.sass', ['sass']); // Наблюдение за sass файлами в папке sass
 
-    gulp.watch('app/pug/**/**/*.pug', ['pug']);
+    gulp.watch('app/pug/**/*.pug', ['pug']);
     gulp.watch('app/img/sprite-svg/*.svg', ['svgSprite']);
     gulp.watch('app/img/sprite-img/*.*', ['imgSprite']);
     gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
