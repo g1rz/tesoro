@@ -1,0 +1,26 @@
+.intro 
+    .container 
+        .intro-slider.swiper-container 
+            .swiper-wrapper
+                .intro-slider__item.swiper-slide
+                    include intro_slide_1
+                .intro-slider__item.swiper-slide
+                    include intro_slide_1
+                .intro-slider__item.swiper-slide
+                    include intro_slide_1
+            .intro-slider-nav
+                .intro-slider-nav__inner 
+                    button.i-slide-nav.i-slide-nav--prev 
+                        svg.i-slide-nav__icon 
+                            use(xlink:href="img/sprite.svg#arrow-right")
+
+                    .i-slide-dots
+
+                    button.i-slide-nav.i-slide-nav--next 
+                        svg.i-slide-nav__icon 
+                            use(xlink:href="img/sprite.svg#arrow-right")
+                        
+            // END swiper-wrapper
+        // END intro-slider swiper-container 
+
+// END intro

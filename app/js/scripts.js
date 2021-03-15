@@ -15,5 +15,21 @@ $(window).on('load resize change', function () {
 
 $(document).ready(function () {
     
+    var introSlider = new Swiper('.intro-slider', {
+        loop: true,
+        // effect: 'fade',
+        speed: 500,
+        autoplay: {
+            delay: 5000,
+        },
+        navigation: {
+            nextEl: '.i-slide-nav--next',
+            prevEl: '.i-slide-nav--prev',
+        },
+        pagination: {
+            el: '.i-slide-dots',
+        },
+        
+    });
 });
 

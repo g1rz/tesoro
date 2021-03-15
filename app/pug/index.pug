@@ -1,9 +1,10 @@
 extends ./tpl/_layout.pug
 
 block variables
-  -
-    var title = 'Главная страница'
-    var description = 'Главная страница'
-    var index = true
+    -
+        var title = 'Главная страница'
+        var description = 'Главная страница'
+        var index = true
 
 block content 
+    include ./sections/intro/intro
