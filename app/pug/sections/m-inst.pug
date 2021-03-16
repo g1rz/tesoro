@@ -1,0 +1,35 @@
+-
+    var instList = [
+        {
+            imageUrl: 'img/instagram/inst_1.jpg',
+            countLikes: 146
+        }, {
+            imageUrl: 'img/instagram/inst_2.jpg',
+            countLikes: 216
+        }, {
+            imageUrl: 'img/instagram/inst_3.jpg',
+            countLikes: 94
+        }, {
+            imageUrl: 'img/instagram/inst_4.jpg',
+            countLikes: 163
+        }
+    ]
+
+include ../components/_inst-item
+include ../components/buttons/_btn-arrow
+
+.m-inst.s-block
+    .container  
+        p.m-inst__name.text-center 
+            a.link(href="#") @tesoro_irkutsk
+        h2.text-center Мы в INSTAGRAM
+        .m-inst__row.row.row--m 
+            each item in instList
+                .cols.cols-3.cols-sm-6
+                    +inst-item(item.imageUrl, item.countLikes)
+        // END m-inst__row
+        p.text-center
+            +btn-arrow('ПОДПИСАТЬСЯ', '#', 'm-inst__btn')
+        
+
+// END m-inst

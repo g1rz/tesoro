@@ -102,6 +102,10 @@ h2
         position: absolute
         bottom: 0
         left: 0
+    &.text-center 
+        &::after 
+            left: 50%
+            transform: translateX(-50%)
 
 
 h3 
@@ -170,7 +174,7 @@ p
         margin-top: -5px
 
 .s-block
-    padding: 136px 0 30px
+    padding: 135px 0 30px
 
 .s-block-gray 
         background-color: $lightGray

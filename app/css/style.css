@@ -168,6 +168,11 @@ h2 {
     position: absolute;
     bottom: 0;
     left: 0; }
+  h2.text-center::after {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
 
 h3 {
   margin-bottom: 50px;
@@ -260,7 +265,7 @@ p {
     margin-top: -5px; }
 
 .s-block {
-  padding: 136px 0 30px; }
+  padding: 135px 0 30px; }
 
 .s-block-gray {
   background-color: #F7F7F7; }
@@ -827,6 +832,15 @@ p {
     margin-bottom: 50px;
     max-width: 650px; }
 
+.m-inst__name {
+  font-size: 24px; }
+
+.m-inst__row {
+  margin-top: 56px; }
+
+.m-inst__btn {
+  margin: 50px; }
+
 .btn {
   display: inline-block;
   padding: 14px 25px;
@@ -1353,5 +1367,70 @@ p {
       background: #CE5E4C;
       width: 0;
       height: 2px; }
+
+.inst-item {
+  margin-bottom: 20px; }
+  .inst-item__link {
+    position: relative;
+    display: block;
+    padding-bottom: 100%; }
+    .inst-item__link:hover .inst-item__img {
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1); }
+  .inst-item__img-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden; }
+  .inst-item__img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease; }
+  .inst-item__row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 15px; }
+  .inst-item__icon-link {
+    display: inline-block;
+    margin-right: 25px; }
+    .inst-item__icon-link:hover .inst-item__icon {
+      fill: #CE5E4C; }
+    .inst-item__icon-link:last-child {
+      margin-right: 0; }
+  .inst-item__icon {
+    width: 20px;
+    height: 20px;
+    fill: #1C1C1C; }
+    .inst-item__icon--like {
+      width: 22px;
+      height: 21px; }
+    .inst-item__icon--comment {
+      width: 20px;
+      height: 20px; }
+    .inst-item__icon--bookmark {
+      width: 23px;
+      height: 20px; }
+  .inst-item__text {
+    margin: 6px 0 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px; }
 
 /*# sourceMappingURL=style.css.map */

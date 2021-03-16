@@ -1,0 +1,18 @@
+mixin inst-item(imageUrl, countLikes)
+    .inst-item
+        a.inst-item__link(href="#")
+            .inst-item__img-wrap
+                img.inst-item__img(src=imageUrl)
+        .inst-item__row 
+            span
+                a.inst-item__icon-link(href="#")
+                    svg.inst-item__icon.inst-item__icon--like
+                        use(xlink:href="img/sprite.svg#like")
+                a.inst-item__icon-link(href="#")
+                    svg.inst-item__icon.inst-item__icon--comment
+                        use(xlink:href="img/sprite.svg#comment")
+            span
+                a.inst-item__icon-link(href="#")
+                    svg.inst-item__icon.inst-item__icon--bookmark
+                        use(xlink:href="img/sprite.svg#bookmark")
+        p.inst-item__text !{countLikes} Отметок «Нравится»
