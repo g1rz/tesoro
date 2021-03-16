@@ -1,0 +1,33 @@
+include ../components/_catalog-item
+include ../components/buttons/_btn-arrow
+
+-
+    var catalog = [
+        {
+            title: 'РУбашки',
+            imageUrl: 'img/catalog/catalog_1.jpg',
+        }, {
+            title: 'ДЖЕМПЕРЫ',
+            imageUrl: 'img/catalog/catalog_2.jpg',
+        }, {
+            title: 'ПАЛЬТО',
+            imageUrl: 'img/catalog/catalog_3.jpg',
+        }, {
+            title: 'АКСЕССУАРЫ',
+            imageUrl: 'img/catalog/catalog_4.jpg',
+        }
+    ]
+
+.m-catalog.section-block
+    .container 
+        .row.row--m
+            .cols.cols-6.cols-sm-12
+                h2 Каталог 
+        .m-catalog__row.row.row--m.masonry
+            each item, index in catalog 
+                .cols.cols-6.cols-sm-12.masonry__item
+                    +catalog-item(item.title, item.imageUrl)
+                    if (index === 3)
+                        .more-block 
+                            p Ещё больше вещей в нашем каталоге
+                            +btn-arrow('СМОТРЕТЬ ВСЕ', '#', 'more-block__btn')

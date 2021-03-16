@@ -8,9 +8,9 @@ mixin card-item(id, title, type, imageUrl, price, priceOld = '')
             //- span.card-wish__in 
                 svg.card-wish__icon 
                     use(xlink:href="img/sprite.svg#like-full")
-
-        .card-item__img-wrap 
-            img.card-item__img(src=imageUrl)
+        .card-item__image
+            .card-item__img-wrap 
+                img.card-item__img(src=imageUrl, alt=type+' - '+title)
         .card-item__body 
             .card-item__type !{type}
             .card-item__row 

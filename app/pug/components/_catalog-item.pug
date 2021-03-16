@@ -1,0 +1,5 @@
+mixin catalog-item(title, imageUrl, link = '#')
+    a.catalog-item(href=link)
+        .catalog-item__img-wrap
+            img.catalog-item__img(src=imageUrl)
+        span.catalog-item__title !{title}
