@@ -82,10 +82,11 @@ html {
 body {
   min-height: 100vh;
   font-family: "Suisse Intl", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.36px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 150%;
+  /* or 30px */
+  letter-spacing: 0.01em;
   color: #1C1C1C;
   background-color: #fff;
   position: relative; }
@@ -152,7 +153,7 @@ h1 {
 
 h2 {
   position: relative;
-  padding-bottom: 34px;
+  padding-bottom: 32px;
   margin-bottom: 28px;
   font-family: 'Cormorant';
   font-weight: 700;
@@ -178,14 +179,12 @@ h3 {
   text-transform: uppercase; }
 
 .subtitle {
-  margin: 0 0 35px;
-  font-size: 23px;
-  font-weight: 400;
-  line-height: 22px;
-  text-align: center;
-  letter-spacing: 0.18px; }
-  .subtitle--min {
-    margin-bottom: 25px; }
+  margin-bottom: 50px;
+  font-family: 'Cormorant';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 54px; }
 
 .subtitle-m {
   margin-bottom: 25px;
@@ -193,6 +192,9 @@ h3 {
   font-weight: 400;
   text-align: center;
   letter-spacing: 0.2px; }
+
+p {
+  margin-bottom: 20px; }
 
 .text-left {
   text-align: left; }
@@ -207,6 +209,8 @@ h3 {
   text-transform: uppercase;
   text-decoration: none;
   color: #1C1C1C;
+  font-size: 14px;
+  letter-spacing: 0.36px;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease; }
@@ -255,20 +259,26 @@ h3 {
   .logo--header {
     margin-top: -5px; }
 
-.section-block {
-  padding: 136px 0 50px; }
+.s-block {
+  padding: 136px 0 30px; }
+
+.s-block-gray {
+  background-color: #F7F7F7; }
 
 .masonry__item:nth-child(even) {
   margin-top: -240px; }
 
 .more-block {
-  margin-top: 136px;
+  margin-top: 132px;
   font-weight: 300;
   font-size: 20px;
   letter-spacing: 0.01em;
   text-align: center; }
   .more-block__btn {
-    margin-top: 26px; }
+    margin-top: 4px; }
+
+.img-block {
+  display: block; }
 
 .container {
   max-width: 1720px;
@@ -755,8 +765,12 @@ h3 {
 
 .header-bottom {
   padding: 17px 0 24px;
-  border-bottom: 1px solid #DEDEDE; }
+  border-bottom: 1px solid #DEDEDE;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.36px; }
   .header-bottom__text {
+    margin-bottom: 0;
     font-family: "Cormorant", serif;
     font-style: italic;
     font-weight: 500;
@@ -801,10 +815,17 @@ h3 {
   margin-bottom: 45px; }
 
 .m-available .card-item {
-  margin-bottom: 18px; }
+  margin-bottom: 13px; }
 
 .m-catalog__row {
   margin-top: 112px; }
+
+.m-about {
+  padding: 86px 0;
+  margin-top: 170px; }
+  .m-about__text {
+    margin-bottom: 50px;
+    max-width: 650px; }
 
 .btn {
   display: inline-block;
@@ -1075,7 +1096,7 @@ h3 {
     text-transform: uppercase;
     text-align: left; }
   .i-slide__btn {
-    margin-top: 67px; }
+    margin-top: 46px; }
   .i-slide__img-wrap {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1157,7 +1178,7 @@ h3 {
 .card-item {
   position: relative;
   display: block;
-  padding-bottom: 20px;
+  padding-bottom: 16px;
   max-width: 390px;
   color: #1C1C1C;
   border-bottom: 1px solid #939393;
@@ -1179,7 +1200,7 @@ h3 {
     height: 2px;
     background-color: #CE5E4C;
     position: absolute;
-    bottom: -1px;
+    bottom: -2px;
     left: 0;
     -webkit-transition: 0.3s ease;
     -o-transition: 0.3s ease;
@@ -1207,6 +1228,7 @@ h3 {
   .card-item__type {
     font-size: 14px;
     font-weight: 450;
+    line-height: 20px;
     color: #000;
     text-transform: uppercase;
     letter-spacing: 0.06em; }
@@ -1257,8 +1279,8 @@ h3 {
 
 .card-wish {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 14px;
+  right: 15px;
   padding: 10px;
   width: 42px;
   height: 40px;
