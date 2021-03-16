@@ -1,0 +1,21 @@
+
+mixin card-item(id, title, type, imageUrl, price, priceOld = '')
+    a.card-item(href="#")
+        .card-wish
+            span.card-wish__to(data-id=id)
+                svg.card-wish__icon 
+                    use(xlink:href="img/sprite.svg#like")
+            //- span.card-wish__in 
+                svg.card-wish__icon 
+                    use(xlink:href="img/sprite.svg#like-full")
+
+        .card-item__img-wrap 
+            img.card-item__img(src=imageUrl)
+        .card-item__body 
+            .card-item__type !{type}
+            .card-item__row 
+                span.card-item__title !{title}
+                span.card-item__price 
+                    if (priceOld !== '')
+                        span.price-old !{priceOld}
+                    span !{pricce}

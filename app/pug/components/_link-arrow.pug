@@ -1,0 +1,5 @@
+mixin link-arrow(title, link = '#', classes = '')
+    a.l-arrow(href=link, class=classes) 
+        span !{title}
+        svg.l-arrow__icon
+            use(xlink:href="img/sprite.svg#arrow-right")

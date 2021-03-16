@@ -29,7 +29,13 @@ $(document).ready(function () {
         pagination: {
             el: '.i-slide-dots',
         },
-        
     });
+
+
+    $('.card-wish').click(function(e) {
+        e.preventDefault();
+        console.log('wish');
+        $(this).toggleClass('active');
+    })
 });
 
