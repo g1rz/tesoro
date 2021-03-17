@@ -1,0 +1,19 @@
+
+mixin review-item(imageUrl,name, city, mark, text, date) 
+    .review-item 
+        .review-item__user-wrap 
+            img.review-item__user(src=imageUrl)
+        p.review-item__name !{name}
+        p.review-item__city !{city}
+        ul.stars.review-item__stars 
+            - for (var i = 1; i <= mark; i++)
+                li.stars__item 
+                    i.stars__icon.stars__icon--active
+            - for (mark; mark < 5; mark++)
+                li.stars__item
+                    i.stars__icon
+        p.review-item__text !{text}
+        p.review-item__date !{date}
+        a.review-item__share(href="#")
+            svg 
+                use(xlink:href="img/sprite.svg#share")

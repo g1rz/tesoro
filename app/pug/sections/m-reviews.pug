@@ -1,0 +1,63 @@
+include ../components/_review-item.pug 
+include ../components/buttons/_btn-arrow.pug 
+
+-
+    var reviews = [
+        {
+            imageUrl: 'img/users/user_1.jpg',
+            name: 'Мария',
+            city: 'г. Иркутск',
+            mark: 5,
+            text: '«Один из любимых магазинов в городе, удобный сервис! Очень много шикарных вещей, внимательные консультанты...»',
+            date: '29 февраля 2021'
+        }, {
+            imageUrl: 'img/users/user_2.jpg',
+            name: 'Александра ',
+            city: 'г. Екатеринбург',
+            mark: 4,
+            text: '«Один из любимых магазинов в городе, удобный сервис! Очень много шикарных вещей, внимательные консультанты...»',
+            date: '29 февраля 2021'
+        }, {
+            imageUrl: 'img/users/user_3.jpg',
+            name: 'Дмитрий',
+            city: 'г. Иркутск',
+            mark: 4,
+            text: '«Один из любимых магазинов в городе, удобный сервис! Очень много шикарных вещей, внимательные консультанты...»',
+            date: '29 февраля 2021'
+        }, {
+            imageUrl: 'img/users/user_1.jpg',
+            name: 'Мария',
+            city: 'г. Иркутск',
+            mark: 5,
+            text: '«Один из любимых магазинов в городе, удобный сервис! Очень много шикарных вещей, внимательные консультанты...»',
+            date: '29 февраля 2021'
+        }
+    ]
+
+
+.m-reviews.s-block-gray
+    .container 
+        h3.text-center Отзывы наших покупателей
+        .r-slider-wrap
+            .r-slider.swiper-container 
+                .swiper-wrapper
+                    each item in reviews
+                        .swiper-slide 
+                            +review-item(item.imageUrl, item.name, item.city, item.mark, item.text, item.date)
+            // END r-slider
+            .r-slider__nav
+                button.r-slide-nav.r-slide-nav--prev 
+                    svg.r-slide-nav__icon 
+                        use(xlink:href="img/sprite.svg#arrow-right")
+
+                .r-slide-dots
+
+                button.r-slide-nav.r-slide-nav--next 
+                    svg.r-slide-nav__icon 
+                        use(xlink:href="img/sprite.svg#arrow-right")
+            // END r-slider-nav
+        // END r-slider-wrap
+        .text-center 
+            +btn-arrow('Добавить отзыв', '#', 'm-reviews__btn btn--disabled')
+            p.notice Авторизуйтесь на сайте, чтобы добавить отзыв
+// END m-reviews

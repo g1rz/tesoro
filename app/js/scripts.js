@@ -31,6 +31,23 @@ $(document).ready(function () {
         },
     });
 
+    var reviewSlider = new Swiper('.r-slider', {
+        loop: true,
+        // effect: 'fade',
+        // speed: 500,
+        slidesPerView: 3,
+        // autoplay: {
+        //     delay: 5000,
+        // },
+        navigation: {
+            nextEl: '.r-slide-nav--next',
+            prevEl: '.r-slide-nav--prev',
+        },
+        pagination: {
+            el: '.r-slide-dots',
+        },
+    });
+
 
     $('.card-wish').click(function(e) {
         e.preventDefault();

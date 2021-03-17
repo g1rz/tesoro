@@ -29,3 +29,66 @@
 .m-news
     &__row
         margin-top: 112px
+
+.m-reviews 
+    padding: 80px 0
+    margin-top: 150px
+    &__btn 
+        margin-top: 66px
+
+.r-slider-wrap 
+    position: relative
+    margin-top: 106px
+    padding: 0 90px
+
+.r-slider 
+    position: relative
+    &::before 
+        content: ''
+        width: 2px
+        height: 100%
+        background-color: $lightGray
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 10
+
+.r-slide-nav 
+    position: absolute
+    top: 40%    
+    transform: translateY(-50%)
+    width: 70px
+    height: 20px
+    border: none
+    cursor: pointer
+    &:hover 
+        .r-slide-nav__icon 
+            opacity: 1
+    &__icon 
+        width: 100%
+        height: 100%
+        fill: $black 
+        opacity: 0.4
+    &--prev 
+        left: 0
+        transform: translateY(-50%) rotate(180deg)
+    &--next 
+        right: 0
+
+.r-slide-dots 
+    display: flex 
+    margin-top: 64px
+    align-items: center
+    justify-content: center
+    .swiper-pagination-bullet
+        margin-right: 17px 
+        width: 12px
+        height: 12px
+        border-radius: 50%
+        background: #494949
+        opacity: 0.35
+        &:last-child 
+            margin: 0
+    .swiper-pagination-bullet-active
+        opacity: 1
+
