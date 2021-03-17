@@ -926,6 +926,13 @@ p {
   .r-slide-dots .swiper-pagination-bullet-active {
     opacity: 1; }
 
+.m-form {
+  padding: 110px 0 134px;
+  background: url(../img/m-form-bg.jpg) no-repeat center;
+  background-size: cover; }
+  .m-form__textarea {
+    margin-top: 6px; }
+
 .btn {
   display: inline-block;
   padding: 14px 25px;
@@ -974,6 +981,13 @@ p {
     cursor: no-drop; }
     .btn--disabled .btn__arrow {
       fill: #A4A4A4 !important; }
+  .btn--black {
+    background-color: #1C1C1C;
+    color: #fff; }
+    .btn--black:hover {
+      background-color: #3A3A3A; }
+  .btn--block {
+    width: 100%; }
 
 .check {
   position: relative; }
@@ -992,7 +1006,7 @@ p {
     font-size: 12px;
     color: #1C1C1C;
     line-height: 16px;
-    letter-spacing: 0.24px; }
+    letter-spacing: 0.02em; }
     .check__label::before {
       content: '';
       position: absolute;
@@ -1010,6 +1024,51 @@ p {
       width: 10px;
       height: 10px;
       background-color: #CE5E4C; }
+
+.form__input {
+  margin-bottom: 34px;
+  width: 100%;
+  height: 36px;
+  border: none;
+  border-bottom: 1px solid #939393;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.02em; }
+  .form__input:placeholder {
+    color: #3D3D3D; }
+  .form__input:focus {
+    border-color: #CE5E4C; }
+
+.form__textarea {
+  margin-bottom: 22px;
+  width: 100%;
+  height: 110px;
+  padding: 8px 11px;
+  border: 1px solid #939393;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.02em; }
+  .form__textarea:placeholder {
+    color: #3D3D3D; }
+  .form__textarea:focus {
+    border-color: #CE5E4C; }
+
+.form__check-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 18px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .socials {
   display: -webkit-box;
@@ -1683,5 +1742,13 @@ p {
     background-size: contain; }
     .stars__icon--active {
       background-image: url("../img/sprite.svg#star-active"); }
+
+.modal {
+  max-width: 726px;
+  padding: 54px 98px 25px;
+  margin: 0 auto;
+  background: #fff; }
+  .modal__title {
+    margin-bottom: 34px; }
 
 /*# sourceMappingURL=style.css.map */

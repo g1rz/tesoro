@@ -1,0 +1,15 @@
+include ../components/fields/_check
+
+.m-form 
+    .container 
+        .modal 
+            h3.modal__title.text-center Остались вопросы?
+            form.form(action="#")
+                input.form__input(type="text", name="name", placeholder="Ваше имя")
+                input.form__input(type="email", name="email", placeholder="Ваш e-mail")
+                textarea.form__textarea.m-form__textarea(name="message", placeholder="Сообщение")
+                button.form__btn.btn.btn--black.btn--block(type="submit") Отправить сообщение
+                .form__check-wrap
+                    +check('Я согласен на обработку персональных данных', 'pdn_f', 'pdn_f')
+        // END modal
+// END m-form
