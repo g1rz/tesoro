@@ -1,0 +1,33 @@
+
+include ../components/_news-item
+include ../components/buttons/_btn-arrow
+
+-
+    var news = [
+        {
+            title: 'Urban Oasis от YEARS Осень – зима 21/22',
+            date: '29 февраля 2021',
+            imageUrl: 'img/news/news_1.jpg',
+        }, {
+            title: 'Обновление ассортимента в нашем магазине',
+            date: '24 февраля 2021',
+            imageUrl: 'img/news/news_2.jpg',
+        }
+    ]
+
+
+
+.m-news.s-block 
+    .container 
+        .row.row--m
+            .cols.cols-6.cols-sm-12
+                h2 Новости
+        .m-news__row.row.row--m.masonry
+            each item, index in news 
+                .cols.cols-6.cols-sm-12 
+                    +news-item(item.title, item.date, item.imageUrl)
+                    if (index === 1)
+                        .more-block 
+                            p Больше новостей из мира моды
+                            +btn-arrow('Другие новости', '#', 'more-block__btn')
+// END m-news

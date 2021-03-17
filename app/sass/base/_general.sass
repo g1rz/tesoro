@@ -92,7 +92,7 @@ h2
     font-family: 'Cormorant'
     font-weight: 700
     font-size: 68px
-    line-height: 68px
+    line-height: 70px
     text-transform: uppercase
     &::after 
         content: ''
@@ -180,8 +180,9 @@ p
         background-color: $lightGray
 
 .masonry 
-    &__item:nth-child(even)
+    & > *:nth-child(even)
         margin-top: -240px
+        // transform: translateY(-240px)
 
 .more-block 
     margin-top: 132px

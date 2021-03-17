@@ -1,0 +1,7 @@
+mixin news-item(title, date, imageUrl, link = '#')
+    a.news-item(href=link)
+        .news-item__img-wrap
+            img.news-item__img(src=imageUrl)
+        .news-item__content
+            span.news-item__title !{title}
+            span.news-item__date !{date}
