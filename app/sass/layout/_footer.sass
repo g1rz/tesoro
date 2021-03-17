@@ -1,0 +1,88 @@
+.footer 
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    padding: 50px 0 62px
+    background-color: $black 
+    color: #fff
+    &__column 
+        height: 100%
+
+.copyright 
+    margin-top: 10px
+    margin-bottom: 0
+    font-size: 12px
+    line-height: 28px
+    letter-spacing: 0.02em
+
+.footer-menu 
+    margin-right: 48px
+    font-size: 16px
+    line-height: 24px
+    letter-spacing: 0.02em
+    &:last-child 
+        margin-right: 0
+    li 
+        margin-bottom: 20px
+        &:last-child 
+            margin-bottom: 0
+
+.subscribe 
+    &__title 
+        margin-bottom: 30px
+        font-size: 18px
+        font-weight: 400
+        line-height: 26px
+        letter-spacing: 0.01em
+    &__row 
+        margin-bottom: 16px
+    &__input
+        padding: 5px 18px
+        width: calc(100% - 144px)
+        height: 44px
+        border: 1px solid #fff
+        font-size: 16px
+        line-height: 28px
+        letter-spacing: 0.02em
+        color: #3D3D3D
+        outline: none
+        &:focus 
+            border-color: $activeColor
+    &__btn 
+        +center
+        width: 144px
+        height: 44px
+        color: #fff
+        border: 1px solid #fff
+        font-size: 16px
+        line-height: 28px
+        text-align: center
+        letter-spacing: 0.02em
+        cursor: pointer
+        +transitionDefault
+        &:hover 
+            border-color: $activeColor
+            color: $activeColor
+
+.f-contacts
+    margin-top: -5px
+    margin-left: 65px
+    &__phone 
+        margin-bottom: 10px
+        a 
+            font-weight: 500
+            font-size: 20px
+            line-height: 24px
+            letter-spacing: 0.05em
+    &__time 
+        margin-bottom: 25px
+        font-size: 12px
+        line-height: 28px
+        letter-spacing: 0.035em
+        color: #CFCFCF
+    &__address 
+        font-size: 18px
+        font-weight: 400
+        line-height: 24px
+        letter-spacing: 0.02em

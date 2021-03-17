@@ -1,0 +1,9 @@
+include ../../components/fields/_check
+
+.subscribe
+    p.subscribe__title Подпишитесь, чтобы не пропустить новинки  и акции в нашем магазине
+    form.subscribe__form 
+        .subscribe__row.row
+            input.subscribe__input(type="text", name="subscribe", placeholder="Ваш e-mail")
+            button.subscribe__btn(type="submit") Подписаться
+        +check('Я согласен на обработку персональных данных ', 's_pdn', 's_pdn')
