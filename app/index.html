@@ -13,7 +13,13 @@
       <div class="container">
         <div class="header-top row">
           <div class="cols-4">
-                    <div class="socials socials--white"><a class="socials__link" href="#">
+            <div class="h-links h-links--mobile">
+              <button class="menu-btn"><span>Меню</span><span class="menu-btn__icon"> </span></button><a class="h-links__item h-links__item--phone" href="tel:+74951008000">
+                <svg class="h-links__item-icon"> 
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg></a>
+            </div>
+                    <div class="socials"><a class="socials__link" href="#">
                         <svg class="socials__link-icon"> 
                           <use xlink:href="img/sprite.svg#inst"></use>
                         </svg></a><a class="socials__link" href="#">
@@ -28,16 +34,16 @@
             <div class="logo-wrap"><a class="logo logo--header" href="/"><img class="logo__img" src="img/logo.svg"></a></div>
           </div>
           <div class="cols-4">
-            <div class="h-links">                    <a class="h-links__item" href="#">
+            <div class="h-links">                    <a class="h-links__item h-links__item--search" href="#">
                 <svg class="h-links__item-icon"> 
                   <use xlink:href="img/sprite.svg#search"></use>
-                </svg></a><a class="h-links__item" href="#">
+                </svg></a><a class="h-links__item h-links__item--like" href="#">
                 <svg class="h-links__item-icon"> 
                   <use xlink:href="img/sprite.svg#like"></use>
-                </svg></a><a class="h-links__item" href="#">
+                </svg></a><a class="h-links__item h-links__item--user" href="#">
                 <svg class="h-links__item-icon"> 
                   <use xlink:href="img/sprite.svg#user"></use>
-                </svg></a><a class="h-links__item" href="#">
+                </svg></a><a class="h-links__item h-links__item--bag" href="#">
                 <svg class="h-links__item-icon"> 
                   <use xlink:href="img/sprite.svg#bag"></use>
                 </svg></a></div>
@@ -49,7 +55,7 @@
     <div class="header-row"> 
       <div class="container">
         <div class="header-bottom"> 
-          <div class="row">
+          <div class="row row--align-c">
             <div class="cols-2">
               <p class="header-bottom__text">Итальянская одежда</p>
             </div>
@@ -114,6 +120,43 @@
         <!-- END header-bottom-->
       </div>
     </div>
+    <div class="menu-mobile">
+      <form class="search-form search-form--mobile">
+        <input class="search-form__input" type="text" name="q" placeholder="Поиск">
+        <buttun class="search-form__btn" type="submit" name="s"> <span>Найти</span></buttun>
+      </form>
+      <ul class="menu-m-list"> 
+        <li> <a class="link" href="#">Каталог</a></li>
+        <li> <a class="link" href="#">Новости</a></li>
+        <li> <a class="link" href="#">О магазине</a></li>
+        <li> <a class="link" href="#">Покупателям</a></li>
+        <li> <a class="link" href="#">Контакты</a></li>
+      </ul>
+      <hr>
+      <ul class="menu-m-list menu-m-list--columns-2">
+        <li> <a class="link" href="#">Обувь</a></li>
+        <li> <a class="link" href="#">Брюки</a></li>
+        <li> <a class="link" href="#">Куртки</a></li>
+        <li> <a class="link" href="#">Блузки</a></li>
+        <li> <a class="link" href="#">Футболки</a></li>
+        <li> <a class="link" href="#">Сумки</a></li>
+        <li> <a class="link" href="#">Джинсы</a></li>
+        <li> <a class="link" href="#">Аксессуары</a></li>
+      </ul>
+      <ul class="menu-m-list menu-m-list--collection">
+        <li class="menu-m-list__title"><a class="link" href="#">Коллекции</a></li>
+        <li> <a class="link" href="#">Зима 2021</a></li>
+        <li> <a class="link" href="#">Мужские</a></li>
+        <li> <a class="link" href="#">Женские</a></li>
+        <li> <a class="link" href="#">Весна / Лето 2021</a></li>
+        <li> <a class="link" href="#">Коллекция 2020</a></li>
+      </ul>
+      <hr><a class="link-icon" href="#">
+        <svg class="link-icon__svg">
+          <use xlink:href="img/sprite.svg#user"></use>
+        </svg><span>Войти</span></a>
+      <hr><a class="link" href="tel:+74951008000">Тел: +7 495 100-80-00</a>
+    </div>
   </header>
   <main class="main-content">
     <div class="intro"> 
@@ -122,52 +165,67 @@
           <div class="swiper-wrapper">
             <div class="intro-slider__item swiper-slide">
               <div class="i-slide row row--m"> 
-                <div class="cols cols-6">
+                <div class="cols cols-6 cols-xs-12">
                   <div class="i-slide__content"> 
                     <p class="i-slide__date">Весна / Лето 2021</p>
                     <h1 class="i-slide__title">Aeronautica Новая коллекция</h1>
-                    <p>Итальянская одежда от известных брендов в магазине Tesoro. <br> Посмотрите новую коллекцию в нашем каталоге</p><a class="btn btn--transp i-slide__btn" href="#"> <span>СМОТРЕТЬ КОЛЛЕКЦИЮ</span>
+                    <p>Итальянская одежда от известных брендов в магазине Tesoro. <br> Посмотрите новую коллекцию в нашем каталоге</p><a class="btn btn--transp i-slide__btn i-slide__btn--pc" href="#"> <span>СМОТРЕТЬ КОЛЛЕКЦИЮ</span>
                                     <svg class="btn__arrow">
                                       <use xlink:href="img/sprite.svg#arrow-right"></use>
                                     </svg></a>
                   </div>
                 </div>
-                <div class="cols cols-6">
+                <div class="cols cols-6 cols-xs-12">
                   <div class="i-slide__img-wrap"> <img class="i-slide__img" src="img/slide_img.jpg"></div>
+                  <div class="text-center"><a class="btn btn--transp i-slide__btn i-slide__btn--mob" href="#"> <span>СМОТРЕТЬ КОЛЛЕКЦИЮ</span>
+                                    <svg class="btn__arrow">
+                                      <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                    </svg></a>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="intro-slider__item swiper-slide">
               <div class="i-slide row row--m"> 
-                <div class="cols cols-6">
+                <div class="cols cols-6 cols-xs-12">
                   <div class="i-slide__content"> 
                     <p class="i-slide__date">Весна / Лето 2021</p>
                     <h1 class="i-slide__title">Aeronautica Новая коллекция</h1>
-                    <p>Итальянская одежда от известных брендов в магазине Tesoro. <br> Посмотрите новую коллекцию в нашем каталоге</p><a class="btn btn--transp i-slide__btn" href="#"> <span>СМОТРЕТЬ КОЛЛЕКЦИЮ</span>
+                    <p>Итальянская одежда от известных брендов в магазине Tesoro. <br> Посмотрите новую коллекцию в нашем каталоге</p><a class="btn btn--transp i-slide__btn i-slide__btn--pc" href="#"> <span>СМОТРЕТЬ КОЛЛЕКЦИЮ</span>
                                     <svg class="btn__arrow">
                                       <use xlink:href="img/sprite.svg#arrow-right"></use>
                                     </svg></a>
                   </div>
                 </div>
-                <div class="cols cols-6">
+                <div class="cols cols-6 cols-xs-12">
                   <div class="i-slide__img-wrap"> <img class="i-slide__img" src="img/slide_img.jpg"></div>
+                  <div class="text-center"><a class="btn btn--transp i-slide__btn i-slide__btn--mob" href="#"> <span>СМОТРЕТЬ КОЛЛЕКЦИЮ</span>
+                                    <svg class="btn__arrow">
+                                      <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                    </svg></a>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="intro-slider__item swiper-slide">
               <div class="i-slide row row--m"> 
-                <div class="cols cols-6">
+                <div class="cols cols-6 cols-xs-12">
                   <div class="i-slide__content"> 
                     <p class="i-slide__date">Весна / Лето 2021</p>
                     <h1 class="i-slide__title">Aeronautica Новая коллекция</h1>
-                    <p>Итальянская одежда от известных брендов в магазине Tesoro. <br> Посмотрите новую коллекцию в нашем каталоге</p><a class="btn btn--transp i-slide__btn" href="#"> <span>СМОТРЕТЬ КОЛЛЕКЦИЮ</span>
+                    <p>Итальянская одежда от известных брендов в магазине Tesoro. <br> Посмотрите новую коллекцию в нашем каталоге</p><a class="btn btn--transp i-slide__btn i-slide__btn--pc" href="#"> <span>СМОТРЕТЬ КОЛЛЕКЦИЮ</span>
                                     <svg class="btn__arrow">
                                       <use xlink:href="img/sprite.svg#arrow-right"></use>
                                     </svg></a>
                   </div>
                 </div>
-                <div class="cols cols-6">
+                <div class="cols cols-6 cols-xs-12">
                   <div class="i-slide__img-wrap"> <img class="i-slide__img" src="img/slide_img.jpg"></div>
+                  <div class="text-center"><a class="btn btn--transp i-slide__btn i-slide__btn--mob" href="#"> <span>СМОТРЕТЬ КОЛЛЕКЦИЮ</span>
+                                    <svg class="btn__arrow">
+                                      <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                    </svg></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -196,13 +254,13 @@
     <div class="m-available s-block">
       <div class="container"> 
         <div class="m-available__row row row--space-b row--align-e">
-          <h3 class="m-available__title">Сейчас в наличии</h3><a class="l-arrow" href="#"> <span>Смотреть еще</span>
+          <h3 class="m-available__title">Сейчас в наличии</h3><a class="l-arrow hide-sm" href="#"> <span>Смотреть еще</span>
                 <svg class="l-arrow__icon">
                   <use xlink:href="img/sprite.svg#arrow-right"></use>
                 </svg></a>
         </div>
         <div class="m-available__products row row--m"> 
-          <div class="cols cols-3 cols-sm-6"><a class="card-item" href="#">
+          <div class="cols cols-3 cols-md-6"><a class="card-item" href="#">
                   <div class="card-wish"><span class="card-wish__to" data-id="1">
                       <svg class="card-wish__icon"> 
                         <use xlink:href="img/sprite.svg#like"></use>
@@ -212,11 +270,12 @@
                   </div>
                   <div class="card-item__body"> 
                     <div class="card-item__type">Майка</div>
-                    <div class="card-item__row"> <span class="card-item__title">Aeronautica Militare</span><span class="card-item__price"> <span class="price-old">1500 ₽</span><span>1200 ₽</span></span></div>
+                    <div class="card-item__row"> <span class="card-item__title">Aeronautica Militare</span><span class="card-item__price"> 
+                        <del class="price-old">1500 ₽</del><span>1200 ₽</span></span></div>
                   </div></a>
                 <!-- END card-item-->
           </div>
-          <div class="cols cols-3 cols-sm-6"><a class="card-item" href="#">
+          <div class="cols cols-3 cols-md-6"><a class="card-item" href="#">
                   <div class="card-wish"><span class="card-wish__to" data-id="2">
                       <svg class="card-wish__icon"> 
                         <use xlink:href="img/sprite.svg#like"></use>
@@ -230,7 +289,7 @@
                   </div></a>
                 <!-- END card-item-->
           </div>
-          <div class="cols cols-3 cols-sm-6"><a class="card-item" href="#">
+          <div class="cols cols-3 cols-md-6"><a class="card-item" href="#">
                   <div class="card-wish"><span class="card-wish__to" data-id="3">
                       <svg class="card-wish__icon"> 
                         <use xlink:href="img/sprite.svg#like"></use>
@@ -244,7 +303,7 @@
                   </div></a>
                 <!-- END card-item-->
           </div>
-          <div class="cols cols-3 cols-sm-6"><a class="card-item" href="#">
+          <div class="cols cols-3 cols-md-6"><a class="card-item" href="#">
                   <div class="card-wish"><span class="card-wish__to" data-id="4">
                       <svg class="card-wish__icon"> 
                         <use xlink:href="img/sprite.svg#like"></use>
@@ -268,363 +327,7 @@
       </div>
     </div>
     <!-- END m-availabel-->
-    <div class="m-catalog s-block">
-      <div class="container"> 
-        <div class="row row--m">
-          <div class="cols cols-6 cols-sm-12">
-            <h2>Каталог </h2>
-          </div>
-        </div>
-        <div class="m-catalog__row row row--m masonry">
-          <div class="cols cols-6 cols-sm-12 masonry__item"><a class="catalog-item" href="#">
-                  <div class="catalog-item__img-wrap"><img class="catalog-item__img" src="img/catalog/catalog_1.jpg"></div><span class="catalog-item__title">РУбашки</span></a>
-          </div>
-          <div class="cols cols-6 cols-sm-12 masonry__item"><a class="catalog-item" href="#">
-                  <div class="catalog-item__img-wrap"><img class="catalog-item__img" src="img/catalog/catalog_2.jpg"></div><span class="catalog-item__title">ДЖЕМПЕРЫ</span></a>
-          </div>
-          <div class="cols cols-6 cols-sm-12 masonry__item"><a class="catalog-item" href="#">
-                  <div class="catalog-item__img-wrap"><img class="catalog-item__img" src="img/catalog/catalog_3.jpg"></div><span class="catalog-item__title">ПАЛЬТО</span></a>
-          </div>
-          <div class="cols cols-6 cols-sm-12 masonry__item"><a class="catalog-item" href="#">
-                  <div class="catalog-item__img-wrap"><img class="catalog-item__img" src="img/catalog/catalog_4.jpg"></div><span class="catalog-item__title">АКСЕССУАРЫ</span></a>
-            <div class="more-block"> 
-              <p>Ещё больше вещей в нашем каталоге</p><a class="btn btn--transp more-block__btn" href="#"> <span>СМОТРЕТЬ ВСЕ</span>
-                    <svg class="btn__arrow">
-                      <use xlink:href="img/sprite.svg#arrow-right"></use>
-                    </svg></a>
-            </div>
-          </div>
-        </div>
-        <!-- END m-catalog__row-->
-      </div>
-    </div>
-    <!-- END m-catalog-->
-    <div class="m-about s-block-gray">
-      <div class="container">
-        <div class="row row--wrap row--align-c">
-          <div class="cols-6 cols-sm-12"> 
-            <h2>О МАГАЗИНЕ</h2>
-            <div class="m-about__text">
-              <p class="subtitle">Итальянская одежда для мужчин и женщин</p>
-              <p>Интернет-магазин TESORO предлагает широкий ассортимент качественной итальянской одежды по доступным ценам.</p>
-              <p>В Tesoro мы можем предложить образ на любой случай вашей повседневной жизни.</p>
-              <p>Только самые лучшие и качественные вещи известных брендов, таких как Aeronautica, Clips, Five Preview и другие.</p>
-            </div>
-                <div class="socials socials--white"><a class="socials__link" href="#">
-                    <svg class="socials__link-icon"> 
-                      <use xlink:href="img/sprite.svg#inst"></use>
-                    </svg></a><a class="socials__link" href="#">
-                    <svg class="socials__link-icon"> 
-                      <use xlink:href="img/sprite.svg#fb"></use>
-                    </svg></a><a class="socials__link" href="#">
-                    <svg class="socials__link-icon"> 
-                      <use xlink:href="img/sprite.svg#telegram"></use>
-                    </svg></a></div>
-          </div>
-          <div class="cols-6 cols-sm-12"> <img class="img-block" src="img/about.jpg"></div>
-        </div>
-      </div>
-    </div>
-    <!-- END m-about-->
-    <div class="m-inst s-block">
-      <div class="container"> 
-        <p class="m-inst__name text-center"> <a class="link" href="#">@tesoro_irkutsk</a></p>
-        <h2 class="text-center">Мы в INSTAGRAM</h2>
-        <div class="m-inst__row row row--m"> 
-          <div class="cols cols-3 cols-sm-6">
-                <div class="inst-item"><a class="inst-item__link" href="#">
-                    <div class="inst-item__img-wrap"><img class="inst-item__img" src="img/instagram/inst_1.jpg"></div></a>
-                  <div class="inst-item__row"> <span><a class="inst-item__icon-link" href="#">
-                        <svg class="inst-item__icon inst-item__icon--like">
-                          <use xlink:href="img/sprite.svg#like"></use>
-                        </svg></a><a class="inst-item__icon-link" href="#">
-                        <svg class="inst-item__icon inst-item__icon--comment">
-                          <use xlink:href="img/sprite.svg#comment"></use>
-                        </svg></a></span><span><a class="inst-item__icon-link" href="#">
-                        <svg class="inst-item__icon inst-item__icon--bookmark">
-                          <use xlink:href="img/sprite.svg#bookmark"></use>
-                        </svg></a></span></div>
-                  <p class="inst-item__text">146 Отметок «Нравится»</p>
-                </div>
-          </div>
-          <div class="cols cols-3 cols-sm-6">
-                <div class="inst-item"><a class="inst-item__link" href="#">
-                    <div class="inst-item__img-wrap"><img class="inst-item__img" src="img/instagram/inst_2.jpg"></div></a>
-                  <div class="inst-item__row"> <span><a class="inst-item__icon-link" href="#">
-                        <svg class="inst-item__icon inst-item__icon--like">
-                          <use xlink:href="img/sprite.svg#like"></use>
-                        </svg></a><a class="inst-item__icon-link" href="#">
-                        <svg class="inst-item__icon inst-item__icon--comment">
-                          <use xlink:href="img/sprite.svg#comment"></use>
-                        </svg></a></span><span><a class="inst-item__icon-link" href="#">
-                        <svg class="inst-item__icon inst-item__icon--bookmark">
-                          <use xlink:href="img/sprite.svg#bookmark"></use>
-                        </svg></a></span></div>
-                  <p class="inst-item__text">216 Отметок «Нравится»</p>
-                </div>
-          </div>
-          <div class="cols cols-3 cols-sm-6">
-                <div class="inst-item"><a class="inst-item__link" href="#">
-                    <div class="inst-item__img-wrap"><img class="inst-item__img" src="img/instagram/inst_3.jpg"></div></a>
-                  <div class="inst-item__row"> <span><a class="inst-item__icon-link" href="#">
-                        <svg class="inst-item__icon inst-item__icon--like">
-                          <use xlink:href="img/sprite.svg#like"></use>
-                        </svg></a><a class="inst-item__icon-link" href="#">
-                        <svg class="inst-item__icon inst-item__icon--comment">
-                          <use xlink:href="img/sprite.svg#comment"></use>
-                        </svg></a></span><span><a class="inst-item__icon-link" href="#">
-                        <svg class="inst-item__icon inst-item__icon--bookmark">
-                          <use xlink:href="img/sprite.svg#bookmark"></use>
-                        </svg></a></span></div>
-                  <p class="inst-item__text">94 Отметок «Нравится»</p>
-                </div>
-          </div>
-          <div class="cols cols-3 cols-sm-6">
-                <div class="inst-item"><a class="inst-item__link" href="#">
-                    <div class="inst-item__img-wrap"><img class="inst-item__img" src="img/instagram/inst_4.jpg"></div></a>
-                  <div class="inst-item__row"> <span><a class="inst-item__icon-link" href="#">
-                        <svg class="inst-item__icon inst-item__icon--like">
-                          <use xlink:href="img/sprite.svg#like"></use>
-                        </svg></a><a class="inst-item__icon-link" href="#">
-                        <svg class="inst-item__icon inst-item__icon--comment">
-                          <use xlink:href="img/sprite.svg#comment"></use>
-                        </svg></a></span><span><a class="inst-item__icon-link" href="#">
-                        <svg class="inst-item__icon inst-item__icon--bookmark">
-                          <use xlink:href="img/sprite.svg#bookmark"></use>
-                        </svg></a></span></div>
-                  <p class="inst-item__text">163 Отметок «Нравится»</p>
-                </div>
-          </div>
-        </div>
-        <!-- END m-inst__row-->
-        <p class="text-center"><a class="btn btn--transp m-inst__btn" href="#"> <span>ПОДПИСАТЬСЯ</span>
-                <svg class="btn__arrow">
-                  <use xlink:href="img/sprite.svg#arrow-right"></use>
-                </svg></a>
-        </p>
-      </div>
-    </div>
-    <!-- END m-inst-->
-    <div class="m-news s-block"> 
-      <div class="container"> 
-        <div class="row row--m">
-          <div class="cols cols-6 cols-sm-12">
-            <h2>Новости</h2>
-          </div>
-        </div>
-        <div class="m-news__row row row--m masonry">
-          <div class="cols cols-6 cols-sm-12"> <a class="news-item" href="#">
-                  <div class="news-item__img-wrap"><img class="news-item__img" src="img/news/news_1.jpg"></div>
-                  <div class="news-item__content"><span class="news-item__title">Urban Oasis от YEARS Осень – зима 21/22</span><span class="news-item__date">29 февраля 2021</span></div></a>
-          </div>
-          <div class="cols cols-6 cols-sm-12"> <a class="news-item" href="#">
-                  <div class="news-item__img-wrap"><img class="news-item__img" src="img/news/news_2.jpg"></div>
-                  <div class="news-item__content"><span class="news-item__title">Обновление ассортимента в нашем магазине</span><span class="news-item__date">24 февраля 2021</span></div></a>
-            <div class="more-block"> 
-              <p>Больше новостей из мира моды</p><a class="btn btn--transp more-block__btn" href="#"> <span>Другие новости</span>
-                    <svg class="btn__arrow">
-                      <use xlink:href="img/sprite.svg#arrow-right"></use>
-                    </svg></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- END m-news-->
-    <div class="m-reviews s-block-gray">
-      <div class="container"> 
-        <h3 class="text-center">Отзывы наших покупателей</h3>
-        <div class="r-slider-wrap">
-          <div class="r-slider swiper-container"> 
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"> 
-                    <div class="review-item"> 
-                      <div class="review-item__user-wrap"> <img class="review-item__user" src="img/users/user_1.jpg"></div>
-                      <p class="review-item__name">Мария</p>
-                      <p class="review-item__city">г. Иркутск</p>
-                      <ul class="stars review-item__stars"> 
-                        <li class="stars__item"> <i class="stars__icon stars__icon--active"></i></li>
-                        <li class="stars__item"> <i class="stars__icon stars__icon--active"></i></li>
-                        <li class="stars__item"> <i class="stars__icon stars__icon--active"></i></li>
-                        <li class="stars__item"> <i class="stars__icon stars__icon--active"></i></li>
-                        <li class="stars__item"> <i class="stars__icon stars__icon--active"></i></li>
-                      </ul>
-                      <p class="review-item__text">«Один из любимых магазинов в городе, удобный сервис! Очень много шикарных вещей, внимательные консультанты...»</p>
-                      <p class="review-item__date">29 февраля 2021</p><a class="review-item__share" href="#">
-                        <svg> 
-                          <use xlink:href="img/sprite.svg#share"></use>
-                        </svg></a>
-                    </div>
-              </div>
-              <div class="swiper-slide"> 
-                    <div class="review-item"> 
-                      <div class="review-item__user-wrap"> <img class="review-item__user" src="img/users/user_2.jpg"></div>
-                      <p class="review-item__name">Александра </p>
-                      <p class="review-item__city">г. Екатеринбург</p>
-                      <ul class="stars review-item__stars"> 
-                        <li class="stars__item"> <i class="stars__icon stars__icon--active"></i></li>
-                        <li class="stars__item"> <i class="stars__icon stars__icon--active"></i></li>
-                        <li class="stars__item"> <i class="stars__icon stars__icon--active"></i></li>
-                        <li class="stars__item"> <i class="stars__icon stars__icon--active"></i></li>
-                        <li class="stars__item"><i class="stars__icon"></i></li>
-                      </ul>
-                      <p class="review-item__text">«Один из любимых магазинов в городе, удобный сервис! Очень много шикарных вещей, внимательные консультанты...»</p>
-                      <p class="review-item__date">29 февраля 2021</p><a class="review-item__share" href="#">
-                        <svg> 
-                          <use xlink:href="img/sprite.svg#share"></use>
-                        </svg></a>
-                    </div>
-              </div>
-              <div class="swiper-slide"> 
-                    <div class="review-item"> 
-                      <div class="review-item__user-wrap"> <img class="review-item__user" src="img/users/user_3.jpg"></div>
-                      <p class="review-item__name">Дмитрий</p>
-                      <p class="review-item__city">г. Иркутск</p>
-                      <ul class="stars review-item__stars"> 
-                        <li class="stars__item"> <i class="stars__icon stars__icon--active"></i></li>
-                        <li class="stars__item"> <i class="stars__icon stars__icon--active"></i></li>
-                        <li class="stars__item"> <i class="stars__icon stars__icon--active"></i></li>
-                        <li class="stars__item"> <i class="stars__icon stars__icon--active"></i></li>
-                        <li class="stars__item"><i class="stars__icon"></i></li>
-                      </ul>
-                      <p class="review-item__text">«Один из любимых магазинов в городе, удобный сервис! Очень много шикарных вещей, внимательные консультанты...»</p>
-                      <p class="review-item__date">29 февраля 2021</p><a class="review-item__share" href="#">
-                        <svg> 
-                          <use xlink:href="img/sprite.svg#share"></use>
-                        </svg></a>
-                    </div>
-              </div>
-              <div class="swiper-slide"> 
-                    <div class="review-item"> 
-                      <div class="review-item__user-wrap"> <img class="review-item__user" src="img/users/user_1.jpg"></div>
-                      <p class="review-item__name">Мария</p>
-                      <p class="review-item__city">г. Иркутск</p>
-                      <ul class="stars review-item__stars"> 
-                        <li class="stars__item"> <i class="stars__icon stars__icon--active"></i></li>
-                        <li class="stars__item"> <i class="stars__icon stars__icon--active"></i></li>
-                        <li class="stars__item"> <i class="stars__icon stars__icon--active"></i></li>
-                        <li class="stars__item"> <i class="stars__icon stars__icon--active"></i></li>
-                        <li class="stars__item"> <i class="stars__icon stars__icon--active"></i></li>
-                      </ul>
-                      <p class="review-item__text">«Один из любимых магазинов в городе, удобный сервис! Очень много шикарных вещей, внимательные консультанты...»</p>
-                      <p class="review-item__date">29 февраля 2021</p><a class="review-item__share" href="#">
-                        <svg> 
-                          <use xlink:href="img/sprite.svg#share"></use>
-                        </svg></a>
-                    </div>
-              </div>
-            </div>
-          </div>
-          <!-- END r-slider-->
-          <div class="r-slider__nav">
-            <button class="r-slide-nav r-slide-nav--prev"> 
-              <svg class="r-slide-nav__icon"> 
-                <use xlink:href="img/sprite.svg#arrow-right"></use>
-              </svg>
-            </button>
-            <div class="r-slide-dots"></div>
-            <button class="r-slide-nav r-slide-nav--next"> 
-              <svg class="r-slide-nav__icon"> 
-                <use xlink:href="img/sprite.svg#arrow-right"></use>
-              </svg>
-            </button>
-          </div>
-          <!-- END r-slider-nav-->
-        </div>
-        <!-- END r-slider-wrap-->
-        <div class="text-center"> <a class="btn btn--transp m-reviews__btn btn--disabled" href="#"> <span>Добавить отзыв</span>
-                <svg class="btn__arrow">
-                  <use xlink:href="img/sprite.svg#arrow-right"></use>
-                </svg></a>
-          <p class="notice">Авторизуйтесь на сайте, чтобы добавить отзыв</p>
-        </div>
-      </div>
-    </div>
-    <!-- END m-reviews-->
-    <div class="m-form"> 
-      <div class="container"> 
-        <div class="modal"> 
-          <h3 class="modal__title text-center">Остались вопросы?</h3>
-          <form class="form" action="#">
-            <input class="form__input" type="text" name="name" placeholder="Ваше имя">
-            <input class="form__input" type="email" name="email" placeholder="Ваш e-mail">
-            <textarea class="form__textarea m-form__textarea" name="message" placeholder="Сообщение"></textarea>
-            <button class="form__btn btn btn--black btn--block" type="submit">Отправить сообщение</button>
-            <div class="form__check-wrap">
-                  <div class="check">
-                    <input class="check__input" type="checkbox" id="pdn_f" name="pdn_f" value="">
-                    <label class="check__label check__label--checkbox" for="pdn_f">Я согласен на обработку персональных данных</label>
-                  </div>
-            </div>
-          </form>
-        </div>
-        <!-- END modal-->
-      </div>
-    </div>
-    <!-- END m-form-->
   </main>
-  <footer class="footer"> 
-    <div class="container"> 
-      <div class="row row--m"> 
-        <div class="cols cols-3 cols-md-6 cols-sm-12">
-          <div class="footer__column row row--column row--space-b"> 
-            <div class="logo-wrap logo-wrap--left"><a class="logo logo--footer" href="/"><img class="logo__img" src="img/logo-white.svg"></a></div>
-            <div>
-                <div class="socials socials--white"><a class="socials__link" href="#">
-                    <svg class="socials__link-icon"> 
-                      <use xlink:href="img/sprite.svg#inst"></use>
-                    </svg></a><a class="socials__link" href="#">
-                    <svg class="socials__link-icon"> 
-                      <use xlink:href="img/sprite.svg#fb"></use>
-                    </svg></a><a class="socials__link" href="#">
-                    <svg class="socials__link-icon"> 
-                      <use xlink:href="img/sprite.svg#telegram"></use>
-                    </svg></a></div>
-              <p class="copyright">Разработано Row Studio. Copyright 2021</p>
-            </div>
-          </div>
-        </div>
-        <div class="cols cols-3 cols-md-6 cols-sm-12">
-          <div class="row row--wrap">
-            <ul class="footer-menu">
-              <li> <a class="link" href="#">Для мужчин</a></li>
-              <li> <a class="link" href="#">Для женщин</a></li>
-              <li> <a class="link" href="#">О магазине</a></li>
-              <li> <a class="link" href="#">Новости</a></li>
-            </ul>
-            <ul class="footer-menu">
-              <li> <a class="link" href="#">Покупателям</a></li>
-              <li> <a class="link" href="#">Сервис</a></li>
-              <li> <a class="link" href="#">Доставка</a></li>
-              <li> <a class="link" href="#">Контакты</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="cols cols-3 cols-md-6 cols-sm-12">
-          <div class="subscribe">
-            <p class="subscribe__title">Подпишитесь, чтобы не пропустить новинки  и акции в нашем магазине</p>
-            <form class="subscribe__form"> 
-              <div class="subscribe__row row">
-                <input class="subscribe__input" type="text" name="subscribe" placeholder="Ваш e-mail">
-                <button class="subscribe__btn" type="submit">Подписаться</button>
-              </div>
-                        <div class="check">
-                          <input class="check__input" type="checkbox" id="s_pdn" name="s_pdn" value="">
-                          <label class="check__label check__label--checkbox" for="s_pdn">Я согласен на обработку персональных данных </label>
-                        </div>
-            </form>
-          </div>
-        </div>
-        <div class="cols cols-3 cols-md-6 cols-sm-12">
-          <div class="f-contacts"> 
-            <p class="f-contacts__phone"><a class="link" href="tel:+73952739191">+7 (3952) 73‒91‒91</a></p>
-            <p class="f-contacts__time">Работаем с пн-сб с 10.30 до 20.00, вс с 10:30 до 19:00</p>
-            <p class="f-contacts__address">​Советская ул., 27, 1 этаж</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
   <script src="js/libs.min.js"></script>
   <script src="js/scripts.js"></script>
 </body>

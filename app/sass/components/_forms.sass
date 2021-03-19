@@ -69,3 +69,33 @@
         margin-top: 18px
         align-items: center
         justify-content: center
+
+
+.search-form 
+    position: relative
+    &__input 
+        width: 100%
+        padding: 8px 30px 8px 0
+        border: none 
+        border-bottom: 1px solid $gray
+        color: $black
+        &::placeholder 
+            color: #C4C4C4
+        &:focus 
+            border-bottom-color: $activeColor 
+    &__btn 
+        position: absolute
+        display: block
+        padding: 7px
+        width: 30px
+        height: 100%
+        top: 0
+        right: 0
+        z-index: 100
+        font-size: 0 
+        background: url('../img/sprite.svg#search') no-repeat center 
+        background-size: 15px
+        cursor: pointer
+    &--mobile 
+        margin-bottom: 20px
+

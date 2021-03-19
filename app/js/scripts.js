@@ -19,9 +19,9 @@ $(document).ready(function () {
         loop: true,
         // effect: 'fade',
         speed: 500,
-        autoplay: {
-            delay: 5000,
-        },
+        // autoplay: {
+        //     delay: 10000,
+        // },
         navigation: {
             nextEl: '.i-slide-nav--next',
             prevEl: '.i-slide-nav--prev',
@@ -53,6 +53,18 @@ $(document).ready(function () {
         e.preventDefault();
         console.log('wish');
         $(this).toggleClass('active');
-    })
+    });
+
+
+    $('.menu-btn').click(function(e) {
+        $(this).toggleClass('active');
+        $('.menu-mobile').slideToggle()
+    });
+
+
+
+    if ($(window).width() <= 576) {
+        $('.i-slide__btn').appendTo($(this).parents('.i-slide'))
+    }
 });
 

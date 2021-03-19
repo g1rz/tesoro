@@ -17,6 +17,6 @@ mixin card-item(id, title, type, imageUrl, price, priceOld = '')
                 span.card-item__title !{title}
                 span.card-item__price 
                     if (priceOld !== '')
-                        span.price-old !{priceOld}
+                        del.price-old !{priceOld}
                     span !{price}
     // END card-item

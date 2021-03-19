@@ -2,6 +2,14 @@ include ../../components/_socials
 
 .header-top.row
     .cols-4
+        .h-links.h-links--mobile
+            button.menu-btn
+                span Меню
+                span.menu-btn__icon 
+
+            a.h-links__item.h-links__item--phone(href="tel:+74951008000")
+                svg.h-links__item-icon 
+                    use(xlink:href="img/sprite.svg#phone")
         +socials
     .cols-4
         .logo-wrap
@@ -9,16 +17,16 @@ include ../../components/_socials
                 img.logo__img(src="img/logo.svg")
     .cols-4
         .h-links                     
-            a.h-links__item(href="#")
+            a.h-links__item.h-links__item--search(href="#")
                 svg.h-links__item-icon 
                     use(xlink:href="img/sprite.svg#search")
-            a.h-links__item(href="#")
+            a.h-links__item.h-links__item--like(href="#")
                 svg.h-links__item-icon 
                     use(xlink:href="img/sprite.svg#like")
-            a.h-links__item(href="#")
+            a.h-links__item.h-links__item--user(href="#")
                 svg.h-links__item-icon 
                     use(xlink:href="img/sprite.svg#user")
-            a.h-links__item(href="#")
+            a.h-links__item.h-links__item--bag(href="#")
                 svg.h-links__item-icon 
                     use(xlink:href="img/sprite.svg#bag")
 // END header-top

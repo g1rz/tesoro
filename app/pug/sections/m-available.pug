@@ -39,10 +39,10 @@ include ../components/_card-item
     .container 
         .m-available__row.row.row--space-b.row--align-e
             h3.m-available__title Сейчас в наличии
-            +link-arrow('Смотреть еще')
+            +link-arrow('Смотреть еще', '#', 'hide-sm')
         .m-available__products.row.row--m 
             each item in products                 
-                .cols.cols-3.cols-sm-6
+                .cols.cols-3.cols-md-6
                     +card-item(item.id, item.title, item.type, item.imageUrl, item.price, item.priceOld)
         // END m-available__products
         p 
