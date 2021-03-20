@@ -19,9 +19,9 @@ $(document).ready(function () {
         loop: true,
         // effect: 'fade',
         speed: 500,
-        // autoplay: {
-        //     delay: 10000,
-        // },
+        autoplay: {
+            delay: 10000,
+        },
         navigation: {
             nextEl: '.i-slide-nav--next',
             prevEl: '.i-slide-nav--prev',
@@ -34,11 +34,8 @@ $(document).ready(function () {
     var reviewSlider = new Swiper('.r-slider', {
         loop: true,
         // effect: 'fade',
-        // speed: 500,
+        speed: 500,
         slidesPerView: 3,
-        // autoplay: {
-        //     delay: 5000,
-        // },
         navigation: {
             nextEl: '.r-slide-nav--next',
             prevEl: '.r-slide-nav--prev',
@@ -46,6 +43,17 @@ $(document).ready(function () {
         pagination: {
             el: '.r-slide-dots',
         },
+        breakpoints: {
+            0: {
+                slidesPerView: 1
+            },
+            768: {
+                slidesPerView: 2
+            },
+            991: {
+                slidesPerView: 3
+            }
+        }
     });
 
 
@@ -62,6 +70,9 @@ $(document).ready(function () {
     });
 
 
+    if ($(window).width() <= 768) {
+        $('.footer-social').insertAfter($('.footer-item:last-child'))
+    }
 
     if ($(window).width() <= 576) {
         $('.i-slide__btn').appendTo($(this).parents('.i-slide'))

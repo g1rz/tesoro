@@ -2,15 +2,18 @@ include ../components/_socials
 
 .m-about.s-block-gray
     .container
-        .row.row--wrap.row--align-c
-            .cols-6.cols-sm-12 
+        .row.row--m.row--wrap.row--align-c
+            .cols.cols-6.cols-sm-12 
                 h2 О МАГАЗИНЕ
                 .m-about__text
                     p.subtitle Итальянская одежда для мужчин и женщин
                     p Интернет-магазин TESORO предлагает широкий ассортимент качественной итальянской одежды по доступным ценам.
                     p В Tesoro мы можем предложить образ на любой случай вашей повседневной жизни.
                     p Только самые лучшие и качественные вещи известных брендов, таких как Aeronautica, Clips, Five Preview и другие.
-                +socials
-            .cols-6.cols-sm-12 
+                .hide-sm
+                    +socials
+            .cols.cols-6.cols-sm-12 
                 img.img-block(src="img/about.jpg")
+                .hide.show-sm
+                    +socials('m-about__socials')
 // END m-about

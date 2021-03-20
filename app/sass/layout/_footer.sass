@@ -44,6 +44,7 @@
         border: 1px solid #fff
         font-size: 16px
         line-height: 28px
+        font-weight: 300
         letter-spacing: 0.02em
         color: #3D3D3D
         outline: none
@@ -69,12 +70,11 @@
     margin-top: -5px
     margin-left: 65px
     &__phone 
-        margin-bottom: 10px
-        a 
-            font-weight: 500
-            font-size: 20px
-            line-height: 24px
-            letter-spacing: 0.05em
+        margin-bottom: 10px 
+        font-weight: 500
+        font-size: 20px
+        line-height: 24px
+        letter-spacing: 0.05em
     &__time 
         margin-bottom: 25px
         font-size: 12px
@@ -86,3 +86,87 @@
         font-weight: 400
         line-height: 24px
         letter-spacing: 0.02em
+
+@media (max-width: 1400px)
+    .footer-menu
+        margin-right: 20px
+    .f-contacts
+        margin-left: 0
+
+    .subscribe
+        &__title
+            font-size: 16px 
+            line-height: 22px
+// max-width: 1400px
+
+@media (max-width: 991px)
+    .footer 
+        padding: 50px 0 10px
+    .footer-item
+        margin-bottom: 40px
+// max-width: 991px
+
+@media (max-width: 768px)
+    .footer-item 
+        margin-bottom: 30px
+
+    .footer-menu
+        margin-right: 100px
+        font-size: 14px
+        line-height: 24px
+        li 
+            margin-bottom: 10px
+
+    .f-contacts 
+        padding-bottom: 26px
+        border-bottom: 1px solid #3C3C3C
+        &__phone 
+            margin-bottom: 0
+            font-size: 16px
+            line-height: 24px
+            letter-spacing: 0.04em
+        &__time 
+            margin-bottom: 5px
+            font-size: 10px
+            line-height: 28px
+            letter-spacing: 0.02em
+        &__address 
+            font-size: 16px
+            line-height: 24px
+
+    .form
+        &__input 
+            margin-bottom: 30px
+            font-size: 14px
+
+    .subscribe
+        &__row 
+            margin-bottom: 11px
+        &__title 
+            margin-bottom: 16px
+            max-width: 300px
+            font-size: 14px
+            line-height: 22px
+            letter-spacing: 0.01em
+        &__input 
+            font-size: 14px
+            line-height: 28px
+        &__btn 
+            font-size: 14px
+            line-height: 28px
+
+    .footer-social 
+        +center
+        flex-direction: column
+        width: 100%
+        text-align: center
+// max-width: 768px
+
+@media (max-width: 576px)
+    .footer
+        padding: 27px 0 15px
+
+    .footer-menu 
+        margin: 0
+        width: 50%
+// max-width: 576px

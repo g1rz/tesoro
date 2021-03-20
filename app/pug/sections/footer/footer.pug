@@ -19,16 +19,16 @@ include ../../components/_socials
 footer.footer 
     .container 
         .row.row--m 
-            .cols.cols-3.cols-md-6.cols-sm-12
+            .footer-item.cols.cols-3.cols-md-6.cols-sm-12.order-sm-1
                 .footer__column.row.row--column.row--space-b 
                     .logo-wrap.logo-wrap--left
                         a.logo.logo--footer(href="/")
                             img.logo__img(src="img/logo-white.svg")
-                    div
-                        +socials(true)
+                    div.footer-social.order-sm-5
+                        +socials('socials--white')
                         p.copyright Разработано Row Studio. Copyright 2021
 
-            .cols.cols-3.cols-md-6.cols-sm-12
+            .footer-item.cols.cols-3.cols-md-6.cols-sm-12.order-sm-2
                 .row.row--wrap
                     ul.footer-menu
                         each item in fMenu1
@@ -38,9 +38,9 @@ footer.footer
                         each item in fMenu2
                             li 
                                 a.link(href="#") !{item}
-            .cols.cols-3.cols-md-6.cols-sm-12
+            .footer-item.cols.cols-3.cols-md-6.cols-sm-12.order-sm-4
                 include subscribe
-            .cols.cols-3.cols-md-6.cols-sm-12
+            .footer-item.cols.cols-3.cols-md-6.cols-sm-12.order-sm-3
                 .f-contacts 
                     p.f-contacts__phone
                         a.link(href="tel:+73952739191") +7 (3952) 73‒91‒91

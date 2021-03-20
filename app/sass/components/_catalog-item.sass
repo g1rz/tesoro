@@ -51,5 +51,33 @@
             width: 0
             height: 2px
     
+@media (max-width: 991px)
+    .catalog-item
+        &__title
+            padding-bottom: 20px
+            top: 50%
+            font-size: 30px
+            &::before 
+                width: 100px 
+        &:hover 
+            .catalog-item__title::after 
+                width: 100px
+// max-width: 991px
 
+@media (max-width: 768px)
+    .catalog-item 
+        margin-bottom: 20px
+// max-width: 768px
 
+@media (max-width: 576px)
+    .catalog-item 
+        margin-bottom: 15px
+        &__title 
+            padding-bottom: 14px
+            font-size: 24px
+            &::before 
+                width: 87px
+        &:hover 
+            .catalog-item__title::after 
+                width: 87px
+// max-width: 768px

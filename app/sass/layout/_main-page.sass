@@ -100,7 +100,65 @@
     &__textarea 
         margin-top: 6px
 
+@media (max-width: 991px)
+    .m-catalog__row 
+        margin-top: 50px
+    .m-about
+        margin-top: 70px
+        padding: 60px 0
+    .m-reviews 
+        margin-top: 35px
+        padding: 60px 0 70px
+// max-width: 991px
+
 @media (max-width: 768px)
     .m-available__row
         display: block
+    .m-about
+        padding: 60px 0 35px
+        &__socials 
+            margin-top: 30px
+            justify-content: center
+        &__text
+            margin-bottom: 40px
+        h2 
+            text-align: left
+            &::after 
+                left: 0
+                transform: none
+
+    .r-slider-wrap 
+        margin-top: 40px
+        padding: 0
+
+    .r-slide-nav
+        display: none
+
+    .r-slide-dots
+        margin-top: 34px
+    
+    .m-reviews
+        &__btn 
+            margin-top: 40px
 // max-width: 768px
+
+@media (max-width: 576px)
+    .m-catalog__row 
+        margin-top: 0
+
+    .m-inst 
+        &__name 
+            margin-bottom: 12px
+            font-size: 12px 
+            line-height: 15px
+        h2 
+            padding-top: 7px
+            padding-bottom: 0
+            &::after 
+                top: 0
+        &__btn 
+            margin: 10px 0 0
+
+    .m-form 
+        padding: 70px 0 75px
+// max-width: 576px
