@@ -1,0 +1,20 @@
+
+
+mixin selector(title, name, arProperties, checked, isAbsolute)
+    - var absoluteClass = isAbsolute ? 'selector-wrap--absolute' : ''
+    .selector-wrap(class=absoluteClass)
+        .selector
+            .selector__head
+                span.selector__name !{title}
+                if (checked)
+                    span.selector__check !{checked}
+            ul.selector__body 
+                each item, index in arProperties
+                    li.selector__item 
+                        input.selector__radio(type="radio",name=name, value=item.value, id=name+'_'+index)
+                        label.selector__label(for=name+'_'+index)
+                            if (item.check)
+                                span.selector__label-check !{item.check}
+                            if (item.title)
+                                span !{item.title}
+    // END selector-wrap

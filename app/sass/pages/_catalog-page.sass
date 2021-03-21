@@ -1,0 +1,145 @@
+.catalog-page
+    margin-bottom: 200px
+    overflow: hidden
+    
+.catalog-top
+    margin-top: 24px
+    &__item 
+        margin-right: 84px
+
+.catalog-bottom 
+    display: flex 
+    align-items: center 
+    justify-content: space-between
+    &__item 
+        min-width: 200px
+
+.catalog-side
+    position: relative
+
+.c-filter-btn 
+    display: none
+    position: relative
+    padding-right: 20px
+    font-size: 12px
+    line-height: 24px
+    text-transform: uppercase
+    border: none 
+    outline: none
+    &__open 
+        display: inline
+    &__close 
+        display: none
+    &::before, &::after 
+        content: ''
+        width: 12px
+        height: 2px
+        background: #000 
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        +transitionDefault
+    &::after
+        transform: translateY(-50%) rotate(90deg)
+    &.active 
+        &::after
+            transform: translateY(-50%) rotate(0)
+        .c-filter-btn
+            &__open 
+                display: none 
+            &__close 
+                display: inline
+
+.mobile-filter 
+    display: none
+    width: 100%
+    margin-top: 20px
+    &__inner 
+        display: flex 
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-left: -10px
+        margin-right: -10px
+        .selector-wrap 
+            width: 50%
+            padding: 0 10px
+
+
+@media (max-width: 991px)
+    .c-sidebar-filter, .to-top
+        display: none
+
+    .catalog-side 
+        display: flex 
+        flex-wrap: wrap 
+        align-items: flex-end
+        justify-content: space-between
+        h1 
+            margin-bottom: 0
+
+    .c-sidebar-menu
+        display: flex 
+        width: auto 
+        overflow-y: scroll
+        font-size: 14px
+        line-height: 24px
+        letter-spacing: 0.01em
+        margin: 30px -15px 28px -15px
+        padding: 0 15px
+        &::after 
+            content: ''
+            width: 1000px
+            height: 1px 
+            background: $gray 
+            position: absolute
+            bottom: 28px
+            left: -50px
+            z-index: 10
+        a 
+            color: #8C8C8C
+            &::after 
+                display: none
+        li 
+            position: relative
+            margin-right: 30px
+            margin-bottom: 0
+            padding-bottom: 9px
+            &:last-child 
+                margin-right: 0
+            &.active 
+                &::after 
+                    content: ''
+                    width: 100%
+                    height: 3px
+                    background: $activeColor
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    z-index: 20
+                a 
+                    color: $black
+        ::-webkit-scrollbar-thumb  
+            background: $activeColor
+
+    .catalog-top 
+        display: none
+
+    .c-filter-btn 
+        display: block
+// max-width: 991px
+
+@media (max-width: 768px)
+    .catalog-page
+        margin-bottom: 50px
+    .catalog-bottom
+        flex-direction: column-reverse
+        &__item 
+            text-align: center
+            margin-bottom: 20px
+// max-width: 768px
+
+@media (max-width: 576px)
+    .catalog-page 
+        margin-bottom: 30px
+// max-width: 576px

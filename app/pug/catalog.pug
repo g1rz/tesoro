@@ -1,0 +1,14 @@
+extends ./tpl/_layout.pug
+
+block variables
+    -
+        var title = 'Каталог'
+        var description = 'Каталог'
+        var index = false
+
+
+include ./components/_breadcrumbs.pug
+
+block content 
+    +breadcrumbs(['Главная', 'Каталог', 'Для мужчин'])
+    include ./pages/catalog/catalog

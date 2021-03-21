@@ -1,0 +1,18 @@
+mixin pagination(nums)
+    ul.pagination
+        li
+            .pagination__arrow.pagination__arrow--prev
+                svg.pagination__icon 
+                    use(xlink:href="img/sprite.svg#arrow-left")
+        - for (var i = 1; i <= nums; i++)
+            if (i === 1)
+                li
+                    span !{i}
+            else
+                li
+                    a(href="#") !{i}
+       
+        li
+            a.pagination__arrow.pagination__arrow--next(href="#")
+                svg.pagination__icon 
+                    use(xlink:href="img/sprite.svg#arrow-right")

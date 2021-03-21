@@ -1,0 +1,17 @@
+.catalog-page 
+    .container 
+        .row.row--m 
+            .cols.cols-3.cols-md-12.catalog-side
+                h1 Каталог
+                button.c-filter-btn 
+                    span.c-filter-btn__open Показать фильтры
+                    span.c-filter-btn__close Скрыть фильтры
+                 
+                include ./catalog-sidebar
+
+                .to-top.to-top--catalog
+                    svg.to-top__icon 
+                        use(xlink:href="img/sprite.svg#arrow-top")
+                    span НАВЕРХ
+            .cols.cols-9.cols-md-12
+                include ./catalog-main

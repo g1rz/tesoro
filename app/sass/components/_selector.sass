@@ -1,0 +1,88 @@
+.selector-wrap 
+    margin-bottom: 22px
+    &--absolute 
+        position: relative 
+        height: 37px
+        min-width: 153px
+        .selector
+            position: absolute
+            top: 0
+            left: 0
+            &.active 
+                top: 0
+                left: -8px
+                margin-left: 0
+.selector 
+    width: 100%
+    max-width: 153px
+    z-index: 90
+    background: #fff
+
+    &__head 
+        position: relative
+        display: flex
+        align-items: center
+        height: 37px
+        padding-right: 10px
+        font-size: 14px
+        font-weight: 400
+        line-height: 120%
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        border-bottom: 1px solid #939393
+        cursor: pointer
+        &::after 
+            content: ''
+            width: 9px
+            height: 11px
+            background: url(../img/sprite.svg#angle-down) no-repeat center
+            background-size: contain
+            position: absolute
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
+            +transitionDefault
+    &.active
+        margin-left: -8px
+        padding: 0 8px 0
+        max-width: 170px
+        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06)
+        z-index: 100
+        .selector
+            &__head::after 
+                transform: translateY(-50%) rotate(180deg)
+
+    &__body 
+        display: none
+        margin-left: -8px
+        padding: 0 8px
+        width: calc(100% + 16px)
+        max-height: 155px
+        overflow-y: scroll
+        font-size: 12px
+        line-height: 14px
+    &__item 
+        border-bottom: 1px solid #F7F7F7
+        &:last-child 
+            border-bottom: none
+    &__radio
+        display: none
+        &:checked + .selector__label
+            color: $activeColor
+    &__label
+        display: flex 
+        width: 100%
+        height: 30px
+        align-items: center
+        cursor: pointer
+    &__label-check 
+        margin-right: 8px
+    &__check
+        margin-left: 10px
+
+    ::-webkit-scrollbar 
+        background: transparent
+        width: 2px
+    
+    ::-webkit-scrollbar-thumb  
+        background: $activeColor
