@@ -1,0 +1,14 @@
+extends ./tpl/_layout.pug
+
+block variables
+    -
+        var title = 'Карточка'
+        var description = 'Карточка'
+        var index = false
+
+
+include ./components/_breadcrumbs.pug
+
+block content 
+    +breadcrumbs(['Главная', 'Каталог', 'Майки', 'Aeronautica Militare'])
+    include ./pages/card/card

@@ -56,6 +56,42 @@ $(document).ready(function () {
         }
     });
 
+    var cardThumbsSlider = new Swiper('.card-thumbs', {
+        loop: true,
+        // effect: 'fade',
+        speed: 500,
+        slidesPerView: 4,
+        navigation: {
+            nextEl: '.card-thumbs-nav--next',
+            prevEl: '.card-thumbs-nav--prev',
+        },
+        direction: 'vertical',
+        breakpoints: {
+            0: {
+                slidesPerView: 1
+            },
+            768: {
+                slidesPerView: 2
+            },
+            991: {
+                slidesPerView: 4
+            }
+        },
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+    });
+
+    var cardPhotosSlider = new Swiper('.card-photos', {
+        loop: true,
+        speed: 500,
+        slidesPerView: 1,
+
+        direction: 'vertical',
+        thumbs: {
+            swiper: cardThumbsSlider,
+          },
+    });
+
 
     $('.card-wish').click(function(e) {
         e.preventDefault();

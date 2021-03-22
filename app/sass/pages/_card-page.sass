@@ -1,0 +1,166 @@
+.card-photos-wrap 
+    display: flex 
+    justify-content: space-between
+    height: 750px
+
+.card-thumbs-wrap 
+    position: relative
+    padding: 25px 0
+
+.card-thumbs
+    position: relative
+    width: 118px
+    height: 100%
+    margin:  0
+    &__item 
+        +center
+        padding: 5px 0
+        box-sizing: border-box
+        &.swiper-slide-active
+            position: relative
+            &::after
+                content: ''
+                width: 100%
+                height: 100%
+                background: rgba(#fff, 0.6)
+                position: absolute
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+    &__item-img 
+        max-width: 100%
+        max-height: 100%
+
+.card-thumbs-nav
+    position: absolute
+    left: 0
+    right: 0
+    height: 12px
+    width: 100%
+    background: none
+    border: none 
+    outline: none
+    &--prev 
+        top: 0
+        .card-thumbs-nav__icon 
+            transform: rotate(180deg)
+    &--next 
+        bottom: 0
+    &__icon 
+        width: 12px
+        height: 12px
+        fill: #5B5B5B
+
+.card-photos
+    width: calc(100% - 143px)
+    margin: 0
+    &__item 
+        +center
+
+.card-head
+    display: flex 
+    flex-wrap: wrap 
+    align-items: flex-end
+    margin-bottom: 6px
+
+.card-type 
+    width: 100%
+    margin-bottom: 6px
+    font-weight: 450
+    font-size: 14px
+    line-height: 120%
+    letter-spacing: 0.06em
+    text-transform: uppercase
+
+.card-title 
+    margin: 0
+    width: calc(100% - 120px)
+    font-size: 48px
+    line-height: 120%
+    text-transform: uppercase
+
+.card-available 
+    margin: 0 0 10px
+    width: 120px
+    font-weight: 450
+    font-size: 14px
+    line-height: 120%
+    letter-spacing: 0.02em
+    text-align: right
+    &--yes 
+        color: #22D429
+    &--no 
+        color: #CE5E4C
+    &--order 
+        color: #8C8C8C
+
+.price 
+    font-family: $fontSecond
+    font-style: normal
+    font-weight: 600
+    font-size: 36px
+    line-height: 120%
+    text-transform: uppercase
+    .price-old 
+        margin-left: 20px
+
+.properties 
+    margin: 25px 0 15px
+
+.property 
+    display: flex 
+    flex-wrap: wrap
+    align-items: center
+    margin-bottom: 20px
+    font-weight: 450
+    font-size: 14px
+    line-height: 120%
+    letter-spacing: 0.06em
+    text-transform: uppercase
+    &__title
+        margin-right: 14px
+        min-width: 65px
+    a 
+        font-size: 12px
+        line-height: 120%
+        letter-spacing: 0.02em
+        color: #5B5B5B
+        text-transform: none
+        text-decoration: none
+        &:hover 
+            color: $activeColor
+
+.property-list 
+    display: flex 
+    flex-wrap: wrap 
+    margin-right: 25px
+
+.property-item 
+    margin-right: 14px
+    color: #5B5B5B
+    cursor: pointer
+    &.selected 
+        color: #000
+    &:last-child 
+        margin-right: 0
+    &--color 
+        border-radius: 50%
+        &.selected 
+            box-shadow: 0 0 0 2px  #fff, 0 0 0 3px  #C4C4C4, 
+    .color-circle 
+        width: 20px
+        height: 20px
+
+.card-desc 
+    max-width: 530px
+    font-weight: 300
+    font-size: 16px
+    line-height: 24px
+    &__title 
+        margin-bottom: 12px
+        font-weight: 450
+        font-size: 14px
+        line-height: 120%
+        letter-spacing: 0.06em
+        text-transform: uppercase

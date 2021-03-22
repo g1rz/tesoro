@@ -1,0 +1,44 @@
+-
+    var photos = [
+        {
+            thumb: 'img/card/thumb_1.jpg',
+            photo: 'img/card/big_1.jpg'
+        }, {
+            thumb: 'img/card/thumb_2.jpg',
+            photo: 'img/card/thumb_2.jpg'
+        }, {
+            thumb: 'img/card/thumb_3.jpg',
+            photo: 'img/card/thumb_3.jpg'
+        }, {
+            thumb: 'img/card/thumb_4.jpg',
+            photo: 'img/card/thumb_4.jpg'
+        }, {
+            thumb: 'img/card/thumb_1.jpg',
+            photo: 'img/card/thumb_1.jpg'
+        }, {
+            thumb: 'img/card/thumb_2.jpg',
+            photo: 'img/card/thumb_2.jpg'
+        }
+    ]
+
+
+.card-photos-wrap
+    .card-thumbs-wrap
+        .card-thumbs.swiper-container 
+            .swiper-wrapper
+                each item in photos 
+                    .card-thumbs__item.swiper-slide
+                        img.card-thumbs__item-img(src=item.thumb)
+
+        .card-thumbs-nav-wrap
+            button.card-thumbs-nav.card-thumbs-nav--prev 
+                svg.card-thumbs-nav__icon 
+                    use(xlink:href="img/sprite.svg#angle-down")
+            button.card-thumbs-nav.card-thumbs-nav--next 
+                svg.card-thumbs-nav__icon 
+                    use(xlink:href="img/sprite.svg#angle-down")
+    .card-photos.swiper-container 
+        .swiper-wrapper 
+            each item in photos 
+                .card-photos__item.swiper-slide
+                    img.card-photos__item-img(src=item.photo)
