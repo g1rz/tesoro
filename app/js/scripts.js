@@ -65,16 +65,21 @@ $(document).ready(function () {
             nextEl: '.card-thumbs-nav--next',
             prevEl: '.card-thumbs-nav--prev',
         },
-        direction: 'vertical',
+        
         breakpoints: {
             0: {
-                slidesPerView: 1
+                slidesPerView: 4
             },
             768: {
-                slidesPerView: 2
+                slidesPerView: 4,
+                direction: 'horizontal',
             },
             991: {
-                slidesPerView: 4
+                slidesPerView: 4,
+                direction: 'vertical'
+            },
+            1400: {
+                slidesPerView: 4,
             }
         },
         watchSlidesVisibility: true,
@@ -85,11 +90,18 @@ $(document).ready(function () {
         loop: true,
         speed: 500,
         slidesPerView: 1,
-
-        direction: 'vertical',
         thumbs: {
             swiper: cardThumbsSlider,
-          },
+        },
+        breakpoints: {
+
+            768: {
+                direction: 'horizontal',
+            },
+            991: {
+                direction: 'vertical'
+            }
+        },
     });
 
 
@@ -130,9 +142,41 @@ $(document).ready(function () {
         $('body, html').animate({ scrollTop: 0 }, 500);
     });
 
+    $('.goto').click(function(e) {
+        e.preventDefault();
+        var scroll_el = $(this).attr('href');
+        if ($(scroll_el).length != 0) {
+            $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+        }
+    });
+
+    $('.goto--accordion').click(function() {
+        var el = $(this).attr('href');
+        
+        $(el).parent().find('.accordion__item-title').removeClass('active');
+        $(el).parent().find('.accordion__item-content').slideUp();
+
+        $(el).find('.accordion__item-title').addClass('active');
+        $(el).find('.accordion__item-content').slideDown();
+    });
+
     $('.c-filter-btn').click(function() {
         $(this).toggleClass('active');
         $('.mobile-filter').slideToggle(300);
+    });
+
+    $('.accordion__item-title').click(function() {
+        if (!$(this).hasClass('active')) {
+            $('.accordion__item-title').removeClass('active');
+            $(this).addClass('active');
+
+            $('.accordion__item-content').slideUp();
+            $(this).siblings('.accordion__item-content').slideDown();
+        } else {
+            $('.accordion__item-content').slideUp();
+            $(this).removeClass('active');
+        }
+        
     });
 
     if ($(window).width() <= 768) {

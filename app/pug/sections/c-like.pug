@@ -1,0 +1,51 @@
+include ../components/_link-arrow
+include ../components/_card-item
+
+//- id, title, type, imageUrl, price, priceOld 
+-
+    var products = [
+        {
+            id: 1,
+            title: 'Aeronautica Militare',
+            type: 'Майка',
+            imageUrl: 'img/products/product_1.jpg',
+            price: '1200 ₽',
+            priceOld: '1500 ₽' 
+        }, {
+            id: 2,
+            title: 'Aeronautica Militare',
+            type: 'Куртка',
+            imageUrl: 'img/products/product_2.jpg',
+            price: '5600 ₽',
+            priceOld: '' 
+        }, {
+            id: 3,
+            title: 'Heritage Man',
+            type: 'Ветровка',
+            imageUrl: 'img/products/product_3.jpg',
+            price: '6300 ₽',
+            priceOld: '' 
+        }, {
+            id: 4,
+            title: 'Heritage Man',
+            type: 'Поло',
+            imageUrl: 'img/products/product_4.jpg',
+            price: '2700 ₽',
+            priceOld: '' 
+        }
+    ]
+
+.m-available.s-block
+    .container 
+        .m-available__row.row.row--space-b.row--align-e
+            h3.m-available__title ВАМ может понравиться
+           
+        .m-available__products.row.row--m 
+            each item in products                 
+                .cols.cols-3.cols-md-6
+                    +card-item(item.id, item.title, item.type, item.imageUrl, item.price, item.priceOld)
+        // END m-available__products
+        p 
+            +link-arrow('Смотреть')
+                
+// END m-availabel

@@ -1,0 +1,16 @@
+//- arItems - массив объектов вида:
+//-     {
+//-         id    
+//-         title 
+//-         content 
+//-     }
+//- isNarow - true/false
+
+mixin accordion(arItems, isNarrow = false) 
+    - var addedClass = isNarrow ? 'accordion--narrow' : ''
+    .accordion(class=addedClass)
+        each item in arItems 
+            .accordion__item(id=item.id)
+                .accordion__item-title 
+                    span !{item.title}
+                .accordion__item-content !{item.content}

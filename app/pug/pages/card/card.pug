@@ -1,8 +1,9 @@
 .card-page 
     .container
-        .row.row--m 
+        .card-page__row.row.row--m 
             .cols.cols-6.cols-md-12
                 include ./card-photo
             .cols.cols-6.cols-md-12
-                include ./card-desc
+                .card-main
+                    include ./card-desc
 // END card-page

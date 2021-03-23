@@ -1,3 +1,25 @@
+include ../../components/buttons/_btn
+include ../../components/buttons/_btn-arrow
+include ../../components/_accordion
+include ../../components/_socials
+
+-
+    var accordionList = [
+        {
+            id: 'charact',
+            title: 'Характеристики',
+            content: '<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, quod incidunt fugiat illo nulla iure delectus aut similique voluptate impedit nihil quaerat hic dolores commodi inventore non ipsam provident assumenda!</p>'
+        }, {
+            id: 'shipping',
+            title: 'Доставка и оплата',
+            content: '<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, quod incidunt fugiat illo nulla iure delectus aut similique voluptate impedit nihil quaerat hic dolores commodi inventore non ipsam provident assumenda!</p>'
+        }, {
+            id: 'table_size',
+            title: 'Таблица обмеров',
+            content: '<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, quod incidunt fugiat illo nulla iure delectus aut similique voluptate impedit nihil quaerat hic dolores commodi inventore non ipsam provident assumenda!</p>'
+        }
+    ]
+
 .card-head
     p.card-type Майка
     h1.card-title Майка AERONAUTICA
@@ -16,7 +38,7 @@
             li.property-item.property-item--size.selected M
             li.property-item.property-item--size L
             li.property-item.property-item--size XL
-        a(href="#") Таблица размеров
+        a.goto.goto--accordion(href="#table_size") Таблица размеров
     .property
         span.property__title ЦВЕТ:
         ul.property-list 
@@ -30,4 +52,28 @@
                 i.color-circle(style="background-color: #CE5E4C")
 .card-desc 
     p.card-desc__title Описание:
-    p Базовая майка на широких бретелях из мягкой микрофибры в рубчик. Майка выполнена по современной бесшовной технологии без боковых швов, только плечевые швы на бретелях. Круглый вырез горловины средней глубины. Вырез горловины, пройма и низ изделия обработаны вподгибку плоским швом.
+    p Базовая майка на&nbsp;широких бретелях из&nbsp;мягкой микрофибры в&nbsp;рубчик. Майка выполнена по&nbsp;современной бесшовной технологии без боковых швов, только плечевые швы на&nbsp;бретелях. Круглый вырез горловины средней глубины. Вырез горловины, пройма и&nbsp;низ изделия обработаны вподгибку плоским швом.
+    
+.card-buttons 
+    .card-buttons__item 
+        +btn('ДОБАВИТЬ В КОРЗИНУ', '#', 'btn--active card-btn')
+    .card-buttons__item 
+        +btn-arrow('КУПИТЬ В ОДИН КЛИК', '#', 'btn--transp card-btn')
+
+.card-info 
+    p.vendor-code Артикул: 256045
+
++accordion(accordionList, true)
+
+.card-questions 
+    span.card-questions__text Есть вопрос?
+    .socials.socials--min
+        a.socials__link(href="#")
+            svg.socials__link-icon 
+                use(xlink:href="img/sprite.svg#telegram")
+        a.socials__link(href="#")
+            svg.socials__link-icon 
+                use(xlink:href="img/sprite.svg#whatsapp")
+        a.socials__link(href="#")
+            svg.socials__link-icon 
+                use(xlink:href="img/sprite.svg#phone")

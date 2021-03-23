@@ -1,31 +1,29 @@
-html 
+html
     box-sizing: border-box
     min-height: 100%
 
-*, *:before, *:after 
+*, *:before, *:after
     margin: 0
     padding: 0
     box-sizing: inherit
 
-body 
+body
     min-height: 100vh
     font-family: $fontMain
     // font-size: 14px
     // font-weight: 400
     // line-height: 24px
     // letter-spacing: 0.36px
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 150%;
+    font-weight: 300
+    font-size: 20px
+    line-height: 150%
     /* or 30px */
 
-    letter-spacing: 0.01em;
+    letter-spacing: 0.01em
 
     color: $black
     background-color: #fff
     position: relative
-
-
 
 a[href^="tel:"]
     white-space: nowrap
@@ -36,7 +34,7 @@ input, button, textarea
     outline: none
     -webkit-appearance: none
 
-button 
+button
     background: none
 
 textarea
@@ -46,25 +44,25 @@ input[type="submit"]
     cursor: pointer
 
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button 
-  -webkit-appearance: none
-  margin: 0
+input::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
 
-hr 
+hr
     margin: 20px 0
     border: none
     border-bottom: 1px solid $gray
 
-
-ul 
+ul
     margin: 0
     padding: 0
     list-style: none
 
-img 
+img
     max-width: 100%
+    max-height: 100%
 
-h1 
+h1
     margin-bottom: 22px
     font-family: 'Cormorant'
     font-style: normal
@@ -75,7 +73,7 @@ h1
     text-align: left
 
 h2
-    position: relative 
+    position: relative
     padding-bottom: 32px
     margin-bottom: 28px
     font-family: 'Cormorant'
@@ -83,7 +81,7 @@ h2
     font-size: 68px
     line-height: 70px
     text-transform: uppercase
-    &::after 
+    &::after
         content: ''
         width: 153px
         height: 1px
@@ -91,13 +89,12 @@ h2
         position: absolute
         bottom: 0
         left: 0
-    &.text-center 
-        &::after 
+    &.text-center
+        &::after
             left: 50%
             transform: translateX(-50%)
 
-
-h3 
+h3
     margin-bottom: 50px
     font-family: 'Cormorant'
     font-style: normal
@@ -106,8 +103,7 @@ h3
     line-height: 120%
     text-transform: uppercase
 
-
-.subtitle 
+.subtitle
     margin-bottom: 50px
     font-family: 'Cormorant'
     font-style: normal
@@ -122,47 +118,45 @@ h3
     text-align: center
     letter-spacing: 0.2px
 
-p 
+p
     margin-bottom: 20px
 
-
 .text
-    &-left 
+    &-left
         text-align: left
-    &-center 
+    &-center
         text-align: center
-    &-right 
+    &-right
         text-align: right
 
 .l-arrow
     text-transform: uppercase
     text-decoration: none
-    color: $black 
+    color: $black
     font-size: 14px
     letter-spacing: 0.36px
     +transitionDefault
-    &:hover 
+    &:hover
         color: $activeColor
-        .l-arrow__icon 
+        .l-arrow__icon
             fill: $activeColor
-    &::after 
+    &::after
         display: none
-    &__icon 
+    &__icon
         margin-left: 13px
         width: 30px
         height: 10px
         transition: 0.3s ease
         fill: $black
-    
 
 .logo-wrap
-    +center 
-    &--left 
+    +center
+    &--left
         justify-content: flex-start
 
-.logo 
+.logo
     +center
-    &--header 
+    &--header
         margin-top: -5px
     &--footer
         margin-bottom: 50px
@@ -170,24 +164,24 @@ p
 .s-block
     padding: 135px 0 30px
 
-.s-block-gray 
-        background-color: $lightGray
+.s-block-gray
+    background-color: $lightGray
 
-.masonry 
+.masonry
     & > *:nth-child(even)
         margin-top: -240px
         // transform: translateY(-240px)
 
-.more-block 
+.more-block
     margin-top: 132px
     font-weight: 300
     font-size: 20px
     letter-spacing: 0.01em
     text-align: center
-    &__btn 
+    &__btn
         margin-top: 4px
 
-.img-block 
+.img-block
     display: block
 
 .notice
@@ -204,7 +198,7 @@ p
     text-decoration: none
     padding-bottom: 4px
     +transitionDefault
-    &::after 
+    &::after
         content: ''
         width: 0%
         height: 1px
@@ -216,19 +210,19 @@ p
     &:hover::after
         width: 100%
 
-.link-icon 
+.link-icon
     position: relative
     display: inline-block
     padding-left: 30px
     color: inherit
     text-decoration: none
-    &:hover 
-        .link-icon__svg 
+    &:hover
+        .link-icon__svg
             fill: $activeColor
-        span::after 
+        span::after
             width: 100%
-    &__svg 
-        position: absolute 
+    &__svg
+        position: absolute
         top: 50%
         left: 0
         transform: translateY(-50%)
@@ -236,9 +230,9 @@ p
         height: 16px
         fill: $blackDark
         +transitionDefault
-    span 
+    span
         position: relative
-        &::after 
+        &::after
             content: ''
             width: 0
             height: 1px
@@ -248,18 +242,18 @@ p
             bottom: -3px
             +transitionDefault
 
-.color-circle 
-    display: block 
+.color-circle
+    display: block
     width: 16px
     height: 16px
     border-radius: 50%
     border: none
-    &--white 
+    &--white
         border: 1px solid #CDCDCD
 
-.to-top 
-    display: flex 
-    flex-direction: column 
+.to-top
+    display: flex
+    flex-direction: column
     align-items: center
     width: 60px
     font-size: 14px
@@ -267,35 +261,33 @@ p
     text-align: center
     cursor: pointer
     +transitionDefault
-    &__icon 
+    &__icon
         height: 30px
         width: 8px
         margin-bottom: 6px
         +transitionDefault
-    &:hover 
+    &:hover
         color: $activeColor
-        .to-top__icon 
+        .to-top__icon
             fill: $activeColor
-    &--catalog 
+    &--catalog
         position: absolute
         left: 60px
         bottom: 100px
 
-
 @media (max-width: 1400px)
-    body 
-        font-size: 16px 
-    h1 
+    body
+        font-size: 16px
+    h1
         font-size: 50px
 // max-width: 1400px
 
-
 @media (max-width: 991px)
-    h2 
+    h2
         padding-bottom: 15px
-        font-size: 40px 
+        font-size: 40px
         line-height: 120%
-    h3 
+    h3
         font-size: 34px
 
     .subtitle
@@ -304,7 +296,7 @@ p
         line-height: 120%
     .s-block
         padding: 80px 0 20px
-    .masonry 
+    .masonry
         & > *:nth-child(even)
             margin-top: -140px
     .more-block
@@ -313,22 +305,22 @@ p
 // max-width: 991px
 
 @media (max-width: 768px)
-    h1 
+    h1
         font-size: 40px
-    h2 
+    h2
         text-align: center
-        &::after 
+        &::after
             left: 50%
             transform: translateX(-50%)
-    h3 
+    h3
         margin-bottom: 45px
         font-size: 30px
         text-align: center
-    body 
+    body
         font-size: 14px
         line-height: 22px
 
-    .masonry 
+    .masonry
         & > *:nth-child(even)
             margin-top: 0
 
@@ -338,16 +330,16 @@ p
 // max-width: 768px
 
 @media (max-width: 576px)
-    p 
+    p
         margin-bottom: 0
-    h1 
+    h1
         font-size: 30px
-    h2 
+    h2
         padding-bottom: 12px
         font-size: 30px
-        &::after 
+        &::after
             width: 90px
-    h3 
+    h3
         font-size: 30px
     .logo
         &--header
@@ -361,6 +353,6 @@ p
     .more-block
         margin-top: 20px
         font-size: 14px
-        &__btn 
+        &__btn
             margin-top: 16px
 // max-width: 576px

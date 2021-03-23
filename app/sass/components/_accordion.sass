@@ -1,0 +1,51 @@
+.accordion
+    margin: 10px 0
+    &--narrow
+        max-width: 547px
+
+    &__item
+        border-top: 1px solid $gray
+        font-size: 16px
+
+        line-height: 140.62%
+        letter-spacing: 0.02em
+        &:last-child
+            border-bottom: 1px solid $gray
+    &__item-title
+        position: relative
+        height: 47px
+        display: flex
+        align-items: center
+        cursor: pointer
+        padding-right: 30px
+        font-weight: 400
+        color: #000
+        &::after
+            content: ''
+            width: 10px
+            height: 10px
+            background: url('../img/sprite.svg#angle-down') no-repeat center
+            background-size: contain
+            position: absolute
+            right: 10px
+            top: 50%
+            transform: translateY(-50%)
+            +transitionDefault
+        &.active::after
+            transform: translateY(-50%) rotate(180deg)
+    &__item-content
+        display: none
+        padding: 10px 0
+
+@media (max-width: 991px)
+    .accordion--narrow
+        max-width: 100%
+
+@media (max-width: 576px)
+    .accordion
+        &__item-title
+            height: 45px
+            font-size: 14px
+        &__item-content
+            font-size: 14px
+// max-width: 576px

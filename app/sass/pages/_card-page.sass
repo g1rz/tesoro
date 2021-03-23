@@ -1,9 +1,14 @@
-.card-photos-wrap 
-    display: flex 
-    justify-content: space-between
-    height: 750px
+.card-page
+    margin-top: 30px
+    &__row
+        margin-bottom: 180px
 
-.card-thumbs-wrap 
+.card-photos-wrap
+    display: flex
+    justify-content: space-between
+    max-height: 750px
+
+.card-thumbs-wrap
     position: relative
     padding: 25px 0
 
@@ -11,12 +16,12 @@
     position: relative
     width: 118px
     height: 100%
-    margin:  0
-    &__item 
+    margin: 0
+    &__item
         +center
         padding: 5px 0
         box-sizing: border-box
-        &.swiper-slide-active
+        &.swiper-slide-thumb-active
             position: relative
             &::after
                 content: ''
@@ -28,7 +33,7 @@
                 left: 0
                 right: 0
                 bottom: 0
-    &__item-img 
+    &__item-img
         max-width: 100%
         max-height: 100%
 
@@ -39,15 +44,15 @@
     height: 12px
     width: 100%
     background: none
-    border: none 
+    border: none
     outline: none
-    &--prev 
+    &--prev
         top: 0
-        .card-thumbs-nav__icon 
+        .card-thumbs-nav__icon
             transform: rotate(180deg)
-    &--next 
+    &--next
         bottom: 0
-    &__icon 
+    &__icon
         width: 12px
         height: 12px
         fill: #5B5B5B
@@ -55,32 +60,32 @@
 .card-photos
     width: calc(100% - 143px)
     margin: 0
-    &__item 
+    &__item
         +center
 
 .card-head
-    display: flex 
-    flex-wrap: wrap 
+    display: flex
+    flex-wrap: wrap
     align-items: flex-end
-    margin-bottom: 6px
+    margin-bottom: 4px
 
-.card-type 
+.card-type
     width: 100%
-    margin-bottom: 6px
+    margin-bottom: 9px
     font-weight: 450
     font-size: 14px
     line-height: 120%
     letter-spacing: 0.06em
     text-transform: uppercase
 
-.card-title 
+.card-title
     margin: 0
     width: calc(100% - 120px)
     font-size: 48px
     line-height: 120%
     text-transform: uppercase
 
-.card-available 
+.card-available
     margin: 0 0 10px
     width: 120px
     font-weight: 450
@@ -88,28 +93,28 @@
     line-height: 120%
     letter-spacing: 0.02em
     text-align: right
-    &--yes 
+    &--yes
         color: #22D429
-    &--no 
+    &--no
         color: #CE5E4C
-    &--order 
+    &--order
         color: #8C8C8C
 
-.price 
+.price
     font-family: $fontSecond
     font-style: normal
     font-weight: 600
     font-size: 36px
     line-height: 120%
     text-transform: uppercase
-    .price-old 
+    .price-old
         margin-left: 20px
 
-.properties 
+.properties
     margin: 25px 0 15px
 
-.property 
-    display: flex 
+.property
+    display: flex
     flex-wrap: wrap
     align-items: center
     margin-bottom: 20px
@@ -121,46 +126,173 @@
     &__title
         margin-right: 14px
         min-width: 65px
-    a 
+    a
         font-size: 12px
         line-height: 120%
         letter-spacing: 0.02em
         color: #5B5B5B
         text-transform: none
         text-decoration: none
-        &:hover 
+        &:hover
             color: $activeColor
 
-.property-list 
-    display: flex 
-    flex-wrap: wrap 
+.property-list
+    display: flex
+    flex-wrap: wrap
     margin-right: 25px
 
-.property-item 
+.property-item
     margin-right: 14px
     color: #5B5B5B
     cursor: pointer
-    &.selected 
+    &.selected
         color: #000
-    &:last-child 
+    &:last-child
         margin-right: 0
-    &--color 
+    &--color
         border-radius: 50%
-        &.selected 
-            box-shadow: 0 0 0 2px  #fff, 0 0 0 3px  #C4C4C4, 
-    .color-circle 
+        &.selected
+            box-shadow: 0 0 0 2px #fff, 0 0 0 3px #C4C4C4,
+    .color-circle
         width: 20px
         height: 20px
 
-.card-desc 
+.card-main
+    padding-left: 102px
+
+.card-desc
+    margin-top: 37px
     max-width: 530px
     font-weight: 300
     font-size: 16px
     line-height: 24px
-    &__title 
+    &__title
         margin-bottom: 12px
         font-weight: 450
         font-size: 14px
         line-height: 120%
         letter-spacing: 0.06em
         text-transform: uppercase
+
+.card-buttons
+    display: flex
+    flex-wrap: wrap
+    margin: 42px 0 22px
+    &__item
+        margin: 0 25px 20px 0
+
+.card-btn
+    width: 261px
+
+.vendor-code
+    margin-bottom: 10px
+    font-size: 12px
+    line-height: 120%
+    letter-spacing: 0.02em
+    color: #5B5B5B
+
+.card-questions
+    display: flex
+    align-items: center
+    margin-top: 30px
+    font-weight: 450
+    font-size: 14px
+    line-height: 120%
+    letter-spacing: 0.06em
+    text-transform: uppercase
+    &__text
+        margin-right: 25px
+
+@media (max-width: 1400px)
+    .card-photos-wrap
+        max-height: 520px
+    .card-thumbs
+        width: 70px
+    .card-photos
+        width: calc(100% - 100px)
+    .card-main
+        padding-left: 0
+    .card-title
+        font-size: 36px
+    .price
+        font-size: 26px
+// max-width: 1400px
+
+@media (max-width: 991px)
+    .card-page__row
+        margin-bottom: 100px
+    .card-photos-wrap
+        max-height: 100%
+        flex-direction: column-reverse
+
+    .card-thumbs-wrap
+        margin-left: -5px
+        margin-right: -5px
+
+    .card-thumbs
+        width: 100%
+        &__item
+            padding: 0 5px
+
+    .card-thumbs-nav
+        display: none
+
+    .card-photos
+        width: 100%
+        max-height: 600px
+
+    .card-type
+        order: 1
+        width: calc(100% - 120px)
+    .card-title
+        width: 100%
+        order: 3
+    .card-available
+        order: 2
+    .card-desc
+        max-width: 100%
+// max-width: 991px
+
+@media (max-width: 576px)
+    .card-page__row
+        margin-bottom: 80px
+
+    .card-type,
+    .card-available
+        font-size: 10px
+        margin-bottom: 8px
+
+    .card-title
+        font-size: 24px
+        line-height: 28px
+
+    .price
+        padding-bottom: 15px
+        font-size: 24px
+        line-height: 100%
+        border-bottom: 1px solid $gray
+
+    .properties
+        margin: 20px 0
+    .property
+        font-size: 12px
+        line-height: 120%
+
+    .card-desc
+        margin-top: 30px
+        font-size: 14px
+        line-height: 22px
+        &__item-title
+            font-size: 12px
+
+    .card-buttons
+        margin: 30px 0 40px
+        &__item
+            margin: 0 0 20px
+            width: 100%
+            &:last-child
+                margin-bottom: 0
+
+    .card-btn
+        width: 100%
+// max-width: 576px
