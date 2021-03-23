@@ -1,0 +1,17 @@
+
+extends ./tpl/_layout.pug
+
+block variables
+    -
+        var title = 'Корзина'
+        var description = 'Корзина'
+        var index = false
+
+
+include ./components/_breadcrumbs.pug
+
+block content 
+    +breadcrumbs(['Главная', 'Корзина'], true)
+    include ./pages/basket/basket
+
+    

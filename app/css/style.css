@@ -221,6 +221,9 @@ p {
     fill: #1C1C1C; }
     .l-arrow__icon--left {
       margin: 0 9px 0 0; }
+    .l-arrow__icon--big {
+      width: 70px;
+      height: 12px; }
 
 .logo-wrap {
   display: -webkit-box;
@@ -2448,6 +2451,9 @@ p {
       content: ' / '; }
     .breadcrumbs-list li:last-child::after {
       display: none; }
+
+.breadcrumbs-arrow::after {
+  display: none; }
 
 .mobile-back {
   display: none; }

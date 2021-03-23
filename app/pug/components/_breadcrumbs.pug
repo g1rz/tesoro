@@ -1,9 +1,14 @@
 //- list - массив списка названий хлебных крошек
 
-mixin breadcrumbs(list) 
+mixin breadcrumbs(list, isBackArrow) 
     .breadcrumbs 
         .container 
             ul.breadcrumbs-list 
+                if (isBackArrow)
+                    li.breadcrumbs-arrow
+                        a.l-arrow.link(href="#")
+                            svg.l-arrow__icon.l-arrow__icon--left.l-arrow__icon--big
+                                use(xlink:href="img/sprite.svg#arrow-left-big")
                 each item, index in list 
                     li 
                         if (list.length - 1 === index)
