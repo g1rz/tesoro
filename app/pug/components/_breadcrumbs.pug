@@ -10,3 +10,8 @@ mixin breadcrumbs(list)
                             span !{item}
                         else 
                             a.link(href="#") !{item}
+            a.l-arrow.mobile-back(href="#")
+                svg.l-arrow__icon.l-arrow__icon--left
+                    use(xlink:href="img/sprite.svg#arrow-left")
+                span Назад
+

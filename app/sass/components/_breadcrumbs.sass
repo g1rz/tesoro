@@ -14,3 +14,19 @@
             content: ' / '
         &:last-child::after 
             display: none
+
+.mobile-back 
+    display: none
+
+@media (max-width: 576px)
+    .breadcrumbs
+        padding: 12px 0
+
+    .breadcrumbs-list 
+        display: none 
+    
+    .mobile-back
+        display: inline
+        font-size: 12px
+        line-height: 16px
+// max-width: 576px
