@@ -197,5 +197,26 @@ $(document).ready(function () {
             $('.selector__body').slideUp(300);
         }
     });
+
+
+    $('.amount__btn').click(function() {
+        var el = $(this);
+        var quanity = el.siblings('input');
+        var quanityNum = parseInt(quanity.val());
+        if (el.hasClass('amount__btn--minus')) {
+            quanityNum--;
+        } else {
+            quanityNum++;
+        }
+        quanityNum = quanityNum <= 0 ? 1 : quanityNum;
+
+        quanity.val(quanityNum);
+        quanity.trigger('change')
+    });
+
+    $('.amount__input').change(function() {
+        console.log('change');
+        this.style.width = ((this.value.length + 1) * 5) + 'px';
+    })
 });
 

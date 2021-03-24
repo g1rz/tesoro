@@ -1,8 +1,7 @@
 
 
-mixin selector(title, name, arProperties, checked, isAbsolute)
-    - var absoluteClass = isAbsolute ? 'selector-wrap--absolute' : ''
-    .selector-wrap(class=absoluteClass)
+mixin selector(title, name, arProperties, checked, classes)
+    .selector-wrap(class=classes)
         .selector
             .selector__head
                 span.selector__name !{title}

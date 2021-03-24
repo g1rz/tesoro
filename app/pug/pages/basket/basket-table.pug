@@ -1,6 +1,68 @@
+include ../../components/_selector
+include ../../components/_amount
+
+-
+    var size = {
+        name: 'size',
+        title: '',
+        arProperties: [
+            {
+                title: '',
+                value: 'xs',
+                check: 'XS'
+            }, {
+                title: '',
+                value: 's',
+                check: 'S'
+            }, {
+                title: '',
+                value: 'm',
+                check: 'M'
+            }, {
+                title: '',
+                value: 'l',
+                check: 'L'
+            }, {
+                title: '',
+                value: 'xl',
+                check: 'XL'
+            }
+        ],
+        сhecked: 'M'
+    }
+
+    var colors = {
+        name: 'color',
+        title: '',
+        arProperties: [
+            {
+                title: '',
+                value: 'white',
+                check: '<i class="color-circle color-circle--white" style="background-color: #fff;"></i>'
+            }, {
+                title: '',
+                value: 'gray',
+                check: '<i class="color-circle" style="background-color: #8C8C8C;"></i>'
+            }, {
+                title: '',
+                value: 'red',
+                check: '<i class="color-circle" style="background-color: #CE5E4C;"></i>'
+            }, {
+                title: '',
+                value: 'green',
+                check: '<i class="color-circle" style="background-color: #4DB45E;"></i>'
+            }, {
+                title: '',
+                value: 'orange',
+                check: '<i class="color-circle" style="background-color: #F79E1B;"></i>'
+            }
+        ],
+        сhecked: '<i class="color-circle  color-circle--white" style="background-color: #fff;"></i>'
+    }
+
 table.basket-table 
     thead.basket-table__head
-        tr 
+        tr.basket-table__line-head
             th.b-col-head.b-col-head--count-p(colspan="2") Товаров: 3
             th.b-col-head.b-col-head--size Размер
             th.b-col-head.b-col-head--color Цвет
@@ -11,12 +73,65 @@ table.basket-table
                     span Очистить
                     svg.delete-link__icon 
                         use(xlink:href="img/sprite.svg#close")
+    // END basket-table__head
     tbody.basket-table__body 
         tr.basket-table__line
-            td.b-col.b-col--image test
-            td.b-col.b-col--name test
-            td.b-col.b-col--size test
-            td.b-col.b-col--color test
-            td.b-col.b-col--count test
-            td.b-col.b-col--price test
-            td.b-col.b-col--clear test
+            td.b-col.b-col--image 
+                .b-image-wrap
+                    img(src="img/basket/product_1.jpg")
+            td.b-col.b-col--name 
+                p.b-product-type Майка
+                p.b-product-name Aeronautica Militare
+            td.b-col.b-col--size 
+                +selector(size.title, size.name, size.arProperties, size.сhecked, 'selector-wrap--absolute selector-wrap--basket')
+            td.b-col.b-col--color 
+                +selector(colors.title, colors.name, colors.arProperties, colors.сhecked, 'selector-wrap--absolute selector-wrap--basket')
+            td.b-col.b-col--count 
+                +amount('a_1', 'amount_1')
+            td.b-col.b-col--price 
+                span.price 2700 ₽
+            td.b-col.b-col--clear 
+                a.link(href="#") Удалить
+        // END basket-table__line
+        tr.basket-table__line
+            td.b-col.b-col--image 
+                .b-image-wrap
+                    img(src="img/basket/product_1.jpg")
+            td.b-col.b-col--name 
+                p.b-product-type Майка
+                p.b-product-name Aeronautica Militare
+            td.b-col.b-col--size 
+                +selector(size.title, size.name, size.arProperties, size.сhecked, 'selector-wrap--absolute selector-wrap--basket')
+            td.b-col.b-col--color 
+                +selector(colors.title, colors.name, colors.arProperties, colors.сhecked, 'selector-wrap--absolute selector-wrap--basket')
+            td.b-col.b-col--count 
+                +amount('a_1', 'amount_1')
+            td.b-col.b-col--price 
+                .price 
+                    span 2700 ₽
+                    span.price-old 300
+            td.b-col.b-col--clear 
+                a.link(href="#") Удалить
+        // END basket-table__line
+        tr.basket-table__line
+            td.b-col.b-col--image 
+                .b-image-wrap
+                    img(src="img/basket/product_1.jpg")
+            td.b-col.b-col--name 
+                p.b-product-type Майка
+                p.b-product-name Aeronautica Militare
+            td.b-col.b-col--size 
+                +selector(size.title, size.name, size.arProperties, size.сhecked, 'selector-wrap--absolute selector-wrap--basket')
+            td.b-col.b-col--color 
+                +selector(colors.title, colors.name, colors.arProperties, colors.сhecked, 'selector-wrap--absolute selector-wrap--basket')
+            td.b-col.b-col--count 
+                +amount('a_1', 'amount_1')
+            td.b-col.b-col--price 
+                .price 
+                    span 2700 ₽
+                    span.price-old 300
+            td.b-col.b-col--clear 
+                a.link(href="#") Удалить
+        // END basket-table__line
+    // END basket-table__body 
+// END basket-table

@@ -12,6 +12,20 @@
                 top: 0
                 left: -8px
                 margin-left: 0
+    &--basket 
+        min-width: auto
+        margin-bottom: 0
+        .selector 
+            width: auto
+            &__head 
+                padding-right: 16px
+                border-bottom: none
+                font-size: 18px
+                .color-circle 
+                    box-shadow: 0 0 0 2px #fff, 0 0 0 3px #c4c4c4
+            &__check 
+                margin-left: 0
+
 .selector 
     width: 100%
     max-width: 153px
@@ -86,3 +100,15 @@
     
     ::-webkit-scrollbar-thumb  
         background: $activeColor
+
+@media (max-width: 576px)
+    .selector-wrap--basket 
+        height: 20px
+        .selector
+            &__head
+                font-size: 14px
+                height: 20px
+                .color-circle 
+                    width: 16px
+                    height: 16px
+// max-width: 576px

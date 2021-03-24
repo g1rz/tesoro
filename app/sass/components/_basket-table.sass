@@ -1,0 +1,210 @@
+.basket-table
+    margin-top: 42px
+    width: 100%
+    border-collapse: collapse
+    &__head
+        font-size: 14px
+        font-weight: 400
+        line-height: 120%
+        letter-spacing: 0.06em
+        text-transform: uppercase
+        text-align: left
+        border-bottom: 1px solid $gray
+    &__body
+        padding-top: 20px
+    &__line:first-child
+        .b-col
+            padding-top: 50px
+
+    .color-circle 
+        width: 20px
+        height: 20px
+
+.b-col-head
+    padding-bottom: 8px
+    &--count-p
+        width: 42.7%
+    &--size
+        width: 8.7%
+    &--color
+        width: 8.5%
+    &--count
+        width: 16.8%
+    &--price
+        width: 15.3%
+    &--clear
+        width: 8%
+        text-align: right
+
+.b-col
+    padding-top: 40px
+    border-bottom: 1px solid $gray
+    &--image
+        width: 17%
+        border-bottom: none
+        padding-right: 40px
+    &--clear
+        text-align: right
+
+.delete-link
+    font-weight: 300
+    font-size: 18px
+    line-height: 120%
+    letter-spacing: 0.01em
+    color: inherit
+    text-decoration: none
+    text-transform: none
+    +transitionDefault
+    &:hover
+        color: $activeColor
+        .delete-link__icon
+            fill: $activeColor
+    &__icon
+        width: 12px
+        height: 12px
+        margin-left: 5px
+        fill: $blackDark
+        +transitionDefault
+
+.b-image-wrap
+    +center
+
+.b-product
+    &-type
+        margin-bottom: 10px 
+        font-size: 14px
+        font-weight: 400
+        line-height: 120%
+        letter-spacing: 0.06em
+        text-transform: uppercase
+    &-name
+        margin-bottom: 0
+        font-size: 24px
+        line-height: 120%
+        letter-spacing: 0.01em
+
+@media (max-width: 1400px)
+    .b-col-head
+        &--count-p
+            width: 40%
+        &--count 
+            width: 14%
+        &--price 
+            width: 14%
+        &--clear 
+            width: 100px
+
+@media (max-width: 991px)
+    .b-col-head
+        &--size, &--color, &--count, &--price 
+            display: none
+        &--count-p, &--clear 
+            width: 50%
+
+    .basket-table
+        display: block
+        &__head, &__body 
+            display: block
+            width: 100%
+            padding: 0
+        &__line-head 
+            display: flex 
+            width: 100%
+        &__line 
+            position: relative
+            display: flex
+            align-items: flex-start
+            flex-wrap: wrap
+            padding-left: 200px
+            margin-top: 25px
+            min-height: 200px
+            border-bottom: 1px solid $gray
+            &:first-child 
+                .b-col 
+                    padding-top: 0
+
+    .b-col 
+        display: block
+        padding-top: 0
+        border-bottom: none
+        height: auto
+        &--image 
+            position: absolute
+            width: 180px
+            height: 200px
+            top: 0
+            left: 0
+            padding: 0
+        &--name 
+            order: 1
+            width: calc(100% - 100px)
+            margin-bottom: 6px
+        &--clear 
+            order: 2
+            width: 100px
+        &--price 
+            order: 3 
+            width: 100%
+            margin-bottom: 25px
+        &--size 
+            order: 4
+            width: 33.33%
+        &--color
+            order: 5
+            width: 33.33%
+        &--count 
+            order: 6
+            width: 33.33%
+            height: 37px
+            display: flex 
+            align-items: center
+// max-width: 991px
+
+@media (max-width: 576px)
+    .basket-table
+        margin-top: 0
+        &__line
+            min-height: 100px
+            padding-left: 92px
+            padding-bottom: 20px
+
+        .price
+            padding: 0
+            font-size: 18px
+            line-height: 100%
+            border: none
+        
+    .b-col-head
+        &--count-p 
+            display: none
+        &--clear 
+            width: 100%
+
+    .b-col
+        &--image 
+            width: 80px
+            height: 100px
+        &--name 
+            width: calc(100% - 40px)
+            margin-bottom: 0
+        &--price 
+            margin-bottom: 10px
+        &--count 
+            height: 20px
+        &--clear 
+            width: 40px
+            font-size: 10px
+    
+    .b-product-type 
+        margin-bottom: 5px
+        font-size: 12px
+    .b-product-name 
+        margin-bottom: 6px
+        font-size: 14px
+
+    .delete-link 
+        font-size: 12px
+        &__icon
+            width: 8px
+            height: 8px
+// max-width: 576px 

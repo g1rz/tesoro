@@ -153,11 +153,11 @@ include ../../components/buttons/_btn
 .catalog-top.row.row--space-b 
     .catalog-top__wrap.row
         .catalog-top__item
-            +selector(size.title, size.name, size.arProperties, size.сhecked, true)
+            +selector(size.title, size.name, size.arProperties, size.сhecked, 'selector-wrap--absolute')
         .catalog-top__item
-            +selector(colors.title, colors.name, colors.arProperties, colors.сhecked, true)
+            +selector(colors.title, colors.name, colors.arProperties, colors.сhecked, 'selector-wrap--absolute')
     .catalog-top__wrap
-        +selector(sort.title, sort.name, sort.arProperties, sort.сhecked, true)
+        +selector(sort.title, sort.name, sort.arProperties, sort.сhecked, 'selector-wrap--absolute')
 
 .catalog-cards.row.row--m
     each item in products 

@@ -30,7 +30,7 @@
       <h1>Корзина</h1>
       <table class="basket-table"> 
         <thead class="basket-table__head">
-          <tr> 
+          <tr class="basket-table__line-head">
             <th class="b-col-head b-col-head--count-p" colspan="2">Товаров: 3</th>
             <th class="b-col-head b-col-head--size">Размер</th>
             <th class="b-col-head b-col-head--color">Цвет</th>
@@ -42,18 +42,289 @@
                 </svg></a></th>
           </tr>
         </thead>
+        <!-- END basket-table__head-->
         <tbody class="basket-table__body"> 
           <tr class="basket-table__line">
-            <td class="b-col b-col--image">test</td>
-            <td class="b-col b-col--name">test</td>
-            <td class="b-col b-col--size">test</td>
-            <td class="b-col b-col--color">test</td>
-            <td class="b-col b-col--count">test</td>
-            <td class="b-col b-col--price">test</td>
-            <td class="b-col b-col--clear">test</td>
+            <td class="b-col b-col--image"> 
+              <div class="b-image-wrap"><img src="img/basket/product_1.jpg"></div>
+            </td>
+            <td class="b-col b-col--name"> 
+              <p class="b-product-type">Майка</p>
+              <p class="b-product-name">Aeronautica Militare</p>
+            </td>
+            <td class="b-col b-col--size"> 
+                    <div class="selector-wrap selector-wrap--absolute selector-wrap--basket">
+                      <div class="selector">
+                        <div class="selector__head"><span class="selector__name"></span><span class="selector__check">M</span>
+                        </div>
+                        <ul class="selector__body"> 
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="size" value="xs" id="size_0">
+                            <label class="selector__label" for="size_0"><span class="selector__label-check">XS</span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="size" value="s" id="size_1">
+                            <label class="selector__label" for="size_1"><span class="selector__label-check">S</span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="size" value="m" id="size_2">
+                            <label class="selector__label" for="size_2"><span class="selector__label-check">M</span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="size" value="l" id="size_3">
+                            <label class="selector__label" for="size_3"><span class="selector__label-check">L</span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="size" value="xl" id="size_4">
+                            <label class="selector__label" for="size_4"><span class="selector__label-check">XL</span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- END selector-wrap-->
+            </td>
+            <td class="b-col b-col--color"> 
+                    <div class="selector-wrap selector-wrap--absolute selector-wrap--basket">
+                      <div class="selector">
+                        <div class="selector__head"><span class="selector__name"></span><span class="selector__check"><i class="color-circle  color-circle--white" style="background-color: #fff;"></i></span>
+                        </div>
+                        <ul class="selector__body"> 
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="color" value="white" id="color_0">
+                            <label class="selector__label" for="color_0"><span class="selector__label-check"><i class="color-circle color-circle--white" style="background-color: #fff;"></i></span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="color" value="gray" id="color_1">
+                            <label class="selector__label" for="color_1"><span class="selector__label-check"><i class="color-circle" style="background-color: #8C8C8C;"></i></span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="color" value="red" id="color_2">
+                            <label class="selector__label" for="color_2"><span class="selector__label-check"><i class="color-circle" style="background-color: #CE5E4C;"></i></span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="color" value="green" id="color_3">
+                            <label class="selector__label" for="color_3"><span class="selector__label-check"><i class="color-circle" style="background-color: #4DB45E;"></i></span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="color" value="orange" id="color_4">
+                            <label class="selector__label" for="color_4"><span class="selector__label-check"><i class="color-circle" style="background-color: #F79E1B;"></i></span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- END selector-wrap-->
+            </td>
+            <td class="b-col b-col--count"> 
+                    <div class="amount">
+                      <button class="amount__btn amount__btn--minus">-</button>
+                      <input class="amount__input" type="text" value="1" id="a_1" name="amount_1">
+                      <button class="amount__btn amount__btn--plus">+</button>
+                    </div>
+            </td>
+            <td class="b-col b-col--price"> <span class="price">2700 ₽</span></td>
+            <td class="b-col b-col--clear"> <a class="link" href="#">Удалить</a></td>
           </tr>
+          <!-- END basket-table__line-->
+          <tr class="basket-table__line">
+            <td class="b-col b-col--image"> 
+              <div class="b-image-wrap"><img src="img/basket/product_1.jpg"></div>
+            </td>
+            <td class="b-col b-col--name"> 
+              <p class="b-product-type">Майка</p>
+              <p class="b-product-name">Aeronautica Militare</p>
+            </td>
+            <td class="b-col b-col--size"> 
+                    <div class="selector-wrap selector-wrap--absolute selector-wrap--basket">
+                      <div class="selector">
+                        <div class="selector__head"><span class="selector__name"></span><span class="selector__check">M</span>
+                        </div>
+                        <ul class="selector__body"> 
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="size" value="xs" id="size_0">
+                            <label class="selector__label" for="size_0"><span class="selector__label-check">XS</span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="size" value="s" id="size_1">
+                            <label class="selector__label" for="size_1"><span class="selector__label-check">S</span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="size" value="m" id="size_2">
+                            <label class="selector__label" for="size_2"><span class="selector__label-check">M</span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="size" value="l" id="size_3">
+                            <label class="selector__label" for="size_3"><span class="selector__label-check">L</span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="size" value="xl" id="size_4">
+                            <label class="selector__label" for="size_4"><span class="selector__label-check">XL</span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- END selector-wrap-->
+            </td>
+            <td class="b-col b-col--color"> 
+                    <div class="selector-wrap selector-wrap--absolute selector-wrap--basket">
+                      <div class="selector">
+                        <div class="selector__head"><span class="selector__name"></span><span class="selector__check"><i class="color-circle  color-circle--white" style="background-color: #fff;"></i></span>
+                        </div>
+                        <ul class="selector__body"> 
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="color" value="white" id="color_0">
+                            <label class="selector__label" for="color_0"><span class="selector__label-check"><i class="color-circle color-circle--white" style="background-color: #fff;"></i></span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="color" value="gray" id="color_1">
+                            <label class="selector__label" for="color_1"><span class="selector__label-check"><i class="color-circle" style="background-color: #8C8C8C;"></i></span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="color" value="red" id="color_2">
+                            <label class="selector__label" for="color_2"><span class="selector__label-check"><i class="color-circle" style="background-color: #CE5E4C;"></i></span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="color" value="green" id="color_3">
+                            <label class="selector__label" for="color_3"><span class="selector__label-check"><i class="color-circle" style="background-color: #4DB45E;"></i></span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="color" value="orange" id="color_4">
+                            <label class="selector__label" for="color_4"><span class="selector__label-check"><i class="color-circle" style="background-color: #F79E1B;"></i></span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- END selector-wrap-->
+            </td>
+            <td class="b-col b-col--count"> 
+                    <div class="amount">
+                      <button class="amount__btn amount__btn--minus">-</button>
+                      <input class="amount__input" type="text" value="1" id="a_1" name="amount_1">
+                      <button class="amount__btn amount__btn--plus">+</button>
+                    </div>
+            </td>
+            <td class="b-col b-col--price"> 
+              <div class="price"> <span>2700 ₽</span><span class="price-old">300</span></div>
+            </td>
+            <td class="b-col b-col--clear"> <a class="link" href="#">Удалить</a></td>
+          </tr>
+          <!-- END basket-table__line-->
+          <tr class="basket-table__line">
+            <td class="b-col b-col--image"> 
+              <div class="b-image-wrap"><img src="img/basket/product_1.jpg"></div>
+            </td>
+            <td class="b-col b-col--name"> 
+              <p class="b-product-type">Майка</p>
+              <p class="b-product-name">Aeronautica Militare</p>
+            </td>
+            <td class="b-col b-col--size"> 
+                    <div class="selector-wrap selector-wrap--absolute selector-wrap--basket">
+                      <div class="selector">
+                        <div class="selector__head"><span class="selector__name"></span><span class="selector__check">M</span>
+                        </div>
+                        <ul class="selector__body"> 
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="size" value="xs" id="size_0">
+                            <label class="selector__label" for="size_0"><span class="selector__label-check">XS</span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="size" value="s" id="size_1">
+                            <label class="selector__label" for="size_1"><span class="selector__label-check">S</span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="size" value="m" id="size_2">
+                            <label class="selector__label" for="size_2"><span class="selector__label-check">M</span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="size" value="l" id="size_3">
+                            <label class="selector__label" for="size_3"><span class="selector__label-check">L</span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="size" value="xl" id="size_4">
+                            <label class="selector__label" for="size_4"><span class="selector__label-check">XL</span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- END selector-wrap-->
+            </td>
+            <td class="b-col b-col--color"> 
+                    <div class="selector-wrap selector-wrap--absolute selector-wrap--basket">
+                      <div class="selector">
+                        <div class="selector__head"><span class="selector__name"></span><span class="selector__check"><i class="color-circle  color-circle--white" style="background-color: #fff;"></i></span>
+                        </div>
+                        <ul class="selector__body"> 
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="color" value="white" id="color_0">
+                            <label class="selector__label" for="color_0"><span class="selector__label-check"><i class="color-circle color-circle--white" style="background-color: #fff;"></i></span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="color" value="gray" id="color_1">
+                            <label class="selector__label" for="color_1"><span class="selector__label-check"><i class="color-circle" style="background-color: #8C8C8C;"></i></span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="color" value="red" id="color_2">
+                            <label class="selector__label" for="color_2"><span class="selector__label-check"><i class="color-circle" style="background-color: #CE5E4C;"></i></span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="color" value="green" id="color_3">
+                            <label class="selector__label" for="color_3"><span class="selector__label-check"><i class="color-circle" style="background-color: #4DB45E;"></i></span>
+                            </label>
+                          </li>
+                          <li class="selector__item"> 
+                            <input class="selector__radio" type="radio" name="color" value="orange" id="color_4">
+                            <label class="selector__label" for="color_4"><span class="selector__label-check"><i class="color-circle" style="background-color: #F79E1B;"></i></span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- END selector-wrap-->
+            </td>
+            <td class="b-col b-col--count"> 
+                    <div class="amount">
+                      <button class="amount__btn amount__btn--minus">-</button>
+                      <input class="amount__input" type="text" value="1" id="a_1" name="amount_1">
+                      <button class="amount__btn amount__btn--plus">+</button>
+                    </div>
+            </td>
+            <td class="b-col b-col--price"> 
+              <div class="price"> <span>2700 ₽</span><span class="price-old">300</span></div>
+            </td>
+            <td class="b-col b-col--clear"> <a class="link" href="#">Удалить</a></td>
+          </tr>
+          <!-- END basket-table__line-->
         </tbody>
+        <!-- END basket-table__body -->
       </table>
+      <!-- END basket-table-->
     </div>
   </main>
   <script src="js/libs.min.js"></script>
