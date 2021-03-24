@@ -3392,4 +3392,68 @@ p {
   .card-btn {
     width: 100%; } }
 
+.basket-table {
+  margin-top: 42px;
+  width: 100%;
+  border-collapse: collapse; }
+  .basket-table__head {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: left;
+    border-bottom: 1px solid #DEDEDE; }
+  .basket-table__body {
+    padding-top: 20px; }
+  .basket-table__line:first-child .b-col {
+    padding-top: 50px; }
+
+.b-col-head {
+  padding-bottom: 8px; }
+  .b-col-head--count-p {
+    width: 42.7%; }
+  .b-col-head--size {
+    width: 8.7%; }
+  .b-col-head--color {
+    width: 8.5%; }
+  .b-col-head--count {
+    width: 16.8%; }
+  .b-col-head--price {
+    width: 15.3%; }
+  .b-col-head--clear {
+    width: 8%;
+    text-align: right; }
+
+.b-col {
+  padding-top: 40px;
+  border-bottom: 1px solid #DEDEDE; }
+  .b-col--image {
+    width: 17%;
+    border-bottom: none; }
+
+.delete-link {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: inherit;
+  text-decoration: none;
+  text-transform: none;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease; }
+  .delete-link:hover {
+    color: #CE5E4C; }
+    .delete-link:hover .delete-link__icon {
+      fill: #CE5E4C; }
+  .delete-link__icon {
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+    fill: #2D2D2D;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease; }
+
 /*# sourceMappingURL=style.css.map */
