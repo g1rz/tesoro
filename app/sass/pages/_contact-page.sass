@@ -1,0 +1,86 @@
+.contacts-row
+    margin-bottom: 150px
+
+.contacts-info
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 100%
+
+.contact
+    margin-bottom: 40px
+    &__label
+        margin-bottom: 10px
+        font-size: 14px
+        line-height: 120%
+        font-weight: 600
+        letter-spacing: 0.06em
+        text-transform: uppercase
+    &__content
+        position: relative
+        padding-left: 26px
+        font-weight: 300
+        font-size: 24px
+        line-height: 120%
+        letter-spacing: 0.01em
+        color: $black
+        text-decoration: none
+        &[href]:hover
+            span::after
+                width: 100%
+            .contact__content-icon
+                fill: $activeColor
+        &-icon
+            position: absolute
+            top: 5px
+            left: 0
+            width: 16px
+            height: 16px
+            fill: $black
+            +transitionDefault
+        span
+            position: relative
+            // padding-bottom: 4px
+            &::after
+                content: ''
+                width: 0%
+                height: 1px
+                background-color: $activeColor
+                position: absolute
+                bottom: 0
+                left: 0
+                +transitionDefault
+
+.map-wrap
+    width: 100%
+    height: 530px
+    margin-top: 14px
+    iframe
+        border: none
+        width: 100%
+        height: 100%
+
+@media (max-width: 991px)
+    .map-wrap
+        height: 350px
+
+    .contact-social
+        +center
+        margin-top: 25px
+// max-width: 991px
+
+@media (max-width: 576px)
+    .contacts-row
+        margin-bottom: 40px
+    .contact
+        margin-bottom: 30px
+        &__label
+            margin-bottom: 6px
+            font-size: 10px
+        &__content
+            font-size: 18px
+            &-icon
+                top: 4px
+                width: 14px
+                height: 14px
+// max-width: 576px

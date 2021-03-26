@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Контакты</title>
+  <meta name="description" content="Контакты">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner">
+  <main class="main-content">
+    <div class="breadcrumbs"> 
+      <div class="container"> 
+        <ul class="breadcrumbs-list"> 
+          <li class="breadcrumbs-arrow"><a class="l-arrow link" href="#">
+              <svg class="l-arrow__icon l-arrow__icon--left l-arrow__icon--big">
+                <use xlink:href="img/sprite.svg#arrow-left-big"></use>
+              </svg></a></li>
+          <li> <a class="link" href="#">Главная</a>
+          </li>
+          <li> <span>Контакты</span>
+          </li>
+        </ul><a class="l-arrow mobile-back" href="#">
+          <svg class="l-arrow__icon l-arrow__icon--left">
+            <use xlink:href="img/sprite.svg#arrow-left"></use>
+          </svg><span>Назад</span></a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="contacts-row row row--m"> 
+        <div class="cols cols-5 cols-md-12">
+          <div class="contacts-info">
+            <h1>Контакты</h1>
+            <div class="contacts-list"> 
+              <div class="contact">
+                <p class="contact__label">ТЕЛЕФОН</p><a class="contact__content" href="tel:+79991234567">
+                  <svg class="contact__content-icon"> 
+                    <use xlink:href="img/sprite.svg#phone"></use>
+                  </svg><span>+7 999 123-45-67</span></a>
+              </div>
+              <div class="contact">
+                <p class="contact__label">ПОЧТА</p><a class="contact__content" href="mailto:hello@olafa.ru">
+                  <svg class="contact__content-icon"> 
+                    <use xlink:href="img/sprite.svg#email"></use>
+                  </svg><span>hello@olafa.ru</span></a>
+              </div>
+              <div class="contact">
+                <p class="contact__label">АДРЕС</p>
+                <p class="contact__content">
+                  <svg class="contact__content-icon"> 
+                    <use xlink:href="img/sprite.svg#location"></use>
+                  </svg><span>г. Иркутск, ул. Советская, 27</span>
+                </p>
+              </div>
+              <div class="hide-md">
+                <div class="socials"><a class="socials__link" href="#">
+                    <svg class="socials__link-icon"> 
+                      <use xlink:href="img/sprite.svg#inst"></use>
+                    </svg></a><a class="socials__link" href="#">
+                    <svg class="socials__link-icon"> 
+                      <use xlink:href="img/sprite.svg#fb"></use>
+                    </svg></a><a class="socials__link" href="#">
+                    <svg class="socials__link-icon"> 
+                      <use xlink:href="img/sprite.svg#telegram"></use>
+                    </svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cols cols-7 cols-md-12">
+          <div class="map-wrap"><iframe src="https://yandex.ru/map-widget/v1/-/CCUUuOeb0A" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+          <div class="hide show-md">
+            <div class="contact-social">
+              <div class="socials"><a class="socials__link" href="#">
+                  <svg class="socials__link-icon"> 
+                    <use xlink:href="img/sprite.svg#inst"></use>
+                  </svg></a><a class="socials__link" href="#">
+                  <svg class="socials__link-icon"> 
+                    <use xlink:href="img/sprite.svg#fb"></use>
+                  </svg></a><a class="socials__link" href="#">
+                  <svg class="socials__link-icon"> 
+                    <use xlink:href="img/sprite.svg#telegram"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="m-form"> 
+      <div class="container"> 
+        <div class="modal"> 
+          <h3 class="modal__title text-center">Остались вопросы?</h3>
+          <form class="form" action="#">
+            <input class="form__input" type="text" name="name" placeholder="Ваше имя">
+            <input class="form__input" type="email" name="email" placeholder="Ваш e-mail">
+            <textarea class="form__textarea m-form__textarea" name="message" placeholder="Сообщение"></textarea>
+            <button class="form__btn btn btn--black btn--block" type="submit">Отправить сообщение</button>
+            <div class="form__check-wrap">
+                  <div class="check">
+                    <input class="check__input" type="checkbox" id="pdn_f" name="pdn_f" value="">
+                    <label class="check__label check__label--checkbox" for="pdn_f">Я согласен на обработку персональных данных</label>
+                  </div>
+            </div>
+          </form>
+        </div>
+        <!-- END modal-->
+      </div>
+    </div>
+    <!-- END m-form-->
+  </main>
+  <script src="js/libs.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
