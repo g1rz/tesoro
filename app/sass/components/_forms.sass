@@ -99,3 +99,68 @@
     &--mobile 
         margin-bottom: 20px
 
+.subscribe, .promo-form
+    &__title 
+        margin-bottom: 30px
+        font-size: 18px
+        font-weight: 400
+        line-height: 26px
+        letter-spacing: 0.01em
+    &__row 
+        margin-bottom: 16px
+    &__input
+        padding: 5px 18px
+        width: calc(100% - 144px)
+        height: 44px
+        border: 1px solid #fff
+        font-size: 16px
+        line-height: 28px
+        font-weight: 300
+        letter-spacing: 0.02em
+        color: #3D3D3D
+        outline: none
+        &:focus 
+            border-color: $activeColor
+    &__btn 
+        +center
+        width: 144px
+        height: 44px
+        color: #fff
+        border: 1px solid #fff
+        font-size: 16px
+        line-height: 28px
+        text-align: center
+        letter-spacing: 0.02em
+        cursor: pointer
+        +transitionDefault
+        &:hover 
+            border-color: $activeColor
+            color: $activeColor
+        
+    &--black 
+        .subscribe, .promo-form
+            &__input 
+                border-color: $black
+            &__btn 
+                background-color: $black 
+                border-color: $black
+                font-size: 14px
+
+@media (max-width: 768px)
+    .subscribe
+        &__row 
+            margin-bottom: 11px
+        &__title 
+            margin-bottom: 16px
+            max-width: 300px
+            font-size: 14px
+            line-height: 22px
+            letter-spacing: 0.01em
+        &__input 
+            font-size: 14px
+            line-height: 28px
+        &__btn 
+            font-size: 14px
+            line-height: 28px
+
+// max-width: 768px

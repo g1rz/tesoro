@@ -1148,59 +1148,6 @@ p {
     .footer-menu li:last-child {
       margin-bottom: 0; }
 
-.subscribe__title {
-  margin-bottom: 30px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 26px;
-  letter-spacing: 0.01em; }
-
-.subscribe__row {
-  margin-bottom: 16px; }
-
-.subscribe__input {
-  padding: 5px 18px;
-  width: calc(100% - 144px);
-  height: 44px;
-  border: 1px solid #fff;
-  font-size: 16px;
-  line-height: 28px;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-  color: #3D3D3D;
-  outline: none; }
-  .subscribe__input:focus {
-    border-color: #CE5E4C; }
-
-.subscribe__btn {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 144px;
-  height: 44px;
-  color: #fff;
-  border: 1px solid #fff;
-  font-size: 16px;
-  line-height: 28px;
-  text-align: center;
-  letter-spacing: 0.02em;
-  cursor: pointer;
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  transition: 0.3s ease; }
-  .subscribe__btn:hover {
-    border-color: #CE5E4C;
-    color: #CE5E4C; }
-
 .f-contacts {
   margin-top: -5px;
   margin-left: 65px; }
@@ -1265,20 +1212,6 @@ p {
   .form__input {
     margin-bottom: 30px;
     font-size: 14px; }
-  .subscribe__row {
-    margin-bottom: 11px; }
-  .subscribe__title {
-    margin-bottom: 16px;
-    max-width: 300px;
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: 0.01em; }
-  .subscribe__input {
-    font-size: 14px;
-    line-height: 28px; }
-  .subscribe__btn {
-    font-size: 14px;
-    line-height: 28px; }
   .footer-social {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1487,6 +1420,83 @@ p {
     cursor: pointer; }
   .search-form--mobile {
     margin-bottom: 20px; }
+
+.subscribe__title, .promo-form__title {
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.01em; }
+
+.subscribe__row, .promo-form__row {
+  margin-bottom: 16px; }
+
+.subscribe__input, .promo-form__input {
+  padding: 5px 18px;
+  width: calc(100% - 144px);
+  height: 44px;
+  border: 1px solid #fff;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: #3D3D3D;
+  outline: none; }
+  .subscribe__input:focus, .promo-form__input:focus {
+    border-color: #CE5E4C; }
+
+.subscribe__btn, .promo-form__btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 144px;
+  height: 44px;
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease; }
+  .subscribe__btn:hover, .promo-form__btn:hover {
+    border-color: #CE5E4C;
+    color: #CE5E4C; }
+
+.subscribe--black .subscribe__input, .subscribe--black .promo-form__input, .promo-form--black .subscribe__input, .promo-form--black .promo-form__input {
+  border-color: #1C1C1C; }
+
+.subscribe--black .subscribe__btn, .subscribe--black .promo-form__btn, .promo-form--black .subscribe__btn, .promo-form--black .promo-form__btn {
+  background-color: #1C1C1C;
+  border-color: #1C1C1C;
+  font-size: 14px; }
+
+@media (max-width: 768px) {
+  .subscribe__row {
+    margin-bottom: 11px; }
+  .subscribe__title {
+    margin-bottom: 16px;
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.01em; }
+  .subscribe__input {
+    font-size: 14px;
+    line-height: 28px; }
+  .subscribe__btn {
+    font-size: 14px;
+    line-height: 28px; } }
 
 .socials {
   display: -webkit-box;
@@ -3686,5 +3696,8 @@ p {
         margin-bottom: 0; }
   .card-btn {
     width: 100%; } }
+
+.basket-bottom {
+  margin: 70px 0 150px; }
 
 /*# sourceMappingURL=style.css.map */

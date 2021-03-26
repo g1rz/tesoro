@@ -1,3 +1,14 @@
+include ../../components/fields/_check
+
 .container 
     h1 Корзина
     include ./basket-table
+    .basket-bottom  
+        .basket-bottom__left
+            +check('Доставка: 300 ₽', 'add_ship', 'add_ship')
+            p.basket-sum Сумма: 13 700 ₽
+            form.promo-form.promo-form--black
+                .promo-form__row.row
+                    input.promo-form__input(type="text", name="promocode", placeholder="Введите промокод")
+                    button.promo-form__btn(type="submit") ПРИМЕНИТЬ
+        .basket-bottom__right 
