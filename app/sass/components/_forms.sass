@@ -1,22 +1,22 @@
-.check 
+.check
     position: relative
-    &__input 
-        position: absolute 
-        z-index: -1 
+    &__input
+        position: absolute
+        z-index: -1
         visibility: hidden
-        &:checked + .check__label::after 
+        &:checked + .check__label::after
             display: block
-    &__label 
+    &__label
         display: block
         margin: 8px 0
         padding-left: 28px
         position: relative
         cursor: pointer
-        font-size: 12px 
+        font-size: 12px
         color: inherit
-        line-height: 16px 
+        line-height: 16px
         letter-spacing: 0.02em
-        &::before 
+        &::before
             content: ''
             position: absolute
             top: -2px
@@ -24,7 +24,7 @@
             width: 18px
             height: 18px
             border: 1px solid #939393
-        &::after  
+        &::after
             content: ''
             display: none
             position: absolute
@@ -34,23 +34,22 @@
             height: 10px
             background-color: $activeColor
 
-
-.form 
-    &__input 
+.form
+    &__input
         margin-bottom: 34px
         width: 100%
         height: 36px
-        border: none 
+        border: none
         border-bottom: 1px solid #939393
         font-weight: 300
         font-size: 16px
         line-height: 28px
         letter-spacing: 0.02em
-        &:placeholder 
+        &:placeholder
             color: #3D3D3D
-        &:focus 
+        &:focus
             border-color: $activeColor
-    &__textarea 
+    &__textarea
         margin-bottom: 22px
         width: 100%
         height: 110px
@@ -60,30 +59,29 @@
         font-size: 16px
         line-height: 28px
         letter-spacing: 0.02em
-        &:placeholder 
+        &:placeholder
             color: #3D3D3D
-        &:focus 
+        &:focus
             border-color: $activeColor
-    &__check-wrap 
-        display: flex 
+    &__check-wrap
+        display: flex
         margin-top: 18px
         align-items: center
         justify-content: center
 
-
-.search-form 
+.search-form
     position: relative
-    &__input 
+    &__input
         width: 100%
         padding: 8px 30px 8px 0
-        border: none 
+        border: none
         border-bottom: 1px solid $gray
         color: $black
-        &::placeholder 
+        &::placeholder
             color: #C4C4C4
-        &:focus 
-            border-bottom-color: $activeColor 
-    &__btn 
+        &:focus
+            border-bottom-color: $activeColor
+    &__btn
         position: absolute
         display: block
         padding: 7px
@@ -92,21 +90,21 @@
         top: 0
         right: 0
         z-index: 100
-        font-size: 0 
-        background: url('../img/sprite.svg#search') no-repeat center 
+        font-size: 0
+        background: url('../img/sprite.svg#search') no-repeat center
         background-size: 15px
         cursor: pointer
-    &--mobile 
+    &--mobile
         margin-bottom: 20px
 
 .subscribe, .promo-form
-    &__title 
+    &__title
         margin-bottom: 30px
         font-size: 18px
         font-weight: 400
         line-height: 26px
         letter-spacing: 0.01em
-    &__row 
+    &__row
         margin-bottom: 16px
     &__input
         padding: 5px 18px
@@ -119,9 +117,9 @@
         letter-spacing: 0.02em
         color: #3D3D3D
         outline: none
-        &:focus 
+        &:focus
             border-color: $activeColor
-    &__btn 
+    &__btn
         +center
         width: 144px
         height: 44px
@@ -133,34 +131,53 @@
         letter-spacing: 0.02em
         cursor: pointer
         +transitionDefault
-        &:hover 
+        &:hover
             border-color: $activeColor
             color: $activeColor
-        
-    &--black 
+
+    &--black
         .subscribe, .promo-form
-            &__input 
+            &__input
                 border-color: $black
-            &__btn 
-                background-color: $black 
+            &__btn
+                background-color: $black
                 border-color: $black
                 font-size: 14px
 
+.promo-form
+    &__input
+        font-size: 18px
+        line-height: 24px
+        height: 53px
+    &__btn
+        height: 53px
+    &__row
+        margin-bottom: 0
+
 @media (max-width: 768px)
     .subscribe
-        &__row 
+        &__row
             margin-bottom: 11px
-        &__title 
+        &__title
             margin-bottom: 16px
             max-width: 300px
             font-size: 14px
             line-height: 22px
             letter-spacing: 0.01em
-        &__input 
+        &__input
             font-size: 14px
             line-height: 28px
-        &__btn 
+        &__btn
             font-size: 14px
             line-height: 28px
 
 // max-width: 768px
+
+@media (max-width: 576px)
+    .promo-form
+        &__input
+            font-size: 14px
+            height: 44px
+        &__btn
+            height: 44px
+// max-width: 576px
