@@ -1,0 +1,17 @@
+include ../../components/fields/_check
+
+.order-result
+    .order-result__sub 
+        .order-result__item
+            span.order-result__title Товары:
+            span.order-result__price 7700 ₽
+        .order-result__item
+            span.order-result__title Доставка:
+            span.order-result__price 300 ₽
+    .order-result__item.order-result__item--main 
+        span.order-result__title Итого:
+        span.order-result__price 8000 ₽
+    button.btn.btn--active.form-order-submit(type="submmit") Оплатить товары 
+    +check('Я согласен на обработку персональных данных', 'pdn_o', 'pdn_o', 'checkbox', '', '', true)
+
+// END form-order-result 

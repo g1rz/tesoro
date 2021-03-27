@@ -1,0 +1,7 @@
+mixin tabs-radio(name, arFields, classes = '') 
+    .tabs-r(class=classes)
+        each item, index in arFields 
+            - var isCheck = index === 0 ? true : false
+            .tabs-r__item 
+                input.tabs-r__radio(type="radio", name=name, value=item.value, id=name+'_'+index, checked=isCheck)
+                label.tabs-r__label(for=name+'_'+index) !{item.label}

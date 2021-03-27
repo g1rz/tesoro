@@ -2,6 +2,10 @@
     margin-top: 42px
     width: 100%
     border-collapse: collapse
+    &--min
+        margin-top: 38px
+        .b-col-head 
+            padding-bottom: 20px
     &__head
         font-size: 14px
         font-weight: 400
@@ -16,12 +20,38 @@
         .b-col
             padding-top: 50px
 
+    &__line--min
+        &:first-child 
+            .b-col
+                padding-top: 23px
+        .b-col
+            padding-top: 36px
+            padding-bottom: 15px
+            vertical-align: bottom
+            &--image 
+                width: 21%
+                padding-right: 34px
+                padding-bottom: 0
+            &--price 
+                text-align: right
+            &--count 
+                font-size: 18px 
+                line-height: 18px
+
+        .b-product-name
+            font-size: 20px 
+            line-height: 24px
+
+        .price
+            font-size: 24px
+
     .color-circle 
         width: 20px
         height: 20px
 
 .b-col-head
     padding-bottom: 8px
+    font-weight: 400
     &--count-p
         width: 42.7%
     &--size
@@ -36,6 +66,11 @@
         width: 8%
         text-align: right
 
+    &--product 
+        width: 70%
+    &--price-l 
+        text-align: right
+
 .b-col
     padding-top: 40px
     border-bottom: 1px solid $gray
@@ -43,6 +78,7 @@
         width: 17%
         border-bottom: none
         padding-right: 40px
+    
     &--clear
         text-align: right
 
@@ -103,6 +139,8 @@
 
     .basket-table
         display: block
+        &--order 
+            display: none
         &__head, &__body 
             display: block
             width: 100%

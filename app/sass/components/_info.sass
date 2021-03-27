@@ -1,0 +1,59 @@
+.info-row 
+    margin-top: 67px 
+    margin-bottom: 40px
+    
+.info 
+    max-width: 660px //678px
+    margin-bottom: 77px
+    &__title 
+        position: relative
+        display: flex 
+        align-items: center 
+        margin-bottom: 16px
+        padding-bottom: 24px
+        max-width: 580px
+        font-family: $fontSecond
+        font-weight: 700
+        font-size: 36px
+        line-height: 120%
+        &::after 
+            content: ''
+            width: 200px
+            height: 1px
+            background: #939393
+            position: absolute
+            bottom: 0
+            left: 0
+    &__title-icon 
+        margin-right: 20px
+        width: 35px
+        height: 35px
+
+.cards-logo 
+    display: flex 
+    align-items: center
+    margin: 40px 0 50px
+    &__item 
+        margin-right: 40px 
+        &:last-child 
+            margin-right: 0 
+
+@media (max-width: 1400px)
+    .cards-logo__item
+        margin-right: 20px
+
+@media (max-width: 768px)
+    .info-row 
+        margin-top: 24px
+        margin-bottom: 0
+
+    .info 
+        margin-bottom: 40px
+        &__title 
+            padding-bottom: 16px
+            font-size: 24px
+        &__title-icon 
+            width: 25px
+            height: 25px
+    .cards-logo 
+        margin: 30px 0

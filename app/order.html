@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Оформление заказа</title>
+  <meta name="description" content="Оформление заказа">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner">
+  <main class="main-content">
+    <div class="breadcrumbs"> 
+      <div class="container"> 
+        <ul class="breadcrumbs-list"> 
+          <li class="breadcrumbs-arrow"><a class="l-arrow link" href="#">
+              <svg class="l-arrow__icon l-arrow__icon--left l-arrow__icon--big">
+                <use xlink:href="img/sprite.svg#arrow-left-big"></use>
+              </svg></a></li>
+          <li> <a class="link" href="#">Главная</a>
+          </li>
+          <li> <a class="link" href="#">Корзина</a>
+          </li>
+          <li> <span>Оформление заказа</span>
+          </li>
+        </ul><a class="l-arrow mobile-back" href="#">
+          <svg class="l-arrow__icon l-arrow__icon--left">
+            <use xlink:href="img/sprite.svg#arrow-left"></use>
+          </svg><span>Назад</span></a>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Оформление заказа</h1>
+      <form class="form-order">
+        <div class="row row--m"> 
+          <div class="cols cols-6 cols-md-12">
+            <div class="form-order-info"> 
+              <div class="info-group">
+                <p class="info-group__title">Покупатель</p>
+                <div class="info-group-fields"> 
+                  <div class="info-group-fields__wrap">
+                    <input class="field-input" type="text" name="user_firstname" placeholder="Имя">
+                  </div>
+                  <div class="info-group-fields__wrap">
+                    <input class="field-input" type="text" name="user_lastname" placeholder="Фамилия">
+                  </div>
+                  <div class="info-group-fields__wrap">
+                    <input class="field-input" type="text" name="user_phone" placeholder="Телефон">
+                  </div>
+                  <div class="info-group-fields__wrap">
+                    <input class="field-input" type="email" name="user_email" placeholder="E-mail">
+                  </div>
+                </div>
+              </div>
+              <!-- END info-group-->
+              <div class="info-group">
+                <p class="info-group__title">Адрес</p>
+                <div class="info-group-fields"> 
+                  <div class="info-group-fields__wrap">
+                    <div class="field-select-wrapper">
+                      <select class="field-select" name="user_country">
+                        <option value="none" hidden="">Страна</option>
+                        <option value="1">Страна1</option>
+                        <option value="2">Страна2</option>
+                        <option value="3">Страна3</option>
+                        <option value="4">Страна4</option>
+                        <option value="5">Страна5</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="info-group-fields__wrap">
+                    <div class="field-select-wrapper">
+                      <select class="field-select" name="user_city">
+                        <option value="none" hidden="">Город</option>
+                        <option value="1">Город1</option>
+                        <option value="2">Город2</option>
+                        <option value="3">Город3</option>
+                        <option value="4">Город4</option>
+                        <option value="5">Город5</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="info-group-fields__wrap">
+                    <input class="field-input" type="text" name="user_zipcode" placeholder="Индекс">
+                  </div>
+                  <div class="info-group-fields__wrap">
+                    <input class="field-input" type="text" name="user_street" placeholder="Улица">
+                  </div>
+                  <div class="info-group-fields__wrap">
+                    <input class="field-input" type="text" name="user_house" placeholder="Дом/Строение">
+                  </div>
+                  <div class="info-group-fields__wrap">
+                    <input class="field-input" type="text" name="user_office" placeholder="Квартира/Офисца">
+                  </div>
+                </div>
+              </div>
+              <!-- END info-group-->
+              <div class="info-group">
+                <p class="info-group__title">Способ доставки</p>
+                            <div class="tabs-r">
+                              <div class="tabs-r__item"> 
+                                <input class="tabs-r__radio" type="radio" name="ship" value="sdek" id="ship_0" checked>
+                                <label class="tabs-r__label" for="ship_0">СДЭК</label>
+                              </div>
+                              <div class="tabs-r__item"> 
+                                <input class="tabs-r__radio" type="radio" name="ship" value="ru_post" id="ship_1">
+                                <label class="tabs-r__label" for="ship_1">Почта России</label>
+                              </div>
+                              <div class="tabs-r__item"> 
+                                <input class="tabs-r__radio" type="radio" name="ship" value="self_take" id="ship_2">
+                                <label class="tabs-r__label" for="ship_2">Самовывоз</label>
+                              </div>
+                            </div>
+              </div>
+              <!-- END info-group-->
+              <div class="info-group">
+                <p class="info-group__title">Способ оплаты</p>
+                            <div class="tabs-r">
+                              <div class="tabs-r__item"> 
+                                <input class="tabs-r__radio" type="radio" name="pay" value="cash" id="pay_0" checked>
+                                <label class="tabs-r__label" for="pay_0">При получении</label>
+                              </div>
+                              <div class="tabs-r__item"> 
+                                <input class="tabs-r__radio" type="radio" name="pay" value="online" id="pay_1">
+                                <label class="tabs-r__label" for="pay_1">Онлайн</label>
+                              </div>
+                            </div>
+              </div>
+              <!-- END info-group-->
+              <div class="info-group">
+                <p class="info-group__title">Комментарии к заказу</p>
+                <textarea class="form__textarea form__textarea--bigger" placeholder="Ваши пожелания к доставке" name="user_comment"></textarea>
+              </div>
+              <!-- END info-group-->
+            </div>
+            <!-- END form-order-info-->
+          </div>
+          <div class="cols cols-6 cols-md-12">
+            <table class="basket-table basket-table--min basket-table--order">
+              <thead class="basket-table__head">
+                <tr class="basket-table__line-head">
+                  <th class="b-col-head b b-col-head--product" colspan="2">Товар</th>
+                  <th class="b-col-head b b-col-head--count">Количество</th>
+                  <th class="b-col-head b b-col-head--price-l">Цена</th>
+                </tr>
+              </thead>
+              <tbody class="basket-table__body"> 
+                <tr class="basket-table__line basket-table__line--min">
+                  <td class="b-col b-col--image">
+                    <div class="b-image-wrap"><img src="img/basket/product_1.jpg"></div>
+                  </td>
+                  <td class="b-col b-col--name"> 
+                    <p class="b-product-type">Майка</p>
+                    <p class="b-product-name">Aeronautica Militare</p>
+                  </td>
+                  <td class="b-col b-col--count">1</td>
+                  <td class="b-col b-col--price"> <span class="price">2700 ₽</span></td>
+                </tr>
+                <!-- END basket-table__line-->
+                <tr class="basket-table__line basket-table__line--min">
+                  <td class="b-col b-col--image">
+                    <div class="b-image-wrap"><img src="img/basket/product_1.jpg"></div>
+                  </td>
+                  <td class="b-col b-col--name"> 
+                    <p class="b-product-type">Майка</p>
+                    <p class="b-product-name">Aeronautica Militare</p>
+                  </td>
+                  <td class="b-col b-col--count">1</td>
+                  <td class="b-col b-col--price"> <span class="price">2700 ₽</span></td>
+                </tr>
+                <!-- END basket-table__line-->
+              </tbody>
+            </table>
+            <!-- END basket-table-->
+            <div class="order-result">
+              <div class="order-result__sub"> 
+                <div class="order-result__item"><span class="order-result__title">Товары:</span><span class="order-result__price">7700 ₽</span></div>
+                <div class="order-result__item"><span class="order-result__title">Доставка:</span><span class="order-result__price">300 ₽</span></div>
+              </div>
+              <div class="order-result__item order-result__item--main"> <span class="order-result__title">Итого:</span><span class="order-result__price">8000 ₽</span></div>
+              <button class="btn btn--active form-order-submit" type="submmit">Оплатить товары </button>
+                          <div class="check">
+                            <input class="check__input" type="checkbox" id="pdn_o" name="pdn_o" value="" required>
+                            <label class="check__label check__label--checkbox" for="pdn_o">Я согласен на обработку персональных данных</label>
+                          </div>
+            </div>
+            <!-- END form-order-result -->
+          </div>
+        </div>
+      </form>
+      <!-- END form-order-->
+    </div>
+  </main>
+  <script src="js/libs.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>

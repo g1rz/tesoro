@@ -1,0 +1,36 @@
+.tabs-r
+    display: flex 
+    &__radio
+        display: none
+        &:checked + .tabs-r__label 
+            background-color: $black 
+            color: #fff
+    &__item
+        flex-basis: 0
+        flex-grow: 1
+        max-width: 190px
+        &:not(:last-child)
+            .tabs-r__label
+                border-right-color: transparent 
+    &__label 
+        +center
+        height: 55px
+        text-align: center
+        border: 1px solid $black
+        font-size: 14px
+        font-weight: 400
+        line-height: 111%
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        cursor: pointer
+
+@media (max-width: 991px)
+    .tabs-r__item
+        max-width: 100%
+
+@media (max-width: 576px)
+    .tabs-r__label
+        height: 44px
+        font-size: 12px
+        line-height: 111%
+        letter-spacing: 0.01em

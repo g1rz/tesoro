@@ -1,0 +1,24 @@
+extends ./tpl/_layout.pug
+
+block variables
+    -
+        var title = 'Оформление заказа'
+        var description = 'Оформление заказа'
+        var index = false
+
+
+include ./components/_breadcrumbs.pug
+
+
+block content 
+    +breadcrumbs(['Главная', 'Корзина', 'Оформление заказа'], true)
+    .container
+        h1 Оформление заказа
+        form.form-order
+            .row.row--m 
+                .cols.cols-6.cols-md-12
+                    include ./pages/order/order-info
+                .cols.cols-6.cols-md-12
+                    include ./pages/order/order-basket
+                    include ./pages/order/order-result
+        // END form-order
