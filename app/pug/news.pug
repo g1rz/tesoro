@@ -1,0 +1,45 @@
+extends ./tpl/_layout.pug
+
+block variables
+    -
+        var title = 'Новости'
+        var description = 'Новости'
+        var index = false
+
+
+include ./components/_breadcrumbs.pug
+include ./components/_selector
+
+
+block content 
+    -
+        var sort = {
+            name: 'sort',
+            title: 'Сортировка',
+            arProperties: [
+                {
+                    title: 'По цене',
+                    value: 'price',
+                    check: ''
+                }, {
+                    title: 'По названию',
+                    value: 'names',
+                    check: ''
+                }, {
+                    title: 'По популярности',
+                    value: 'popular',
+                    check: ''
+                }
+            ],
+            сhecked: ''
+        }
+
+    +breadcrumbs(['Главная', 'Новости'], false)
+
+    .container
+        .row.row--space-b.row--align-c
+            h1 Новости
+            +selector(sort.title, sort.name, sort.arProperties, sort.сhecked, 'selector-wrap--absolute')
+        
+        include ./pages/news/news-content
+            

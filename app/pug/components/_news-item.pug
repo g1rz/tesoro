@@ -1,5 +1,5 @@
-mixin news-item(title, date, imageUrl, link = '#')
-    a.news-item(href=link)
+mixin news-item(title, date, imageUrl, link = '#', classes = '')
+    a.news-item(href=link, class=classes)
         .news-item__img-wrap
             img.news-item__img(src=imageUrl)
         .news-item__content

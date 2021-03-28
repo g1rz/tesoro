@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Новости</title>
+  <meta name="description" content="Новости">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner">
+  <main class="main-content">
+    <div class="breadcrumbs"> 
+      <div class="container"> 
+        <ul class="breadcrumbs-list"> 
+          <li> <a class="link" href="#">Главная</a>
+          </li>
+          <li> <span>Новости</span>
+          </li>
+        </ul><a class="l-arrow mobile-back" href="#">
+          <svg class="l-arrow__icon l-arrow__icon--left">
+            <use xlink:href="img/sprite.svg#arrow-left"></use>
+          </svg><span>Назад</span></a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row row--space-b row--align-c">
+        <h1>Новости</h1>
+        <div class="selector-wrap selector-wrap--absolute">
+          <div class="selector">
+            <div class="selector__head"><span class="selector__name">Сортировка</span>
+            </div>
+            <ul class="selector__body"> 
+              <li class="selector__item"> 
+                <input class="selector__radio" type="radio" name="sort" value="price" id="sort_0"/>
+                <label class="selector__label" for="sort_0"><span>По цене</span>
+                </label>
+              </li>
+              <li class="selector__item"> 
+                <input class="selector__radio" type="radio" name="sort" value="names" id="sort_1"/>
+                <label class="selector__label" for="sort_1"><span>По названию</span>
+                </label>
+              </li>
+              <li class="selector__item"> 
+                <input class="selector__radio" type="radio" name="sort" value="popular" id="sort_2"/>
+                <label class="selector__label" for="sort_2"><span>По популярности</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END selector-wrap-->
+      </div>
+      <div class="news-row row row--m">
+        <div class="cols cols-sm-12 cols-12"><a class="news-item news-item--big" href="#">
+                  <div class="news-item__img-wrap"><img class="news-item__img" src="img/news/news_big_1.jpg"></div>
+                  <div class="news-item__content"><span class="news-item__title">Коллекция сумок в нашем магазине</span><span class="news-item__date">22 февраля 2021</span></div></a>
+        </div>
+        <div class="cols cols-sm-12 cols-6"><a class="news-item" href="#">
+                  <div class="news-item__img-wrap"><img class="news-item__img" src="img/news/news_1.jpg"></div>
+                  <div class="news-item__content"><span class="news-item__title">Urban Oasis от YEARS Осень – зима 21/22</span><span class="news-item__date">29 февраля 2021</span></div></a>
+        </div>
+        <div class="cols cols-sm-12 cols-6"><a class="news-item" href="#">
+                  <div class="news-item__img-wrap"><img class="news-item__img" src="img/news/news_2.jpg"></div>
+                  <div class="news-item__content"><span class="news-item__title">Обновление ассортимента в нашем магазине</span><span class="news-item__date">24 февраля 2021</span></div></a>
+        </div>
+        <div class="cols cols-sm-12 cols-6"><a class="news-item" href="#">
+                  <div class="news-item__img-wrap"><img class="news-item__img" src="img/news/news_3.jpg"></div>
+                  <div class="news-item__content"><span class="news-item__title">Распродажа зимней коллекции в феврале</span><span class="news-item__date">22 февраля 2021</span></div></a>
+        </div>
+        <div class="cols cols-sm-12 cols-6"><a class="news-item" href="#">
+                  <div class="news-item__img-wrap"><img class="news-item__img" src="img/news/news_4.jpg"></div>
+                  <div class="news-item__content"><span class="news-item__title">Кроссовки от известных итальянских брендов</span><span class="news-item__date">21 февраля 2021</span></div></a>
+        </div>
+      </div>
+      <!-- END news-row -->
+      <div class="text-center"><a class="btn btn--transp news-btn" href="#">ПОКАЗАТЬ ЕЩЕ       </a>
+      </div>
+    </div>
+  </main>
+  <script src="js/libs.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>

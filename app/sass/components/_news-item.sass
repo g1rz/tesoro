@@ -16,6 +16,10 @@
                 color: $activeColor
                 &::after
                     width: 153px
+    &--big 
+        max-width: 100% 
+        padding-bottom: 41.6%
+
     &__img-wrap 
         position: absolute
         top: 0
@@ -70,6 +74,8 @@
             height: 2px
             background-color: $activeColor
             +transitionDefault
+
+
         
 @media (max-width: 1400px)
     .news-item
@@ -81,6 +87,12 @@
             font-size: 26px 
             line-height: 30px
 // max-width: 1400px
+
+@media (max-width: 768px)
+    .news-item
+        &--big 
+            padding-bottom: 500px
+// max-width: 768px
 
 @media (max-width: 576px)
     .news-item

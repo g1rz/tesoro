@@ -1,0 +1,38 @@
+include ../../components/_news-item
+include ../../components/buttons/_btn
+
+-
+    var news = [
+        {
+            title: 'Коллекция сумок в нашем магазине',
+            date: '22 февраля 2021',
+            imageUrl: 'img/news/news_big_1.jpg',
+        }, {
+            title: 'Urban Oasis от YEARS Осень – зима 21/22',
+            date: '29 февраля 2021',
+            imageUrl: 'img/news/news_1.jpg',
+        }, {
+            title: 'Обновление ассортимента в нашем магазине',
+            date: '24 февраля 2021',
+            imageUrl: 'img/news/news_2.jpg',
+        }, {
+            title: 'Распродажа зимней коллекции в феврале',
+            date: '22 февраля 2021',
+            imageUrl: 'img/news/news_3.jpg',
+        }, {
+            title: 'Кроссовки от известных итальянских брендов',
+            date: '21 февраля 2021',
+            imageUrl: 'img/news/news_4.jpg',
+        }
+    ]
+
+.news-row.row.row--m
+    each item, index in news 
+        - var colClass = index === 0 ? 'cols-12' : 'cols-6'
+        - var newsClass = index === 0 ? 'news-item--big' : ''
+        .cols.cols-sm-12(class=colClass)
+            +news-item(item.title, item.date, item.imageUrl, '#', newsClass)
+// END news-row 
+
+.text-center
+    +btn('ПОКАЗАТЬ ЕЩЕ', '#', 'btn--transp news-btn')
