@@ -1,0 +1,54 @@
+extends ./tpl/_layout.pug
+
+block variables
+    -
+        var title = 'Вход/регистрация'
+        var description = 'Вход/регистрация'
+        var index = false
+
+
+include ./components/_breadcrumbs.pug
+include ./components/fields/_check.pug
+
+block content 
+    +breadcrumbs(['Главная', 'Личный кабинет'])
+    .sign-in-page
+        .container
+            .tab-links 
+                a.tab-links__item.tab-links__item--goto.active(href="#login") Войти в аккаунт
+                a.tab-links__item.tab-links__item--goto(href="#signin") Зарегистрироваться
+            .sign-in-page__row
+                .sign-form-wrap.active#login
+                    p.sign-form-title Войти в аккаунт
+                    form.sign-form 
+                        .sign-form__row
+                            .sign-form__wrap
+                                input.field-input(type="text", name="user_email", placeholder="Почта")
+                            .sign-form__wrap
+                                input.field-input(type="password", name="user_pass", placeholder="Пароль")
+                        button.btn.btn--black.sign-form__btn(type="submit") ВОЙТИ в аккаунт
+
+                        .sign-form__bottom.row.row--space-b.row--align-c 
+                            +check('Запомнить меня', 'remember', 'remember', 'checkbox', '', '')
+                            a.sign-form__forget(href="#") Забыли пароль?
+
+                .sign-form-wrap#signin
+                    p.sign-form-title Зарегистрироваться
+                    form.sign-form 
+                        .sign-form__row
+                            .sign-form__wrap.sign-form__wrap--half
+                                input.field-input(type="text", name="user_firstname", placeholder="Имя")
+                            .sign-form__wrap.sign-form__wrap--half
+                                input.field-input(type="text", name="user_lastname", placeholder="Фамилия")
+                            .sign-form__wrap.sign-form__wrap--half
+                                input.field-input(type="text", name="user_email", placeholder="E-mail")
+                            .sign-form__wrap.sign-form__wrap--half
+                                input.field-input(type="password", name="user_pass", placeholder="Пароль")
+                        button.btn.btn--active.sign-form__btn(type="submit") ЗАРЕГИСТРИРОВАТЬСЯ
+
+                        .sign-form__bottom.row.row--space-b.row--align-c 
+                            +check('Я согласен на обработку персональных данных ', 'pdn_sign', 'pdn_sign', 'checkbox', '', '', true)
+                            
+
+            
+        

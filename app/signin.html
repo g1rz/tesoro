@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Вход/регистрация</title>
+  <meta name="description" content="Вход/регистрация">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner">
+  <main class="main-content">
+    <div class="breadcrumbs"> 
+      <div class="container"> 
+        <ul class="breadcrumbs-list"> 
+          <li> <a class="link" href="#">Главная</a>
+          </li>
+          <li> <span>Личный кабинет</span>
+          </li>
+        </ul><a class="l-arrow mobile-back" href="#">
+          <svg class="l-arrow__icon l-arrow__icon--left">
+            <use xlink:href="img/sprite.svg#arrow-left"></use>
+          </svg><span>Назад</span></a>
+      </div>
+    </div>
+    <div class="sign-in-page">
+      <div class="container">
+        <div class="tab-links"> <a class="tab-links__item tab-links__item--goto active" href="#login">Войти в аккаунт</a><a class="tab-links__item tab-links__item--goto" href="#signin">Зарегистрироваться</a></div>
+        <div class="sign-in-page__row">
+          <div class="sign-form-wrap active" id="login">
+            <p class="sign-form-title">Войти в аккаунт</p>
+            <form class="sign-form"> 
+              <div class="sign-form__row">
+                <div class="sign-form__wrap">
+                  <input class="field-input" type="text" name="user_email" placeholder="Почта">
+                </div>
+                <div class="sign-form__wrap">
+                  <input class="field-input" type="password" name="user_pass" placeholder="Пароль">
+                </div>
+              </div>
+              <button class="btn btn--black sign-form__btn" type="submit">ВОЙТИ в аккаунт</button>
+              <div class="sign-form__bottom row row--space-b row--align-c"> 
+                <div class="check">
+                  <input class="check__input" type="checkbox" id="remember" name="remember" value=""/>
+                  <label class="check__label check__label--checkbox" for="remember">Запомнить меня</label>
+                </div><a class="sign-form__forget" href="#">Забыли пароль?</a>
+              </div>
+            </form>
+          </div>
+          <div class="sign-form-wrap" id="signin">
+            <p class="sign-form-title">Зарегистрироваться</p>
+            <form class="sign-form"> 
+              <div class="sign-form__row">
+                <div class="sign-form__wrap sign-form__wrap--half">
+                  <input class="field-input" type="text" name="user_firstname" placeholder="Имя">
+                </div>
+                <div class="sign-form__wrap sign-form__wrap--half">
+                  <input class="field-input" type="text" name="user_lastname" placeholder="Фамилия">
+                </div>
+                <div class="sign-form__wrap sign-form__wrap--half">
+                  <input class="field-input" type="text" name="user_email" placeholder="E-mail">
+                </div>
+                <div class="sign-form__wrap sign-form__wrap--half">
+                  <input class="field-input" type="password" name="user_pass" placeholder="Пароль">
+                </div>
+              </div>
+              <button class="btn btn--active sign-form__btn" type="submit">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+              <div class="sign-form__bottom row row--space-b row--align-c"> 
+                <div class="check">
+                  <input class="check__input" type="checkbox" id="pdn_sign" name="pdn_sign" value="" required="required"/>
+                  <label class="check__label check__label--checkbox" for="pdn_sign">Я согласен на обработку персональных данных </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/libs.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>

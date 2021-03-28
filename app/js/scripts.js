@@ -254,6 +254,17 @@ $(document).ready(function () {
     $('.amount__input').change(function() {
         console.log('change');
         this.style.width = ((this.value.length + 1) * 5) + 'px';
+    });
+
+
+    $('.tab-links__item--goto').click(function(e) {
+        e.preventDefault();
+
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+        var content = $(this).attr('href');
+        $('.sign-form-wrap').not(content).removeClass('active');
+        $(content).addClass('active');
     })
 });
 
