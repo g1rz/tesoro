@@ -1,0 +1,14 @@
+extends ./tpl/_layout.pug
+
+block variables
+    -
+        var title = 'Вам понравилось'
+        var description = 'Вам понравилось'
+        var index = false
+
+
+include ./components/_breadcrumbs.pug
+
+block content 
+    +breadcrumbs(['Главная', 'Вам понравилось'])
+    include ./pages/favorites/favorites

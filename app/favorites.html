@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Вам понравилось</title>
+  <meta name="description" content="Вам понравилось">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner">
+  <main class="main-content">
+    <div class="breadcrumbs"> 
+      <div class="container"> 
+        <ul class="breadcrumbs-list"> 
+          <li> <a class="link" href="#">Главная</a>
+          </li>
+          <li> <span>Вам понравилось</span>
+          </li>
+        </ul><a class="l-arrow mobile-back" href="#">
+          <svg class="l-arrow__icon l-arrow__icon--left">
+            <use xlink:href="img/sprite.svg#arrow-left"></use>
+          </svg><span>Назад</span></a>
+      </div>
+    </div>
+    <div class="container"> 
+      <div class="favorites-page__row-head row row--space-b row--align-c">
+        <h1 class="favorites-title">Вам понравилось</h1>
+            <div class="selector-wrap selector-wrap--absolute selector-wrap--sort">
+              <div class="selector">
+                <div class="selector__head"><span class="selector__name">Сортировка</span>
+                </div>
+                <ul class="selector__body"> 
+                  <li class="selector__item"> 
+                    <input class="selector__radio" type="radio" name="sort" value="price" id="sort_0">
+                    <label class="selector__label" for="sort_0"><span>По цене</span>
+                    </label>
+                  </li>
+                  <li class="selector__item"> 
+                    <input class="selector__radio" type="radio" name="sort" value="names" id="sort_1">
+                    <label class="selector__label" for="sort_1"><span>По названию</span>
+                    </label>
+                  </li>
+                  <li class="selector__item"> 
+                    <input class="selector__radio" type="radio" name="sort" value="popular" id="sort_2">
+                    <label class="selector__label" for="sort_2"><span>По популярности</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- END selector-wrap-->
+      </div>
+      <div class="favorites-page__products row row--m">
+        <div class="cols cols-3 cols-md-6"><a class="card-item" href="#">
+                <div class="card-del"><span class="card-del__to" data-id="1">
+                    <svg class="card-del__icon"> 
+                      <use xlink:href="img/sprite.svg#close"></use>
+                    </svg></span></div>
+                <div class="card-item__image">
+                  <div class="card-item__img-wrap"> <img class="card-item__img" src="img/products/product_5.jpg" alt="Куртка - Heritage Man"></div>
+                </div>
+                <div class="card-item__body"> 
+                  <div class="card-item__type">Куртка</div>
+                  <div class="card-item__row"> <span class="card-item__title">Heritage Man</span><span class="card-item__price"> 
+                      <del class="price-old">6500 ₽</del><span>5600 ₽</span></span></div>
+                </div></a>
+              <!-- END card-item-->
+        </div>
+        <div class="cols cols-3 cols-md-6"><a class="card-item" href="#">
+                <div class="card-del"><span class="card-del__to" data-id="2">
+                    <svg class="card-del__icon"> 
+                      <use xlink:href="img/sprite.svg#close"></use>
+                    </svg></span></div>
+                <div class="card-item__image">
+                  <div class="card-item__img-wrap"> <img class="card-item__img" src="img/products/product_6.jpg" alt="Ветровка - Heritage Man"></div>
+                </div>
+                <div class="card-item__body"> 
+                  <div class="card-item__type">Ветровка</div>
+                  <div class="card-item__row"> <span class="card-item__title">Heritage Man</span><span class="card-item__price"> <span>6300 ₽</span></span></div>
+                </div></a>
+              <!-- END card-item-->
+        </div>
+        <div class="cols cols-3 cols-md-6"><a class="card-item" href="#">
+                <div class="card-del"><span class="card-del__to" data-id="3">
+                    <svg class="card-del__icon"> 
+                      <use xlink:href="img/sprite.svg#close"></use>
+                    </svg></span></div>
+                <div class="card-item__image">
+                  <div class="card-item__img-wrap"> <img class="card-item__img" src="img/products/product_4.jpg" alt="Поло - Heritage Man"></div>
+                </div>
+                <div class="card-item__body"> 
+                  <div class="card-item__type">Поло</div>
+                  <div class="card-item__row"> <span class="card-item__title">Heritage Man</span><span class="card-item__price"> <span>2700 ₽</span></span></div>
+                </div></a>
+              <!-- END card-item-->
+        </div>
+        <div class="cols cols-3 cols-md-6"><a class="card-item" href="#">
+                <div class="card-del"><span class="card-del__to" data-id="4">
+                    <svg class="card-del__icon"> 
+                      <use xlink:href="img/sprite.svg#close"></use>
+                    </svg></span></div>
+                <div class="card-item__image">
+                  <div class="card-item__img-wrap"> <img class="card-item__img" src="img/products/product_8.jpg" alt="Поло - Heritage Man"></div>
+                </div>
+                <div class="card-item__body"> 
+                  <div class="card-item__type">Поло</div>
+                  <div class="card-item__row"> <span class="card-item__title">Heritage Man</span><span class="card-item__price"> <span>5600 ₽</span></span></div>
+                </div></a>
+              <!-- END card-item-->
+        </div>
+        <div class="cols cols-3 cols-md-6"><a class="card-item" href="#">
+                <div class="card-del"><span class="card-del__to" data-id="5">
+                    <svg class="card-del__icon"> 
+                      <use xlink:href="img/sprite.svg#close"></use>
+                    </svg></span></div>
+                <div class="card-item__image">
+                  <div class="card-item__img-wrap"> <img class="card-item__img" src="img/products/product_4.jpg" alt="Поло - Heritage Man"></div>
+                </div>
+                <div class="card-item__body"> 
+                  <div class="card-item__type">Поло</div>
+                  <div class="card-item__row"> <span class="card-item__title">Heritage Man</span><span class="card-item__price"> <span>2700 ₽</span></span></div>
+                </div></a>
+              <!-- END card-item-->
+        </div>
+      </div>
+      <div class="to-top to-top--center">
+        <svg class="to-top__icon"> 
+          <use xlink:href="img/sprite.svg#arrow-top"></use>
+        </svg><span>НАВЕРХ</span>
+      </div>
+    </div>
+  </main>
+  <script src="js/libs.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>

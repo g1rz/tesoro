@@ -406,6 +406,8 @@ p {
     position: absolute;
     left: 60px;
     bottom: 100px; }
+  .to-top--center {
+    margin: 15px auto 0; }
 
 .main-content {
   margin-bottom: 100px; }
@@ -2100,7 +2102,7 @@ p {
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
 
-.card-wish {
+.card-wish, .card-del {
   position: absolute;
   top: 14px;
   right: 15px;
@@ -2108,11 +2110,11 @@ p {
   width: 42px;
   height: 40px;
   z-index: 10; }
-  .card-wish__icon {
+  .card-wish__icon, .card-del__icon {
     max-width: 100%;
     max-height: 100%;
     fill: #353535; }
-  .card-wish.active .card-wish__icon {
+  .card-wish.active .card-wish__icon, .card-del.active .card-wish__icon {
     fill: #CE5E4C; }
 
 @media (max-width: 1400px) {
@@ -2158,9 +2160,11 @@ p {
       padding-bottom: 8px;
       font-size: 14px;
       line-height: 120%; }
-  .card-wish {
+  .card-wish, .card-del {
     top: 0;
-    right: 0; } }
+    right: 0;
+    width: 30px;
+    height: 30px; } }
 
 .catalog-item {
   position: relative;
@@ -3592,7 +3596,7 @@ p {
     margin-top: 0; }
 
 @media (max-width: 991px) {
-  .c-sidebar-filter, .to-top {
+  .c-sidebar-filter, .to-top--catalog {
     display: none; }
   .catalog-side {
     display: -webkit-box;
@@ -4604,5 +4608,36 @@ p {
   .search-title {
     font-size: 24px;
     line-height: 120%; } }
+
+.favorites-title {
+  margin-bottom: 0;
+  font-size: 48px;
+  line-height: 68px; }
+
+.favorites-page__products {
+  margin-top: 60px; }
+
+@media (max-width: 768px) {
+  .favorites-title {
+    font-size: 40px;
+    line-height: 48px; }
+  .favorites-page__products {
+    margin-top: 30px; } }
+
+@media (max-width: 576px) {
+  .favorites-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 120%; }
+  .favorites-page__row-head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: start;
+        -ms-flex-align: start;
+            align-items: start; } }
 
 /*# sourceMappingURL=style.css.map */

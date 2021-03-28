@@ -1,0 +1,22 @@
+
+mixin card-item-favorite(id, title, type, imageUrl, price, priceOld = '')
+    a.card-item(href="#")
+        .card-del
+            span.card-del__to(data-id=id)
+                svg.card-del__icon 
+                    use(xlink:href="img/sprite.svg#close")
+            //- span.card-wish__in 
+                svg.card-wish__icon 
+                    use(xlink:href="img/sprite.svg#like-full")
+        .card-item__image
+            .card-item__img-wrap 
+                img.card-item__img(src=imageUrl, alt=type+' - '+title)
+        .card-item__body 
+            .card-item__type !{type}
+            .card-item__row 
+                span.card-item__title !{title}
+                span.card-item__price 
+                    if (priceOld !== '')
+                        del.price-old !{priceOld}
+                    span !{price}
+    // END card-item

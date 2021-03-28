@@ -1,0 +1,81 @@
+include ../../components/_selector
+include ../../components/_card-item-favorite
+
+-
+    var sort = {
+        name: 'sort',
+        title: 'Сортировка',
+        arProperties: [
+            {
+                title: 'По цене',
+                value: 'price',
+                check: ''
+            }, {
+                title: 'По названию',
+                value: 'names',
+                check: ''
+            }, {
+                title: 'По популярности',
+                value: 'popular',
+                check: ''
+            }
+        ],
+        сhecked: ''
+    }
+
+    var products = [
+        {
+            id: 1,
+            title: 'Heritage Man',
+            type: 'Куртка',
+            imageUrl: 'img/products/product_5.jpg',
+            price: '5600 ₽',
+            priceOld: '6500 ₽' 
+        }, {
+            id: 2,
+            title: 'Heritage Man',
+            type: 'Ветровка',
+            imageUrl: 'img/products/product_6.jpg',
+            price: '6300 ₽',
+            priceOld: '' 
+        }, {
+            id: 3,
+            title: 'Heritage Man',
+            type: 'Поло',
+            imageUrl: 'img/products/product_4.jpg',
+            price: '2700 ₽',
+            priceOld: '' 
+        }, {
+            id: 4,
+            title: 'Heritage Man',
+            type: 'Поло',
+            imageUrl: 'img/products/product_8.jpg',
+            price: '5600 ₽',
+            priceOld: '' 
+        }, {
+            id: 5,
+            title: 'Heritage Man',
+            type: 'Поло',
+            imageUrl: 'img/products/product_4.jpg',
+            price: '2700 ₽',
+            priceOld: '' 
+        }
+    ]
+
+
+.container 
+    .favorites-page__row-head.row.row--space-b.row--align-c
+        
+        h1.favorites-title Вам понравилось
+
+        +selector(sort.title, sort.name, sort.arProperties, sort.сhecked, 'selector-wrap--absolute selector-wrap--sort')
+
+    .favorites-page__products.row.row--m
+        each item in products 
+            .cols.cols-3.cols-md-6
+                +card-item-favorite(item.id, item.title, item.type, item.imageUrl, item.price, item.priceOld)
+
+    .to-top.to-top--center
+        svg.to-top__icon 
+            use(xlink:href="img/sprite.svg#arrow-top")
+        span НАВЕРХ
