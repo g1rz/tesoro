@@ -2,6 +2,25 @@
     margin: 10px 0
     &--narrow
         max-width: 547px
+    &--big 
+        .accordion
+            &__item 
+                font-size: 20px
+                line-height: 150%
+                letter-spacing: 0.01em
+            &__item-title 
+                height: 120px
+                padding-right: 50px
+                font-family: $fontSecond
+                font-size: 48px
+                line-height: 120%
+                font-weight: 600
+                &::after 
+                    width: 20px
+                    height: 20px
+            &__item-content 
+                max-width: 920px
+                padding: 10px 0 30px
 
     &__item
         border-top: 1px solid $gray
@@ -37,9 +56,41 @@
         display: none
         padding: 10px 0
 
+@media (max-width: 1400px)
+    .accordion--big 
+        .accordion
+            &__item
+                font-size: 16px 
+                line-height: 120%
+            &__item-title 
+                height: 80px
+                font-size: 34px 
+                
+// max-width: 1400px
+
 @media (max-width: 991px)
     .accordion--narrow
         max-width: 100%
+// max-width: 991px
+
+@media (max-width: 768px)
+    .accordion--big 
+        .accordion
+            &__item
+                font-size: 14px 
+                p 
+                    margin-bottom: 10px
+                    &:last-child 
+                        margin-bottom: 0
+            &__item-title 
+                padding: 10px 30px 10px 0
+                min-height: 45px
+                height: auto
+                font-size: 18px 
+                &::after 
+                    width: 10px
+                    height: 10px
+// max-width: 768px
 
 @media (max-width: 576px)
     .accordion

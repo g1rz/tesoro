@@ -6,9 +6,8 @@
 //-     }
 //- isNarow - true/false
 
-mixin accordion(arItems, isNarrow = false) 
-    - var addedClass = isNarrow ? 'accordion--narrow' : ''
-    .accordion(class=addedClass)
+mixin accordion(arItems, classes = '') 
+    .accordion(class=classes)
         each item in arItems 
             .accordion__item(id=item.id)
                 .accordion__item-title 
