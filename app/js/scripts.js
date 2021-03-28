@@ -105,6 +105,43 @@ $(document).ready(function () {
         },
     });
 
+    var newsSlider = new Swiper('.news-slider', {
+        loop: true,
+        // effect: 'fade',
+        speed: 500,
+        autoplay: {
+            delay: 10000,
+        },
+        navigation: {
+            nextEl: '.n-slide-nav--next',
+            prevEl: '.n-slide-nav--prev',
+        },
+        pagination: {
+            el: '.n-slide-dots',
+        },
+    });
+
+    var readMoreSlider = new Swiper('.read-more-slider', {
+        loop: true,
+        
+        // slidesPerView: 2,
+        navigation: {
+            nextEl: '.read-more-nav__item--next',
+            prevEl: '.read-more-nav__item--prev',
+        },
+        breakpoints: {
+            767: {
+                slidesPerView: 1,
+                slidesPerColumn: 2,
+                // spaceBetween: 30
+            }, 
+            768: {
+                slidesPerView: 2,
+                slidesPerColumn: 1,
+            }
+        },
+    });
+
 
     $('.card-wish').click(function(e) {
         e.preventDefault();

@@ -1,0 +1,10 @@
+mixin news-item-head(title, date, imageUrl, classes = '')
+    .news-item(href=link, class=classes)
+        a.news-item__close(href="#") 
+            svg.news-item__close-icon
+                use(xlink:href="img/sprite.svg#close")
+        .news-item__img-wrap
+            img.news-item__img(src=imageUrl)
+        .news-item__content
+            h1.news-item__title !{title}
+            span.news-item__date !{date}

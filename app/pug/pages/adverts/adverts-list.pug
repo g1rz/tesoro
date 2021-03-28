@@ -1,0 +1,30 @@
+include ../../components/_news-item
+include ../../components/buttons/_btn
+
+-
+    var news = [
+        {
+            title: 'Распродажа зимней коллекции в феврале. Скидки до 40%',
+            date: '22 февраля 2021',
+            imageUrl: 'img/news/news_big_2.jpg',
+        }, {
+            title: 'Скидка -20% на коллекцию кроссовок от Heritage',
+            date: '22 февраля 2021',
+            imageUrl: 'img/news/news_5.jpg',
+        }, {
+            title: 'Кроссовки от известных итальянских брендов',
+            date: '21 февраля 2021',
+            imageUrl: 'img/news/news_6.jpg',
+        }
+    ]
+
+.news-row.row.row--m
+    each item, index in news 
+        - var colClass = index === 0 ? 'cols-12' : 'cols-6'
+        - var newsClass = index === 0 ? 'news-item--big' : ''
+        .cols.cols-sm-12(class=colClass)
+            +news-item(item.title, item.date, item.imageUrl, '#', newsClass, 'news-item__content--big')
+// END news-row 
+
+.text-center
+    +btn('ПОКАЗАТЬ ЕЩЕ', '#', 'btn--transp news-btn')

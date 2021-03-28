@@ -1,0 +1,27 @@
+extends ./tpl/_layout.pug
+
+block variables
+    -
+        var title = 'Новость'
+        var description = 'Новость'
+        var index = false
+
+
+include ./components/_breadcrumbs.pug
+include ./components/_news-item-head.pug
+
+
+block content 
+   
+    +breadcrumbs(['Главная', 'Новости', 'Коллекция сумок в нашем магазине'], false)
+
+    .news-item-page
+        .container
+            +news-item-head('Коллекция сумок в нашем магазине', '22 февраля 2021', 'img/news/news_big_1.jpg', 'news-item--big')
+            .news-item-page__row.row.row--m 
+                .cols.cols-3.cols-md-12.order-md-2
+                    include ./pages/news/news-sidebar
+                .cols.cols-9.cols-md-12.order-md-1
+                    include ./pages/news/news-content-single
+            
+        include ./sections/n-read-more

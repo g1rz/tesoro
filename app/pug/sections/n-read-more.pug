@@ -1,0 +1,53 @@
+include ../components/buttons/_btn
+include ../components/_news-item
+
+//- id, title, type, imageUrl, price, priceOld 
+-
+    var news = [
+        {
+            title: 'Коллекция сумок в нашем магазине',
+            date: '22 февраля 2021',
+            imageUrl: 'img/news/news_big_1.jpg',
+        }, {
+            title: 'Urban Oasis от YEARS Осень – зима 21/22',
+            date: '29 февраля 2021',
+            imageUrl: 'img/news/news_1.jpg',
+        }, {
+            title: 'Обновление ассортимента в нашем магазине',
+            date: '24 февраля 2021',
+            imageUrl: 'img/news/news_2.jpg',
+        }, {
+            title: 'Распродажа зимней коллекции в феврале',
+            date: '22 февраля 2021',
+            imageUrl: 'img/news/news_3.jpg',
+        }, {
+            title: 'Кроссовки от известных итальянских брендов',
+            date: '21 февраля 2021',
+            imageUrl: 'img/news/news_4.jpg',
+        }
+    ]
+
+.m-available
+    .container 
+        .m-available__row.row.row--space-b.row--align-c
+            h3.m-available__title.m-available__title--left Читате также
+            .read-more-nav
+                button.read-more-nav__item.read-more-nav__item--prev 
+                    svg.read-more-nav__item-icon 
+                        use(xlink:href="img/sprite.svg#arrow-right")
+
+                button.read-more-nav__item.read-more-nav__item--next 
+                    svg.read-more-nav__item-icon 
+                        use(xlink:href="img/sprite.svg#arrow-right")
+
+        .read-more-slider.row.row--m.swiper-container 
+            .swiper-wrapper
+                each item in news         
+                    .swiper-slide        
+                        .cols
+                            +news-item(item.title, item.date, item.imageUrl)
+        // END read-more-slider
+        .text-center
+            +btn('ПОКАЗАТЬ ЕЩЕ', '#', 'btn--transp more-btn')
+                
+// END m-availabel
