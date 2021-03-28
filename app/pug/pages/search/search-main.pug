@@ -1,0 +1,85 @@
+
+include ../../components/_card-item
+include ../../components/_pagination
+include ../../components/buttons/_btn
+
+-
+    
+    var products = [
+        {
+            id: 1,
+            title: 'Heritage Man',
+            type: 'Куртка',
+            imageUrl: 'img/products/product_5.jpg',
+            price: '5600 ₽',
+            priceOld: '6500 ₽' 
+        }, {
+            id: 2,
+            title: 'Heritage Man',
+            type: 'Ветровка',
+            imageUrl: 'img/products/product_6.jpg',
+            price: '6300 ₽',
+            priceOld: '' 
+        }, {
+            id: 3,
+            title: 'Heritage Man',
+            type: 'Поло',
+            imageUrl: 'img/products/product_4.jpg',
+            price: '2700 ₽',
+            priceOld: '' 
+        }, {
+            id: 4,
+            title: 'Heritage Man',
+            type: 'Поло',
+            imageUrl: 'img/products/product_8.jpg',
+            price: '5600 ₽',
+            priceOld: '' 
+        }, {
+            id: 5,
+            title: 'Heritage Man',
+            type: 'Поло',
+            imageUrl: 'img/products/product_4.jpg',
+            price: '2700 ₽',
+            priceOld: '' 
+        }, {
+            id: 6,
+            title: 'Heritage Man',
+            type: 'Поло',
+            imageUrl: 'img/products/product_4.jpg',
+            price: '2700 ₽',
+            priceOld: '' 
+        }, {
+            id: 7,
+            title: 'Heritage Man',
+            type: 'Поло',
+            imageUrl: 'img/products/product_8.jpg',
+            price: '5600 ₽',
+            priceOld: '' 
+        }, {
+            id: 8,
+            title: 'Heritage Man',
+            type: 'Поло',
+            imageUrl: 'img/products/product_7.jpg',
+            price: '2700 ₽',
+            priceOld: '' 
+        }, {
+            id: 9,
+            title: 'Heritage Man',
+            type: 'Поло',
+            imageUrl: 'img/products/product_4.jpg',
+            price: '2700 ₽',
+            priceOld: '' 
+        }
+    ]
+
+.catalog-cards.row.row--m
+    each item in products 
+        .cols.cols-4.cols-md-6
+            +card-item(item.id, item.title, item.type, item.imageUrl, item.price, item.priceOld)
+
+.catalog-bottom.row.row--wrap
+    .catalog-bottom__item
+    .catalog-bottom__item
+        +pagination(5)
+    .catalog-bottom__item.text-right
+        +btn('ПОКАЗАТЬ ЕЩЕ (9)', '#', 'btn--transp')

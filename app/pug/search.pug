@@ -1,0 +1,14 @@
+extends ./tpl/_layout.pug
+
+block variables
+    -
+        var title = 'Поиск'
+        var description = 'Поиск'
+        var index = false
+
+
+include ./components/_breadcrumbs.pug
+
+block content 
+    +breadcrumbs(['Главная', 'Каталог', 'Для мужчин'])
+    include ./pages/search/search

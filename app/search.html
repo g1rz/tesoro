@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Поиск</title>
+  <meta name="description" content="Поиск">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner">
+  <main class="main-content">
+    <div class="breadcrumbs"> 
+      <div class="container"> 
+        <ul class="breadcrumbs-list"> 
+          <li> <a class="link" href="#">Главная</a>
+          </li>
+          <li> <a class="link" href="#">Каталог</a>
+          </li>
+          <li> <span>Для мужчин</span>
+          </li>
+        </ul><a class="l-arrow mobile-back" href="#">
+          <svg class="l-arrow__icon l-arrow__icon--left">
+            <use xlink:href="img/sprite.svg#arrow-left"></use>
+          </svg><span>Назад</span></a>
+      </div>
+    </div>
+    <div class="catalog-page"> 
+      <div class="container"> 
+        <div class="search-page__row-head row row--space-b row--align-c">
+          <h1 class="search-title">Товары по запросу «футболка» </h1>
+          <button class="c-filter-btn"> <span class="c-filter-btn__open">Показать фильтры</span><span class="c-filter-btn__close">Скрыть фильтры</span></button>
+              <div class="selector-wrap selector-wrap--absolute selector-wrap--sort">
+                <div class="selector">
+                  <div class="selector__head"><span class="selector__name">Сортировка</span>
+                  </div>
+                  <ul class="selector__body"> 
+                    <li class="selector__item"> 
+                      <input class="selector__radio" type="radio" name="sort" value="price" id="sort_0">
+                      <label class="selector__label" for="sort_0"><span>По цене</span>
+                      </label>
+                    </li>
+                    <li class="selector__item"> 
+                      <input class="selector__radio" type="radio" name="sort" value="names" id="sort_1">
+                      <label class="selector__label" for="sort_1"><span>По названию</span>
+                      </label>
+                    </li>
+                    <li class="selector__item"> 
+                      <input class="selector__radio" type="radio" name="sort" value="popular" id="sort_2">
+                      <label class="selector__label" for="sort_2"><span>По популярности</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- END selector-wrap-->
+        </div>
+        <div class="row row--m"> 
+          <div class="cols cols-3 cols-md-12 catalog-side">
+            <div class="c-sidebar-filter mobile-filter mobile-filter--main">
+              <div class="c-sidebar-filter__inner">
+                            <div class="selector-wrap">
+                              <div class="selector">
+                                <div class="selector__head"><span class="selector__name">Мужское</span>
+                                </div>
+                                <ul class="selector__body"> 
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="type" value="man" id="type_0">
+                                    <label class="selector__label" for="type_0"><span>Мужское</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="type" value="woman" id="type_1">
+                                    <label class="selector__label" for="type_1"><span>Женское</span>
+                                    </label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <!-- END selector-wrap-->
+                            <div class="selector-wrap">
+                              <div class="selector">
+                                <div class="selector__head"><span class="selector__name">Цвет</span><span class="selector__check"> </span>
+                                </div>
+                                <ul class="selector__body"> 
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="color" value="black" id="color_0">
+                                    <label class="selector__label" for="color_0"><span class="selector__label-check"><i class="color-circle" style="background-color: #050109;"></i></span><span>Черный</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="color" value="gray" id="color_1">
+                                    <label class="selector__label" for="color_1"><span class="selector__label-check"><i class="color-circle" style="background-color: #8C8C8C;"></i></span><span>Серый</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="color" value="red" id="color_2">
+                                    <label class="selector__label" for="color_2"><span class="selector__label-check"><i class="color-circle" style="background-color: #CE5E4C;"></i></span><span>Красный</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="color" value="green" id="color_3">
+                                    <label class="selector__label" for="color_3"><span class="selector__label-check"><i class="color-circle" style="background-color: #4DB45E;"></i></span><span>Зеленый</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="color" value="orange" id="color_4">
+                                    <label class="selector__label" for="color_4"><span class="selector__label-check"><i class="color-circle" style="background-color: #F79E1B;"></i></span><span>Оранжевый</span>
+                                    </label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <!-- END selector-wrap-->
+                            <div class="selector-wrap">
+                              <div class="selector">
+                                <div class="selector__head"><span class="selector__name">Размер</span><span class="selector__check">(M)</span>
+                                </div>
+                                <ul class="selector__body"> 
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="size" value="xs" id="size_0">
+                                    <label class="selector__label" for="size_0"><span class="selector__label-check">(XS)</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="size" value="s" id="size_1">
+                                    <label class="selector__label" for="size_1"><span class="selector__label-check">(S)</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="size" value="m" id="size_2">
+                                    <label class="selector__label" for="size_2"><span class="selector__label-check">(M)</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="size" value="l" id="size_3">
+                                    <label class="selector__label" for="size_3"><span class="selector__label-check">(L)</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="size" value="xl" id="size_4">
+                                    <label class="selector__label" for="size_4"><span class="selector__label-check">(XL)</span>
+                                    </label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <!-- END selector-wrap-->
+                            <div class="selector-wrap">
+                              <div class="selector">
+                                <div class="selector__head"><span class="selector__name">Бренд</span>
+                                </div>
+                                <ul class="selector__body"> 
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="brand" value="Aeronautica Militare" id="brand_0">
+                                    <label class="selector__label" for="brand_0"><span>Aeronautica Militare</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="brand" value="Heritage Man" id="brand_1">
+                                    <label class="selector__label" for="brand_1"><span>Heritage Man</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="brand" value="Diesel" id="brand_2">
+                                    <label class="selector__label" for="brand_2"><span>Diesel</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="brand" value="Roberto Cavalli" id="brand_3">
+                                    <label class="selector__label" for="brand_3"><span>Roberto Cavalli</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="brand" value="FILA" id="brand_4">
+                                    <label class="selector__label" for="brand_4"><span>FILA</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="brand" value="Diesel" id="brand_5">
+                                    <label class="selector__label" for="brand_5"><span>Diesel</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="brand" value="Heritage Man" id="brand_6">
+                                    <label class="selector__label" for="brand_6"><span>Heritage Man</span>
+                                    </label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <!-- END selector-wrap-->
+                            <div class="selector-wrap">
+                              <div class="selector">
+                                <div class="selector__head"><span class="selector__name">Материал</span>
+                                </div>
+                                <ul class="selector__body"> 
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="material" value="Aeronautica Militare" id="material_0">
+                                    <label class="selector__label" for="material_0"><span>Aeronautica Militare</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="material" value="Heritage Man" id="material_1">
+                                    <label class="selector__label" for="material_1"><span>Heritage Man</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="material" value="Diesel" id="material_2">
+                                    <label class="selector__label" for="material_2"><span>Diesel</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="material" value="Roberto Cavalli" id="material_3">
+                                    <label class="selector__label" for="material_3"><span>Roberto Cavalli</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="material" value="FILA" id="material_4">
+                                    <label class="selector__label" for="material_4"><span>FILA</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="material" value="Diesel" id="material_5">
+                                    <label class="selector__label" for="material_5"><span>Diesel</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="material" value="Heritage Man" id="material_6">
+                                    <label class="selector__label" for="material_6"><span>Heritage Man</span>
+                                    </label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <!-- END selector-wrap-->
+              </div>
+            </div>
+            <div class="to-top to-top--catalog">
+              <svg class="to-top__icon"> 
+                <use xlink:href="img/sprite.svg#arrow-top"></use>
+              </svg><span>НАВЕРХ</span>
+            </div>
+          </div>
+          <div class="cols cols-9 cols-md-12">
+            <div class="catalog-cards row row--m">
+              <div class="cols cols-4 cols-md-6"><a class="card-item" href="#">
+                              <div class="card-wish"><span class="card-wish__to" data-id="1">
+                                  <svg class="card-wish__icon"> 
+                                    <use xlink:href="img/sprite.svg#like"></use>
+                                  </svg></span></div>
+                              <div class="card-item__image">
+                                <div class="card-item__img-wrap"> <img class="card-item__img" src="img/products/product_5.jpg" alt="Куртка - Heritage Man"></div>
+                              </div>
+                              <div class="card-item__body"> 
+                                <div class="card-item__type">Куртка</div>
+                                <div class="card-item__row"> <span class="card-item__title">Heritage Man</span><span class="card-item__price"> 
+                                    <del class="price-old">6500 ₽</del><span>5600 ₽</span></span></div>
+                              </div></a>
+                            <!-- END card-item-->
+              </div>
+              <div class="cols cols-4 cols-md-6"><a class="card-item" href="#">
+                              <div class="card-wish"><span class="card-wish__to" data-id="2">
+                                  <svg class="card-wish__icon"> 
+                                    <use xlink:href="img/sprite.svg#like"></use>
+                                  </svg></span></div>
+                              <div class="card-item__image">
+                                <div class="card-item__img-wrap"> <img class="card-item__img" src="img/products/product_6.jpg" alt="Ветровка - Heritage Man"></div>
+                              </div>
+                              <div class="card-item__body"> 
+                                <div class="card-item__type">Ветровка</div>
+                                <div class="card-item__row"> <span class="card-item__title">Heritage Man</span><span class="card-item__price"> <span>6300 ₽</span></span></div>
+                              </div></a>
+                            <!-- END card-item-->
+              </div>
+              <div class="cols cols-4 cols-md-6"><a class="card-item" href="#">
+                              <div class="card-wish"><span class="card-wish__to" data-id="3">
+                                  <svg class="card-wish__icon"> 
+                                    <use xlink:href="img/sprite.svg#like"></use>
+                                  </svg></span></div>
+                              <div class="card-item__image">
+                                <div class="card-item__img-wrap"> <img class="card-item__img" src="img/products/product_4.jpg" alt="Поло - Heritage Man"></div>
+                              </div>
+                              <div class="card-item__body"> 
+                                <div class="card-item__type">Поло</div>
+                                <div class="card-item__row"> <span class="card-item__title">Heritage Man</span><span class="card-item__price"> <span>2700 ₽</span></span></div>
+                              </div></a>
+                            <!-- END card-item-->
+              </div>
+              <div class="cols cols-4 cols-md-6"><a class="card-item" href="#">
+                              <div class="card-wish"><span class="card-wish__to" data-id="4">
+                                  <svg class="card-wish__icon"> 
+                                    <use xlink:href="img/sprite.svg#like"></use>
+                                  </svg></span></div>
+                              <div class="card-item__image">
+                                <div class="card-item__img-wrap"> <img class="card-item__img" src="img/products/product_8.jpg" alt="Поло - Heritage Man"></div>
+                              </div>
+                              <div class="card-item__body"> 
+                                <div class="card-item__type">Поло</div>
+                                <div class="card-item__row"> <span class="card-item__title">Heritage Man</span><span class="card-item__price"> <span>5600 ₽</span></span></div>
+                              </div></a>
+                            <!-- END card-item-->
+              </div>
+              <div class="cols cols-4 cols-md-6"><a class="card-item" href="#">
+                              <div class="card-wish"><span class="card-wish__to" data-id="5">
+                                  <svg class="card-wish__icon"> 
+                                    <use xlink:href="img/sprite.svg#like"></use>
+                                  </svg></span></div>
+                              <div class="card-item__image">
+                                <div class="card-item__img-wrap"> <img class="card-item__img" src="img/products/product_4.jpg" alt="Поло - Heritage Man"></div>
+                              </div>
+                              <div class="card-item__body"> 
+                                <div class="card-item__type">Поло</div>
+                                <div class="card-item__row"> <span class="card-item__title">Heritage Man</span><span class="card-item__price"> <span>2700 ₽</span></span></div>
+                              </div></a>
+                            <!-- END card-item-->
+              </div>
+              <div class="cols cols-4 cols-md-6"><a class="card-item" href="#">
+                              <div class="card-wish"><span class="card-wish__to" data-id="6">
+                                  <svg class="card-wish__icon"> 
+                                    <use xlink:href="img/sprite.svg#like"></use>
+                                  </svg></span></div>
+                              <div class="card-item__image">
+                                <div class="card-item__img-wrap"> <img class="card-item__img" src="img/products/product_4.jpg" alt="Поло - Heritage Man"></div>
+                              </div>
+                              <div class="card-item__body"> 
+                                <div class="card-item__type">Поло</div>
+                                <div class="card-item__row"> <span class="card-item__title">Heritage Man</span><span class="card-item__price"> <span>2700 ₽</span></span></div>
+                              </div></a>
+                            <!-- END card-item-->
+              </div>
+              <div class="cols cols-4 cols-md-6"><a class="card-item" href="#">
+                              <div class="card-wish"><span class="card-wish__to" data-id="7">
+                                  <svg class="card-wish__icon"> 
+                                    <use xlink:href="img/sprite.svg#like"></use>
+                                  </svg></span></div>
+                              <div class="card-item__image">
+                                <div class="card-item__img-wrap"> <img class="card-item__img" src="img/products/product_8.jpg" alt="Поло - Heritage Man"></div>
+                              </div>
+                              <div class="card-item__body"> 
+                                <div class="card-item__type">Поло</div>
+                                <div class="card-item__row"> <span class="card-item__title">Heritage Man</span><span class="card-item__price"> <span>5600 ₽</span></span></div>
+                              </div></a>
+                            <!-- END card-item-->
+              </div>
+              <div class="cols cols-4 cols-md-6"><a class="card-item" href="#">
+                              <div class="card-wish"><span class="card-wish__to" data-id="8">
+                                  <svg class="card-wish__icon"> 
+                                    <use xlink:href="img/sprite.svg#like"></use>
+                                  </svg></span></div>
+                              <div class="card-item__image">
+                                <div class="card-item__img-wrap"> <img class="card-item__img" src="img/products/product_7.jpg" alt="Поло - Heritage Man"></div>
+                              </div>
+                              <div class="card-item__body"> 
+                                <div class="card-item__type">Поло</div>
+                                <div class="card-item__row"> <span class="card-item__title">Heritage Man</span><span class="card-item__price"> <span>2700 ₽</span></span></div>
+                              </div></a>
+                            <!-- END card-item-->
+              </div>
+              <div class="cols cols-4 cols-md-6"><a class="card-item" href="#">
+                              <div class="card-wish"><span class="card-wish__to" data-id="9">
+                                  <svg class="card-wish__icon"> 
+                                    <use xlink:href="img/sprite.svg#like"></use>
+                                  </svg></span></div>
+                              <div class="card-item__image">
+                                <div class="card-item__img-wrap"> <img class="card-item__img" src="img/products/product_4.jpg" alt="Поло - Heritage Man"></div>
+                              </div>
+                              <div class="card-item__body"> 
+                                <div class="card-item__type">Поло</div>
+                                <div class="card-item__row"> <span class="card-item__title">Heritage Man</span><span class="card-item__price"> <span>2700 ₽</span></span></div>
+                              </div></a>
+                            <!-- END card-item-->
+              </div>
+            </div>
+            <div class="catalog-bottom row row--wrap">
+              <div class="catalog-bottom__item"></div>
+              <div class="catalog-bottom__item">
+                            <ul class="pagination">
+                              <li>
+                                <div class="pagination__arrow pagination__arrow--prev">
+                                  <svg class="pagination__icon"> 
+                                    <use xlink:href="img/sprite.svg#arrow-left"></use>
+                                  </svg>
+                                </div>
+                              </li>
+                              <li><span>1</span></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li><a href="#">4</a></li>
+                              <li><a href="#">5</a></li>
+                              <li><a class="pagination__arrow pagination__arrow--next" href="#">
+                                  <svg class="pagination__icon"> 
+                                    <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                  </svg></a></li>
+                            </ul>
+              </div>
+              <div class="catalog-bottom__item text-right"><a class="btn btn--transp" href="#">ПОКАЗАТЬ ЕЩЕ (9)       </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/libs.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>

@@ -1,0 +1,50 @@
+include ../../components/_selector
+
+-
+    var sort = {
+        name: 'sort',
+        title: 'Сортировка',
+        arProperties: [
+            {
+                title: 'По цене',
+                value: 'price',
+                check: ''
+            }, {
+                title: 'По названию',
+                value: 'names',
+                check: ''
+            }, {
+                title: 'По популярности',
+                value: 'popular',
+                check: ''
+            }
+        ],
+        сhecked: ''
+    }
+
+.catalog-page 
+    .container 
+        .search-page__row-head.row.row--space-b.row--align-c
+            
+            h1.search-title Товары по запросу «футболка» 
+
+            button.c-filter-btn 
+                span.c-filter-btn__open Показать фильтры
+                span.c-filter-btn__close Скрыть фильтры
+            
+            +selector(sort.title, sort.name, sort.arProperties, sort.сhecked, 'selector-wrap--absolute selector-wrap--sort')
+
+            
+        .row.row--m 
+            .cols.cols-3.cols-md-12.catalog-side
+                
+                
+                 
+                include ./search-sidebar
+
+                .to-top.to-top--catalog
+                    svg.to-top__icon 
+                        use(xlink:href="img/sprite.svg#arrow-top")
+                    span НАВЕРХ
+            .cols.cols-9.cols-md-12
+                include ./search-main

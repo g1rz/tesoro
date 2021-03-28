@@ -1,0 +1,186 @@
+include ../../components/_selector
+
+-
+    var brands = {
+        name: 'brand',
+        title: 'Бренд',
+        arProperties: [
+            {
+                title: 'Aeronautica Militare',
+                value: 'Aeronautica Militare',
+                check: ''
+            }, {
+                title: 'Heritage Man',
+                value: 'Heritage Man',
+                check: ''
+            }, {
+                title: 'Diesel',
+                value: 'Diesel',
+                check: ''
+            }, {
+                title: 'Roberto Cavalli',
+                value: 'Roberto Cavalli',
+                check: ''
+            }, {
+                title: 'FILA',
+                value: 'FILA',
+                check: ''
+            }, {
+                title: 'Diesel',
+                value: 'Diesel',
+                check: ''
+            }, {
+                title: 'Heritage Man',
+                value: 'Heritage Man',
+                check: ''
+            }
+        ]
+    }
+
+    var material = {
+        name: 'material',
+        title: 'Материал',
+        arProperties: [
+            {
+                title: 'Aeronautica Militare',
+                value: 'Aeronautica Militare',
+                check: ''
+            }, {
+                title: 'Heritage Man',
+                value: 'Heritage Man',
+                check: ''
+            }, {
+                title: 'Diesel',
+                value: 'Diesel',
+                check: ''
+            }, {
+                title: 'Roberto Cavalli',
+                value: 'Roberto Cavalli',
+                check: ''
+            }, {
+                title: 'FILA',
+                value: 'FILA',
+                check: ''
+            }, {
+                title: 'Diesel',
+                value: 'Diesel',
+                check: ''
+            }, {
+                title: 'Heritage Man',
+                value: 'Heritage Man',
+                check: ''
+            }
+        ]
+    }
+
+
+
+    var size = {
+        name: 'size',
+        title: 'Размер',
+        arProperties: [
+            {
+                title: '',
+                value: 'xs',
+                check: '(XS)'
+            }, {
+                title: '',
+                value: 's',
+                check: '(S)'
+            }, {
+                title: '',
+                value: 'm',
+                check: '(M)'
+            }, {
+                title: '',
+                value: 'l',
+                check: '(L)'
+            }, {
+                title: '',
+                value: 'xl',
+                check: '(XL)'
+            }
+        ],
+        сhecked: '(M)'
+    }
+
+    var colors = {
+        name: 'color',
+        title: 'Цвет',
+        arProperties: [
+            {
+                title: 'Черный',
+                value: 'black',
+                check: '<i class="color-circle" style="background-color: #050109;"></i>'
+            }, {
+                title: 'Серый',
+                value: 'gray',
+                check: '<i class="color-circle" style="background-color: #8C8C8C;"></i>'
+            }, {
+                title: 'Красный',
+                value: 'red',
+                check: '<i class="color-circle" style="background-color: #CE5E4C;"></i>'
+            }, {
+                title: 'Зеленый',
+                value: 'green',
+                check: '<i class="color-circle" style="background-color: #4DB45E;"></i>'
+            }, {
+                title: 'Оранжевый',
+                value: 'orange',
+                check: '<i class="color-circle" style="background-color: #F79E1B;"></i>'
+            }
+        ],
+        сhecked: ' '
+    }
+
+    var sort = {
+        name: 'sort',
+        title: 'Сортировка',
+        arProperties: [
+            {
+                title: 'По цене',
+                value: 'price',
+                check: ''
+            }, {
+                title: 'По названию',
+                value: 'names',
+                check: ''
+            }, {
+                title: 'По популярности',
+                value: 'popular',
+                check: ''
+            }
+        ],
+        сhecked: ''
+    }
+
+    var type = {
+        name: 'type',
+        title: 'Мужское',
+        arProperties: [
+            {
+                title: 'Мужское',
+                value: 'man',
+                check: ''
+            }, {
+                title: 'Женское',
+                value: 'woman',
+                check: ''
+            }
+        ],
+        сhecked: ''
+    }
+
+    
+
+.c-sidebar-filter.mobile-filter.mobile-filter--main
+    .c-sidebar-filter__inner
+        +selector(type.title, type.name, type.arProperties)
+
+        +selector(colors.title, colors.name, colors.arProperties, colors.сhecked)
+
+        +selector(size.title, size.name, size.arProperties, size.сhecked)
+
+        +selector(brands.title, brands.name, brands.arProperties)
+
+        +selector(material.title, material.name, material.arProperties)
