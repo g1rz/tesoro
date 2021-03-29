@@ -197,6 +197,25 @@
         background: url('../img/sprite.svg#angle-down') no-repeat center 
         background-size: contain
 
+.field-icon 
+    position: relative
+    &::before 
+        content: ''
+        width: 40px
+        height: 40px
+        position: absolute
+        top: 2px
+        left: 0
+    &--calendar::before 
+        background: url('../img/sprite.svg#calendar') no-repeat center
+        background-size: contain
+    &--pass::before 
+        background: url('../img/sprite.svg#password') no-repeat center
+        background-size: contain
+
+    input
+        padding-left: 36px
+
 
 @media (max-width: 768px)
     .subscribe
@@ -229,4 +248,10 @@
         font-size: 14px
         line-height: 111%
         letter-spacing: 0.01em
+
+    .field-icon 
+        &::before 
+            display: none
+        input
+            padding-left: 10px
 // max-width: 576px

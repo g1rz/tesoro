@@ -1,0 +1,34 @@
+extends ./tpl/_layout.pug
+
+block variables
+    -
+        var title = 'Личный кабинет'
+        var description = 'Личный кабинет'
+        var index = false
+
+
+include ./components/_breadcrumbs
+include ./components/fields/_check
+include ./components/buttons/_btn
+
+block content 
+    +breadcrumbs(['Главная', 'Личный кабинет'])
+    .container 
+        .row.row--space-b.row--align-c
+            h1.account-title Личный кабинет
+            a.logout-mobile(href="#")
+                span Выйти
+                svg.logout-mobile__icon 
+                    use(xlink:href="img/sprite.svg#close")
+        .account-row.row.row--m.row--space-b
+            .cols.cols-2.cols-lg-3.cols-md-12
+                ul.account-links
+                    li
+                        a.link.active(href="#") Личные данные
+                    li 
+                        a.link(href="#") История заказов
+
+                +btn('Выйти', '#', 'btn--black btn--block logout-btn')
+            .cols.cols-8.cols-lg-8.cols-md-12
+                .account-info 
+                    include ./pages/account/account-info

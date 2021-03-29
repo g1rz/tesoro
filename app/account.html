@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Личный кабинет</title>
+  <meta name="description" content="Личный кабинет">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner">
+  <main class="main-content">
+    <div class="breadcrumbs"> 
+      <div class="container"> 
+        <ul class="breadcrumbs-list"> 
+          <li> <a class="link" href="#">Главная</a>
+          </li>
+          <li> <span>Личный кабинет</span>
+          </li>
+        </ul><a class="l-arrow mobile-back" href="#">
+          <svg class="l-arrow__icon l-arrow__icon--left">
+            <use xlink:href="img/sprite.svg#arrow-left"></use>
+          </svg><span>Назад</span></a>
+      </div>
+    </div>
+    <div class="container"> 
+      <div class="row row--space-b row--align-c">
+        <h1 class="account-title">Личный кабинет</h1><a class="logout-mobile" href="#"><span>Выйти</span>
+          <svg class="logout-mobile__icon"> 
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg></a>
+      </div>
+      <div class="account-row row row--m row--space-b">
+        <div class="cols cols-2 cols-lg-3 cols-md-12">
+          <ul class="account-links">
+            <li><a class="link active" href="#">Личные данные</a></li>
+            <li> <a class="link" href="#">История заказов</a></li>
+          </ul><a class="btn btn--black btn--block logout-btn" href="#">Выйти       </a>
+        </div>
+        <div class="cols cols-8 cols-lg-8 cols-md-12">
+          <div class="account-info"> 
+            <form class="account-info__form"> 
+              <div class="row row--m">
+                <div class="cols cols-6 cols-sm-12"> 
+                  <div class="row row--m">
+                    <div class="cols cols-12 cols-sm-6">
+                      <div class="account-info__wrap"> 
+                        <input class="field-input" type="text" name="user_firstname" placeholder="Имя">
+                      </div>
+                    </div>
+                    <div class="cols cols-12 cols-sm-6">
+                      <div class="account-info__wrap"> 
+                        <input class="field-input" type="text" name="user_lastname" placeholder="Фамилия">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cols cols-6 cols-sm-12"> 
+                  <div class="row row--m">
+                    <div class="cols cols-12 cols-sm-6">
+                      <div class="account-info__wrap"> 
+                        <input class="field-input" type="email" name="user_email" placeholder="E-mail">
+                      </div>
+                    </div>
+                    <div class="cols cols-12 cols-sm-6">
+                      <div class="account-info__wrap"> 
+                        <input class="field-input" type="text" name="user_phone" placeholder="Телефон">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cols cols-6 cols-lg-12">
+                  <div class="row row--m"> 
+                    <div class="cols cols-6 cols-sm-6">
+                      <div class="account-info__wrap field-select-wrapper field-icon field-icon--calendar">
+                        <input class="field-input" type="text" name="user_phone" placeholder="Дата рождения" onfocus="(this.type='date')" onblur="(this.type='text')">
+                      </div>
+                    </div>
+                    <div class="cols cols-6 cols-sm-6">
+                      <div class="account-info__wrap field-select-wrapper">
+                        <select class="field-select" name="user_country">
+                          <option value="none" hidden="">Пол</option>
+                          <option value="1">Мужской</option>
+                          <option value="2">Женский</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="account-info__pass">
+                    <div class="account-info__wrap field-icon field-icon--pass">
+                      <input class="field-input" type="password" name="user_newpass" placeholder="Новый пароль">
+                    </div>
+                    <div class="account-info__wrap field-icon field-icon--pass">
+                      <input class="field-input" type="password" name="user_newpassconfirm" placeholder="Подтвердите пароль">
+                    </div>
+                  </div>
+                  <button class="btn btn--active btn--block account-info__submit" type="submit">Сохранить изменения</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/libs.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>

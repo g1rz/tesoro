@@ -1,0 +1,111 @@
+.account-row
+    margin-top: 30px 
+    margin-bottom: 160px
+
+.account-links 
+    margin-bottom: 70px
+    li 
+        margin-bottom: 16px
+    a 
+        padding-bottom: 6px
+        font-size: 20px
+        line-height: 30px
+        font-weight: 400
+        letter-spacing: 0.01em
+        color: $blackDark
+        text-decoration: none
+        &::after 
+            height: 2px
+        &.active::after 
+            width: 100%
+
+.account-info
+    &__wrap
+        margin-bottom: 24px
+    &__pass 
+        margin-top: 50px
+    &__submit 
+        margin-top: 30px
+
+.logout-mobile
+    display: none
+    position: relative
+    padding-right: 14px
+    font-weight: 300
+    font-size: 12px
+    line-height: 120%
+    letter-spacing: 0.01em
+    color: $black
+    text-decoration: none
+    &__icon
+        position: absolute
+        top: 3px
+        right: 0
+        width: 8px
+        height: 8px
+
+@media (max-width: 991px)
+    .logout-mobile
+        display: block 
+        
+    .logout-btn
+        display: none
+
+    .account-row 
+        overflow: hidden
+
+    .account-links
+        position: relative
+        display: flex
+        padding-bottom: 5px
+        &::after
+            content: ''
+            width: 1000px
+            height: 1px
+            background: $gray
+            position: absolute
+            left: -50px
+            bottom: 0
+        li 
+            margin-bottom: 0
+        a 
+            position: relative
+            margin-right: 30px
+            padding-bottom: 9px
+            font-size: 14px
+            line-height: 24px
+            letter-spacing: 0.01em
+            color: #8C8C8C
+            text-decoration: none
+            &.active 
+                color: $black
+                font-weight: 400
+                &::after
+                    content: ''
+                    width: 100%
+                    height: 3px
+                    background: $activeColor
+                    position: absolute
+                    left: 0
+                    bottom: 0
+                    z-index: 10
+// max-width: 991px
+
+@media (max-width: 576px)
+    .account-row
+        margin-top: 16px
+        margin-bottom: 80px
+
+    .account-links
+        margin-bottom: 40px
+
+    .account-info
+        &__pass
+            margin-top: 30px
+        &__submit
+            margin-top: 0
+
+    .account-title 
+        margin-bottom: 0
+        text-transform: none
+// max-width: 576px

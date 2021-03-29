@@ -1,0 +1,37 @@
+form.account-info__form 
+    .row.row--m
+        .cols.cols-6.cols-sm-12 
+            .row.row--m
+                .cols.cols-12.cols-sm-6
+                    .account-info__wrap 
+                        input.field-input(type="text", name="user_firstname", placeholder="Имя")
+                .cols.cols-12.cols-sm-6
+                    .account-info__wrap 
+                        input.field-input(type="text", name="user_lastname", placeholder="Фамилия")
+        .cols.cols-6.cols-sm-12 
+            .row.row--m
+                .cols.cols-12.cols-sm-6
+                    .account-info__wrap 
+                        input.field-input(type="email", name="user_email", placeholder="E-mail")
+                .cols.cols-12.cols-sm-6
+                    .account-info__wrap 
+                        input.field-input(type="text", name="user_phone", placeholder="Телефон")
+        .cols.cols-6.cols-lg-12
+            .row.row--m 
+                .cols.cols-6.cols-sm-6
+                    .account-info__wrap.field-select-wrapper.field-icon.field-icon--calendar
+                        input.field-input(type="text", name="user_phone", placeholder="Дата рождения", onfocus="(this.type='date')", onblur="(this.type='text')")
+                .cols.cols-6.cols-sm-6
+                    .account-info__wrap.field-select-wrapper
+                        select.field-select(name="user_country")
+                            option(value="none", hidden="") Пол
+                            option(value="1") Мужской
+                            option(value="2") Женский
+
+            .account-info__pass
+                .account-info__wrap.field-icon.field-icon--pass
+                    input.field-input(type="password", name="user_newpass", placeholder="Новый пароль")
+                .account-info__wrap.field-icon.field-icon--pass
+                    input.field-input(type="password", name="user_newpassconfirm", placeholder="Подтвердите пароль")
+            
+            button.btn.btn--active.btn--block.account-info__submit(type="submit") Сохранить изменения
