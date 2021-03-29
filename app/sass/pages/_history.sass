@@ -1,0 +1,39 @@
+.history-item 
+    padding: 20px 40px
+    max-width: 900px
+    border: 1px solid #C4C4C4
+    &.active
+        .history-item
+            &__title::after
+                transform: translateY(-50%)
+    &__head 
+        display: flex 
+        align-items: center
+        justify-content: space-between
+        padding: 20px 0
+        font-size: 24px
+        font-weight: 400
+        line-height: 111%
+        letter-spacing: 0.04em
+        cursor: pointer
+    &__title
+        position: relative
+        padding-right: 35px
+        &::after 
+            content: ''
+            width: 20px
+            height: 20px
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%) rotate(-90deg)
+            background: url('../img/sprite.svg#angle-down') no-repeat center 
+            background-size: contain
+            +transitionDefault
+    &__content
+        border-top: 1px solid #939393
+
+@media (max-width: 576px)
+    .history-item
+        padding: 10px
+// max-width: 576px

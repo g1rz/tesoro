@@ -6,6 +6,9 @@
         margin-top: 38px
         .b-col-head 
             padding-bottom: 20px
+    &--history 
+        margin-top: 0
+        margin-bottom: 58px
     &__head
         font-size: 14px
         font-weight: 400
@@ -160,6 +163,35 @@
             &:first-child 
                 .b-col 
                     padding-top: 0
+        &--history 
+            .b-col
+                padding-bottom: 0
+                &--image 
+                    width: 100px
+                    height: 100%
+                    overflow: hidden
+                    padding-right: 0
+                &--count 
+                    order: 2
+                    display: block
+                    margin-bottom: 6px
+                    width: 100px
+                    height: auto
+                    text-align: right
+                    &:before
+                        content: 'x'
+                &--price 
+                    order: 3
+                    padding-bottom: 12px
+                    margin-bottom: 0
+                    text-align: left
+                    border-bottom: 1px solid #939393
+            .basket-table
+                &__line 
+                    min-height: 80px
+                    padding-left: 130px
+                    align-items: flex-end
+                    border-bottom: none
 
     .b-col 
         display: block
@@ -205,6 +237,13 @@
             min-height: 100px
             padding-left: 92px
             padding-bottom: 20px
+        
+        &--history 
+            .b-col
+                &--count
+                    width: 40px
+                &--image 
+                    width: 80px
 
         .price
             padding: 0

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>История заказов</title>
+  <meta name="description" content="История заказов">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner">
+  <main class="main-content">
+    <div class="breadcrumbs"> 
+      <div class="container"> 
+        <ul class="breadcrumbs-list"> 
+          <li> <a class="link" href="#">Главная</a>
+          </li>
+          <li> <span>История заказов</span>
+          </li>
+        </ul><a class="l-arrow mobile-back" href="#">
+          <svg class="l-arrow__icon l-arrow__icon--left">
+            <use xlink:href="img/sprite.svg#arrow-left"></use>
+          </svg><span>Назад</span></a>
+      </div>
+    </div>
+    <div class="container"> 
+      <div class="row row--space-b row--align-c">
+        <h1 class="account-title">История заказов</h1><a class="logout-mobile" href="#"><span>Выйти</span>
+          <svg class="logout-mobile__icon"> 
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg></a>
+      </div>
+      <div class="account-row row row--m row--space-b">
+        <div class="cols cols-2 cols-lg-3 cols-md-12">
+          <ul class="account-links">
+            <li><a class="link" href="#">Личные данные</a></li>
+            <li> <a class="link active" href="#">История заказов</a></li>
+          </ul><a class="btn btn--black btn--block logout-btn" href="#">Выйти       </a>
+        </div>
+        <div class="cols cols-8 cols-lg-8 cols-md-12">
+          <div class="history-info"> 
+            <div class="history-item active">
+              <div class="history-item__head"> <span class="history-item__title">Номер заказа: 0718190</span><span class="history-item__date">01.03.2021</span></div>
+              <div class="history-item__content">
+                <table class="basket-table basket-table--min basket-table--history">
+                  <tbody class="basket-table__body"> 
+                    <tr class="basket-table__line basket-table__line--min">
+                      <td class="b-col b-col--image">
+                        <div class="b-image-wrap"><img src="img/basket/product_1.jpg"></div>
+                      </td>
+                      <td class="b-col b-col--name"> 
+                        <p class="b-product-type">Майка</p>
+                        <p class="b-product-name">Aeronautica Militare</p>
+                      </td>
+                      <td class="b-col b-col--count">1</td>
+                      <td class="b-col b-col--price"> <span class="price">2700 ₽</span></td>
+                    </tr>
+                    <!-- END basket-table__line-->
+                    <tr class="basket-table__line basket-table__line--min">
+                      <td class="b-col b-col--image">
+                        <div class="b-image-wrap"><img src="img/basket/product_1.jpg"></div>
+                      </td>
+                      <td class="b-col b-col--name"> 
+                        <p class="b-product-type">Майка</p>
+                        <p class="b-product-name">Aeronautica Militare</p>
+                      </td>
+                      <td class="b-col b-col--count">1</td>
+                      <td class="b-col b-col--price"> <span class="price">2700 ₽</span></td>
+                    </tr>
+                    <!-- END basket-table__line-->
+                  </tbody>
+                </table>
+                <!-- END basket-table-->
+                <div class="order-result__sub"> 
+                  <div class="order-result__item"><span class="order-result__title">Товары:</span><span class="order-result__price">7700 ₽</span></div>
+                  <div class="order-result__item"><span class="order-result__title">Доставка:</span><span class="order-result__price">300 ₽</span></div>
+                </div>
+                <div class="order-result__item order-result__item--main"> <span class="order-result__title">Итого:</span><span class="order-result__price">8000 ₽</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/libs.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
