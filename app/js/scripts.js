@@ -265,6 +265,14 @@ $(document).ready(function () {
         var content = $(this).attr('href');
         $('.sign-form-wrap').not(content).removeClass('active');
         $(content).addClass('active');
-    })
+    });
+
+    $('.history-item__head').click(function() {
+        $(this).parent().toggleClass('active');
+        $(this).siblings('.history-item__content').slideToggle();
+    });
+
+    $('.history-item').eq(0).addClass('active')
+    $('.history-item').eq(0).find('.history-item__content').slideDown();
 });
 
