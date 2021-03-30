@@ -63,7 +63,7 @@ include ../../components/_amount
 table.basket-table 
     thead.basket-table__head
         tr.basket-table__line-head
-            th.b-col-head.b-col-head--count-p(colspan="2") Товаров: 3
+            th.b-col-head.b-col-head--count-p(colspan="2") Товаров: #[span.product-count 3]
             th.b-col-head.b-col-head--size Размер
             th.b-col-head.b-col-head--color Цвет
             th.b-col-head.b-col-head--count Количество
@@ -91,7 +91,7 @@ table.basket-table
             td.b-col.b-col--price 
                 span.price 2700 ₽
             td.b-col.b-col--clear 
-                a.link(href="#") Удалить
+                a.link.del-item-basket(href="#") Удалить
         // END basket-table__line
         tr.basket-table__line
             td.b-col.b-col--image 
@@ -111,7 +111,7 @@ table.basket-table
                     span 2700 ₽
                     span.price-old 300
             td.b-col.b-col--clear 
-                a.link(href="#") Удалить
+                a.link.del-item-basket(href="#") Удалить
         // END basket-table__line
         tr.basket-table__line
             td.b-col.b-col--image 
@@ -131,7 +131,7 @@ table.basket-table
                     span 2700 ₽
                     span.price-old 300
             td.b-col.b-col--clear 
-                a.link(href="#") Удалить
+                a.link.del-item-basket(href="#") Удалить
         // END basket-table__line
     // END basket-table__body 
 // END basket-table

@@ -370,10 +370,7 @@ p {
     border: 1px solid #CDCDCD; }
 
 .to-top {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -391,6 +388,11 @@ p {
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease; }
+  .to-top.active {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
   .to-top__icon {
     height: 30px;
     width: 8px;
@@ -403,11 +405,18 @@ p {
     .to-top:hover .to-top__icon {
       fill: #CE5E4C; }
   .to-top--catalog {
-    position: absolute;
-    left: 60px;
-    bottom: 100px; }
+    position: fixed;
+    left: 120px;
+    bottom: 50px; }
   .to-top--center {
-    margin: 15px auto 0; }
+    display: none;
+    margin: 15px auto 0;
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
 
 .main-content {
   margin-bottom: 100px; }
@@ -990,7 +999,8 @@ p {
   position: relative; }
 
 .header-row {
-  position: relative; }
+  position: relative;
+  z-index: 110; }
 
 .header-top {
   padding: 25px 0 18px;
@@ -1108,6 +1118,10 @@ p {
       -webkit-transform: translateY(50%) rotate(-45deg);
           -ms-transform: translateY(50%) rotate(-45deg);
               transform: translateY(50%) rotate(-45deg); }
+
+.header-search {
+  display: none;
+  padding: 10px 0; }
 
 @media (max-width: 991px) {
   .header {
@@ -1455,7 +1469,7 @@ p {
     z-index: 100;
     font-size: 0;
     background: url("../img/sprite.svg#search") no-repeat center;
-    background-size: 15px;
+    background-size: contain;
     cursor: pointer; }
   .search-form--mobile {
     margin-bottom: 20px; }
@@ -1690,7 +1704,9 @@ p {
           -ms-transform: translateY(-50%) rotate(180deg);
               transform: translateY(-50%) rotate(180deg); }
     .menu-main__item:hover .submenu {
-      display: block; }
+      display: block;
+      -webkit-animation: showSubmenu 0.3s ease-out;
+              animation: showSubmenu 0.3s ease-out; }
   .menu-main__link {
     letter-spacing: 0.04em; }
     .menu-main__link.dropdown {
@@ -1834,6 +1850,28 @@ p {
   .submenu {
     font-size: 16px;
     line-height: 20px; } }
+
+@-webkit-keyframes showSubmenu {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: block;
+    opacity: 1; } }
+
+@keyframes showSubmenu {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: block;
+    opacity: 1; } }
 
 .i-slide {
   position: relative; }

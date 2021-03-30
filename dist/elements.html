@@ -34,7 +34,7 @@
             <div class="logo-wrap"><a class="logo logo--header" href="/"><img class="logo__img" src="img/logo.svg"></a></div>
           </div>
           <div class="cols-4">
-            <div class="h-links">                    <a class="h-links__item h-links__item--search" href="#">
+            <div class="h-links">                    <a class="h-links__item h-links__item--search search-pc" href="#">
                 <svg class="h-links__item-icon"> 
                   <use xlink:href="img/sprite.svg#search"></use>
                 </svg></a><a class="h-links__item h-links__item--like" href="#">
@@ -50,6 +50,12 @@
           </div>
         </div>
         <!-- END header-top-->
+        <div class="header-search"> 
+          <form class="search-form search-form--header">
+            <input class="search-form__input" type="text" name="q" placeholder="Поиск">
+            <buttun class="search-form__btn" type="submit" name="s"> <span>Найти</span></buttun>
+          </form>
+        </div>
       </div>
     </div>
     <div class="header-row"> 
@@ -62,7 +68,7 @@
             <div class="cols-8">
               <nav class="menu-main-wrap">
                 <ul class="menu-main">
-                  <li class="menu-main__item"><a class="menu-main__link link dropdown" href="#">Каталог</a>
+                  <li class="menu-main__item dropdown"><a class="menu-main__link link dropdown" href="#">Каталог</a>
                     <div class="submenu"> 
                       <div class="container">
                         <div class="submenu__wrapper row">
@@ -106,7 +112,24 @@
                   </li>
                   <li class="menu-main__item"><a class="menu-main__link link" href="#">Новости</a></li>
                   <li class="menu-main__item"><a class="menu-main__link link" href="#">О магазине</a></li>
-                  <li class="menu-main__item"><a class="menu-main__link link dropdown" href="#">Покупателям</a></li>
+                  <li class="menu-main__item dropdown"><a class="menu-main__link link dropdown" href="#">Покупателям</a>
+                    <div class="submenu"> 
+                      <div class="container">
+                        <div class="submenu__wrapper row">
+                          <div class="submenu__item"> 
+                            <ul class="submenu-list"> 
+                              <li><a class="link" href="#">Оплата</a></li>
+                              <li><a class="link" href="#">Условия возврата</a></li>
+                              <li><a class="link" href="#">Акции</a></li>
+                              <li><a class="link" href="#">Вопрос-ответ</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- END submenu__wrapper-->
+                      </div>
+                    </div>
+                    <!-- END submenu-->
+                  </li>
                   <li class="menu-main__item"><a class="menu-main__link link" href="#">Контакты</a></li>
                 </ul>
                 <!-- END menu-main-->

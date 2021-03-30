@@ -17,7 +17,7 @@ include ../../components/_socials
                 img.logo__img(src="img/logo.svg")
     .cols-4
         .h-links                     
-            a.h-links__item.h-links__item--search(href="#")
+            a.h-links__item.h-links__item--search.search-pc(href="#")
                 svg.h-links__item-icon 
                     use(xlink:href="img/sprite.svg#search")
             a.h-links__item.h-links__item--like(href="#")
@@ -30,3 +30,9 @@ include ../../components/_socials
                 svg.h-links__item-icon 
                     use(xlink:href="img/sprite.svg#bag")
 // END header-top
+
+.header-search 
+    form.search-form.search-form--header
+        input.search-form__input(type="text", name="q", placeholder="Поиск")
+        buttun.search-form__btn(type="submit", name="s") 
+            span Найти

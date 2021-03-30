@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
-  <title>Каталог</title>
-  <meta name="description" content="Каталог">
+  <title>Поиск</title>
+  <meta name="description" content="Поиск">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/libs.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -34,7 +34,7 @@
             <div class="logo-wrap"><a class="logo logo--header" href="/"><img class="logo__img" src="img/logo.svg"></a></div>
           </div>
           <div class="cols-4">
-            <div class="h-links">                    <a class="h-links__item h-links__item--search" href="#">
+            <div class="h-links">                    <a class="h-links__item h-links__item--search search-pc" href="#">
                 <svg class="h-links__item-icon"> 
                   <use xlink:href="img/sprite.svg#search"></use>
                 </svg></a><a class="h-links__item h-links__item--like" href="#">
@@ -50,6 +50,12 @@
           </div>
         </div>
         <!-- END header-top-->
+        <div class="header-search"> 
+          <form class="search-form search-form--header">
+            <input class="search-form__input" type="text" name="q" placeholder="Поиск">
+            <buttun class="search-form__btn" type="submit" name="s"> <span>Найти</span></buttun>
+          </form>
+        </div>
       </div>
     </div>
     <div class="header-row"> 
@@ -62,7 +68,7 @@
             <div class="cols-8">
               <nav class="menu-main-wrap">
                 <ul class="menu-main">
-                  <li class="menu-main__item"><a class="menu-main__link link dropdown" href="#">Каталог</a>
+                  <li class="menu-main__item dropdown"><a class="menu-main__link link dropdown" href="#">Каталог</a>
                     <div class="submenu"> 
                       <div class="container">
                         <div class="submenu__wrapper row">
@@ -106,7 +112,24 @@
                   </li>
                   <li class="menu-main__item"><a class="menu-main__link link" href="#">Новости</a></li>
                   <li class="menu-main__item"><a class="menu-main__link link" href="#">О магазине</a></li>
-                  <li class="menu-main__item"><a class="menu-main__link link dropdown" href="#">Покупателям</a></li>
+                  <li class="menu-main__item dropdown"><a class="menu-main__link link dropdown" href="#">Покупателям</a>
+                    <div class="submenu"> 
+                      <div class="container">
+                        <div class="submenu__wrapper row">
+                          <div class="submenu__item"> 
+                            <ul class="submenu-list"> 
+                              <li><a class="link" href="#">Оплата</a></li>
+                              <li><a class="link" href="#">Условия возврата</a></li>
+                              <li><a class="link" href="#">Акции</a></li>
+                              <li><a class="link" href="#">Вопрос-ответ</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- END submenu__wrapper-->
+                      </div>
+                    </div>
+                    <!-- END submenu-->
+                  </li>
                   <li class="menu-main__item"><a class="menu-main__link link" href="#">Контакты</a></li>
                 </ul>
                 <!-- END menu-main-->
@@ -168,107 +191,133 @@
           </li>
           <li> <span>Для мужчин</span>
           </li>
-        </ul>
+        </ul><a class="l-arrow mobile-back" href="#">
+          <svg class="l-arrow__icon l-arrow__icon--left">
+            <use xlink:href="img/sprite.svg#arrow-left"></use>
+          </svg><span>Назад</span></a>
       </div>
     </div>
     <div class="catalog-page"> 
       <div class="container"> 
+        <div class="search-page__row-head row row--space-b row--align-c">
+          <h1 class="search-title">Товары по запросу «футболка» </h1>
+          <button class="c-filter-btn"> <span class="c-filter-btn__open">Показать фильтры</span><span class="c-filter-btn__close">Скрыть фильтры</span></button>
+              <div class="selector-wrap selector-wrap--absolute selector-wrap--sort">
+                <div class="selector">
+                  <div class="selector__head"><span class="selector__name">Сортировка</span>
+                  </div>
+                  <ul class="selector__body"> 
+                    <li class="selector__item"> 
+                      <input class="selector__radio" type="radio" name="sort" value="price" id="sort_0">
+                      <label class="selector__label" for="sort_0"><span>По цене</span>
+                      </label>
+                    </li>
+                    <li class="selector__item"> 
+                      <input class="selector__radio" type="radio" name="sort" value="names" id="sort_1">
+                      <label class="selector__label" for="sort_1"><span>По названию</span>
+                      </label>
+                    </li>
+                    <li class="selector__item"> 
+                      <input class="selector__radio" type="radio" name="sort" value="popular" id="sort_2">
+                      <label class="selector__label" for="sort_2"><span>По популярности</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- END selector-wrap-->
+        </div>
         <div class="row row--m"> 
           <div class="cols cols-3 cols-md-12 catalog-side">
-            <h1>Каталог</h1>
-            <button class="c-filter-btn"> <span class="c-filter-btn__open">Показать фильтры</span><span class="c-filter-btn__close">Скрыть фильтры</span></button>
-            <div class="c-sidebar-filter">
-                          <div class="selector-wrap">
-                            <div class="selector">
-                              <div class="selector__head"><span class="selector__name">Бренд</span>
+            <div class="c-sidebar-filter mobile-filter mobile-filter--main">
+              <div class="c-sidebar-filter__inner">
+                            <div class="selector-wrap">
+                              <div class="selector">
+                                <div class="selector__head"><span class="selector__name">Мужское</span>
+                                </div>
+                                <ul class="selector__body"> 
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="type" value="man" id="type_0">
+                                    <label class="selector__label" for="type_0"><span>Мужское</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="type" value="woman" id="type_1">
+                                    <label class="selector__label" for="type_1"><span>Женское</span>
+                                    </label>
+                                  </li>
+                                </ul>
                               </div>
-                              <ul class="selector__body"> 
-                                <li class="selector__item"> 
-                                  <input class="selector__radio" type="radio" name="brand" value="Aeronautica Militare" id="brand_0">
-                                  <label class="selector__label" for="brand_0"><span>Aeronautica Militare</span>
-                                  </label>
-                                </li>
-                                <li class="selector__item"> 
-                                  <input class="selector__radio" type="radio" name="brand" value="Heritage Man" id="brand_1">
-                                  <label class="selector__label" for="brand_1"><span>Heritage Man</span>
-                                  </label>
-                                </li>
-                                <li class="selector__item"> 
-                                  <input class="selector__radio" type="radio" name="brand" value="Diesel" id="brand_2">
-                                  <label class="selector__label" for="brand_2"><span>Diesel</span>
-                                  </label>
-                                </li>
-                                <li class="selector__item"> 
-                                  <input class="selector__radio" type="radio" name="brand" value="Roberto Cavalli" id="brand_3">
-                                  <label class="selector__label" for="brand_3"><span>Roberto Cavalli</span>
-                                  </label>
-                                </li>
-                                <li class="selector__item"> 
-                                  <input class="selector__radio" type="radio" name="brand" value="FILA" id="brand_4">
-                                  <label class="selector__label" for="brand_4"><span>FILA</span>
-                                  </label>
-                                </li>
-                                <li class="selector__item"> 
-                                  <input class="selector__radio" type="radio" name="brand" value="Diesel" id="brand_5">
-                                  <label class="selector__label" for="brand_5"><span>Diesel</span>
-                                  </label>
-                                </li>
-                                <li class="selector__item"> 
-                                  <input class="selector__radio" type="radio" name="brand" value="Heritage Man" id="brand_6">
-                                  <label class="selector__label" for="brand_6"><span>Heritage Man</span>
-                                  </label>
-                                </li>
-                              </ul>
                             </div>
-                          </div>
-                          <!-- END selector-wrap-->
-                          <div class="selector-wrap">
-                            <div class="selector">
-                              <div class="selector__head"><span class="selector__name">Материал</span>
+                            <!-- END selector-wrap-->
+                            <div class="selector-wrap">
+                              <div class="selector">
+                                <div class="selector__head"><span class="selector__name">Цвет</span><span class="selector__check"> </span>
+                                </div>
+                                <ul class="selector__body"> 
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="color" value="black" id="color_0">
+                                    <label class="selector__label" for="color_0"><span class="selector__label-check"><i class="color-circle" style="background-color: #050109;"></i></span><span>Черный</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="color" value="gray" id="color_1">
+                                    <label class="selector__label" for="color_1"><span class="selector__label-check"><i class="color-circle" style="background-color: #8C8C8C;"></i></span><span>Серый</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="color" value="red" id="color_2">
+                                    <label class="selector__label" for="color_2"><span class="selector__label-check"><i class="color-circle" style="background-color: #CE5E4C;"></i></span><span>Красный</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="color" value="green" id="color_3">
+                                    <label class="selector__label" for="color_3"><span class="selector__label-check"><i class="color-circle" style="background-color: #4DB45E;"></i></span><span>Зеленый</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="color" value="orange" id="color_4">
+                                    <label class="selector__label" for="color_4"><span class="selector__label-check"><i class="color-circle" style="background-color: #F79E1B;"></i></span><span>Оранжевый</span>
+                                    </label>
+                                  </li>
+                                </ul>
                               </div>
-                              <ul class="selector__body"> 
-                                <li class="selector__item"> 
-                                  <input class="selector__radio" type="radio" name="material" value="Aeronautica Militare" id="material_0">
-                                  <label class="selector__label" for="material_0"><span>Aeronautica Militare</span>
-                                  </label>
-                                </li>
-                                <li class="selector__item"> 
-                                  <input class="selector__radio" type="radio" name="material" value="Heritage Man" id="material_1">
-                                  <label class="selector__label" for="material_1"><span>Heritage Man</span>
-                                  </label>
-                                </li>
-                                <li class="selector__item"> 
-                                  <input class="selector__radio" type="radio" name="material" value="Diesel" id="material_2">
-                                  <label class="selector__label" for="material_2"><span>Diesel</span>
-                                  </label>
-                                </li>
-                                <li class="selector__item"> 
-                                  <input class="selector__radio" type="radio" name="material" value="Roberto Cavalli" id="material_3">
-                                  <label class="selector__label" for="material_3"><span>Roberto Cavalli</span>
-                                  </label>
-                                </li>
-                                <li class="selector__item"> 
-                                  <input class="selector__radio" type="radio" name="material" value="FILA" id="material_4">
-                                  <label class="selector__label" for="material_4"><span>FILA</span>
-                                  </label>
-                                </li>
-                                <li class="selector__item"> 
-                                  <input class="selector__radio" type="radio" name="material" value="Diesel" id="material_5">
-                                  <label class="selector__label" for="material_5"><span>Diesel</span>
-                                  </label>
-                                </li>
-                                <li class="selector__item"> 
-                                  <input class="selector__radio" type="radio" name="material" value="Heritage Man" id="material_6">
-                                  <label class="selector__label" for="material_6"><span>Heritage Man</span>
-                                  </label>
-                                </li>
-                              </ul>
                             </div>
-                          </div>
-                          <!-- END selector-wrap-->
-            </div>
-            <div class="mobile-filter">
-              <div class="mobile-filter__inner">
+                            <!-- END selector-wrap-->
+                            <div class="selector-wrap">
+                              <div class="selector">
+                                <div class="selector__head"><span class="selector__name">Размер</span><span class="selector__check">(M)</span>
+                                </div>
+                                <ul class="selector__body"> 
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="size" value="xs" id="size_0">
+                                    <label class="selector__label" for="size_0"><span class="selector__label-check">(XS)</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="size" value="s" id="size_1">
+                                    <label class="selector__label" for="size_1"><span class="selector__label-check">(S)</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="size" value="m" id="size_2">
+                                    <label class="selector__label" for="size_2"><span class="selector__label-check">(M)</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="size" value="l" id="size_3">
+                                    <label class="selector__label" for="size_3"><span class="selector__label-check">(L)</span>
+                                    </label>
+                                  </li>
+                                  <li class="selector__item"> 
+                                    <input class="selector__radio" type="radio" name="size" value="xl" id="size_4">
+                                    <label class="selector__label" for="size_4"><span class="selector__label-check">(XL)</span>
+                                    </label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <!-- END selector-wrap-->
                             <div class="selector-wrap">
                               <div class="selector">
                                 <div class="selector__head"><span class="selector__name">Бренд</span>
@@ -357,110 +406,8 @@
                               </div>
                             </div>
                             <!-- END selector-wrap-->
-                            <div class="selector-wrap">
-                              <div class="selector">
-                                <div class="selector__head"><span class="selector__name">Размер</span><span class="selector__check">(M)</span>
-                                </div>
-                                <ul class="selector__body"> 
-                                  <li class="selector__item"> 
-                                    <input class="selector__radio" type="radio" name="size" value="xs" id="size_0">
-                                    <label class="selector__label" for="size_0"><span class="selector__label-check">(XS)</span>
-                                    </label>
-                                  </li>
-                                  <li class="selector__item"> 
-                                    <input class="selector__radio" type="radio" name="size" value="s" id="size_1">
-                                    <label class="selector__label" for="size_1"><span class="selector__label-check">(S)</span>
-                                    </label>
-                                  </li>
-                                  <li class="selector__item"> 
-                                    <input class="selector__radio" type="radio" name="size" value="m" id="size_2">
-                                    <label class="selector__label" for="size_2"><span class="selector__label-check">(M)</span>
-                                    </label>
-                                  </li>
-                                  <li class="selector__item"> 
-                                    <input class="selector__radio" type="radio" name="size" value="l" id="size_3">
-                                    <label class="selector__label" for="size_3"><span class="selector__label-check">(L)</span>
-                                    </label>
-                                  </li>
-                                  <li class="selector__item"> 
-                                    <input class="selector__radio" type="radio" name="size" value="xl" id="size_4">
-                                    <label class="selector__label" for="size_4"><span class="selector__label-check">(XL)</span>
-                                    </label>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                            <!-- END selector-wrap-->
-                            <div class="selector-wrap">
-                              <div class="selector">
-                                <div class="selector__head"><span class="selector__name">Цвет</span><span class="selector__check"> </span>
-                                </div>
-                                <ul class="selector__body"> 
-                                  <li class="selector__item"> 
-                                    <input class="selector__radio" type="radio" name="color" value="black" id="color_0">
-                                    <label class="selector__label" for="color_0"><span class="selector__label-check"><i class="color-circle" style="background-color: #050109;"></i></span><span>Черный</span>
-                                    </label>
-                                  </li>
-                                  <li class="selector__item"> 
-                                    <input class="selector__radio" type="radio" name="color" value="gray" id="color_1">
-                                    <label class="selector__label" for="color_1"><span class="selector__label-check"><i class="color-circle" style="background-color: #8C8C8C;"></i></span><span>Серый</span>
-                                    </label>
-                                  </li>
-                                  <li class="selector__item"> 
-                                    <input class="selector__radio" type="radio" name="color" value="red" id="color_2">
-                                    <label class="selector__label" for="color_2"><span class="selector__label-check"><i class="color-circle" style="background-color: #CE5E4C;"></i></span><span>Красный</span>
-                                    </label>
-                                  </li>
-                                  <li class="selector__item"> 
-                                    <input class="selector__radio" type="radio" name="color" value="green" id="color_3">
-                                    <label class="selector__label" for="color_3"><span class="selector__label-check"><i class="color-circle" style="background-color: #4DB45E;"></i></span><span>Зеленый</span>
-                                    </label>
-                                  </li>
-                                  <li class="selector__item"> 
-                                    <input class="selector__radio" type="radio" name="color" value="orange" id="color_4">
-                                    <label class="selector__label" for="color_4"><span class="selector__label-check"><i class="color-circle" style="background-color: #F79E1B;"></i></span><span>Оранжевый</span>
-                                    </label>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                            <!-- END selector-wrap-->
-                            <div class="selector-wrap">
-                              <div class="selector">
-                                <div class="selector__head"><span class="selector__name">Сортировка</span>
-                                </div>
-                                <ul class="selector__body"> 
-                                  <li class="selector__item"> 
-                                    <input class="selector__radio" type="radio" name="sort" value="price" id="sort_0">
-                                    <label class="selector__label" for="sort_0"><span>По цене</span>
-                                    </label>
-                                  </li>
-                                  <li class="selector__item"> 
-                                    <input class="selector__radio" type="radio" name="sort" value="names" id="sort_1">
-                                    <label class="selector__label" for="sort_1"><span>По названию</span>
-                                    </label>
-                                  </li>
-                                  <li class="selector__item"> 
-                                    <input class="selector__radio" type="radio" name="sort" value="popular" id="sort_2">
-                                    <label class="selector__label" for="sort_2"><span>По популярности</span>
-                                    </label>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                            <!-- END selector-wrap-->
               </div>
             </div>
-            <ul class="c-sidebar-menu">
-              <li class="active"><a class="link" href="#">Все</a></li>
-              <li><a class="link" href="#">Куртки</a></li>
-              <li><a class="link" href="#">Футболки</a></li>
-              <li><a class="link" href="#">Джинсы</a></li>
-              <li><a class="link" href="#">Брюки</a></li>
-              <li><a class="link" href="#">Блузки</a></li>
-              <li><a class="link" href="#">Сумки</a></li>
-              <li><a class="link" href="#">Аксессуары</a></li>
-            </ul>
             <div class="to-top to-top--catalog">
               <svg class="to-top__icon"> 
                 <use xlink:href="img/sprite.svg#arrow-top"></use>
@@ -468,108 +415,6 @@
             </div>
           </div>
           <div class="cols cols-9 cols-md-12">
-            <div class="catalog-top row row--space-b"> 
-              <div class="catalog-top__wrap row">
-                <div class="catalog-top__item">
-                              <div class="selector-wrap selector-wrap--absolute">
-                                <div class="selector">
-                                  <div class="selector__head"><span class="selector__name">Размер</span><span class="selector__check">(M)</span>
-                                  </div>
-                                  <ul class="selector__body"> 
-                                    <li class="selector__item"> 
-                                      <input class="selector__radio" type="radio" name="size" value="xs" id="size_0">
-                                      <label class="selector__label" for="size_0"><span class="selector__label-check">(XS)</span>
-                                      </label>
-                                    </li>
-                                    <li class="selector__item"> 
-                                      <input class="selector__radio" type="radio" name="size" value="s" id="size_1">
-                                      <label class="selector__label" for="size_1"><span class="selector__label-check">(S)</span>
-                                      </label>
-                                    </li>
-                                    <li class="selector__item"> 
-                                      <input class="selector__radio" type="radio" name="size" value="m" id="size_2">
-                                      <label class="selector__label" for="size_2"><span class="selector__label-check">(M)</span>
-                                      </label>
-                                    </li>
-                                    <li class="selector__item"> 
-                                      <input class="selector__radio" type="radio" name="size" value="l" id="size_3">
-                                      <label class="selector__label" for="size_3"><span class="selector__label-check">(L)</span>
-                                      </label>
-                                    </li>
-                                    <li class="selector__item"> 
-                                      <input class="selector__radio" type="radio" name="size" value="xl" id="size_4">
-                                      <label class="selector__label" for="size_4"><span class="selector__label-check">(XL)</span>
-                                      </label>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                              <!-- END selector-wrap-->
-                </div>
-                <div class="catalog-top__item">
-                              <div class="selector-wrap selector-wrap--absolute">
-                                <div class="selector">
-                                  <div class="selector__head"><span class="selector__name">Цвет</span><span class="selector__check"> </span>
-                                  </div>
-                                  <ul class="selector__body"> 
-                                    <li class="selector__item"> 
-                                      <input class="selector__radio" type="radio" name="color" value="black" id="color_0">
-                                      <label class="selector__label" for="color_0"><span class="selector__label-check"><i class="color-circle" style="background-color: #050109;"></i></span><span>Черный</span>
-                                      </label>
-                                    </li>
-                                    <li class="selector__item"> 
-                                      <input class="selector__radio" type="radio" name="color" value="gray" id="color_1">
-                                      <label class="selector__label" for="color_1"><span class="selector__label-check"><i class="color-circle" style="background-color: #8C8C8C;"></i></span><span>Серый</span>
-                                      </label>
-                                    </li>
-                                    <li class="selector__item"> 
-                                      <input class="selector__radio" type="radio" name="color" value="red" id="color_2">
-                                      <label class="selector__label" for="color_2"><span class="selector__label-check"><i class="color-circle" style="background-color: #CE5E4C;"></i></span><span>Красный</span>
-                                      </label>
-                                    </li>
-                                    <li class="selector__item"> 
-                                      <input class="selector__radio" type="radio" name="color" value="green" id="color_3">
-                                      <label class="selector__label" for="color_3"><span class="selector__label-check"><i class="color-circle" style="background-color: #4DB45E;"></i></span><span>Зеленый</span>
-                                      </label>
-                                    </li>
-                                    <li class="selector__item"> 
-                                      <input class="selector__radio" type="radio" name="color" value="orange" id="color_4">
-                                      <label class="selector__label" for="color_4"><span class="selector__label-check"><i class="color-circle" style="background-color: #F79E1B;"></i></span><span>Оранжевый</span>
-                                      </label>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                              <!-- END selector-wrap-->
-                </div>
-              </div>
-              <div class="catalog-top__wrap">
-                            <div class="selector-wrap selector-wrap--absolute">
-                              <div class="selector">
-                                <div class="selector__head"><span class="selector__name">Сортировка</span>
-                                </div>
-                                <ul class="selector__body"> 
-                                  <li class="selector__item"> 
-                                    <input class="selector__radio" type="radio" name="sort" value="price" id="sort_0">
-                                    <label class="selector__label" for="sort_0"><span>По цене</span>
-                                    </label>
-                                  </li>
-                                  <li class="selector__item"> 
-                                    <input class="selector__radio" type="radio" name="sort" value="names" id="sort_1">
-                                    <label class="selector__label" for="sort_1"><span>По названию</span>
-                                    </label>
-                                  </li>
-                                  <li class="selector__item"> 
-                                    <input class="selector__radio" type="radio" name="sort" value="popular" id="sort_2">
-                                    <label class="selector__label" for="sort_2"><span>По популярности</span>
-                                    </label>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                            <!-- END selector-wrap-->
-              </div>
-            </div>
             <div class="catalog-cards row row--m">
               <div class="cols cols-4 cols-md-6"><a class="card-item" href="#">
                               <div class="card-wish"><span class="card-wish__to" data-id="1">

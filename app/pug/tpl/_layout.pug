@@ -15,12 +15,12 @@ head
 body(class=index ? 'main-page' : 'inner')
   
   
-    //- include ../sections/header/header
+    include ../sections/header/header
     
     main.main-content
         block content
   
-    //- include ../sections/footer/footer
+    include ../sections/footer/footer
 
     script(src='js/libs.min.js')
     script(src='js/scripts.js')

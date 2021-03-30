@@ -20,7 +20,8 @@ form.account-info__form
             .row.row--m 
                 .cols.cols-6.cols-sm-6
                     .account-info__wrap.field-select-wrapper.field-icon.field-icon--calendar
-                        input.field-input(type="text", name="user_phone", placeholder="Дата рождения", onfocus="(this.type='date')", onblur="(this.type='text')")
+                        //- input.field-input(type="text", name="user_phone", placeholder="Дата рождения", onfocus="(this.type='date')", onblur="(this.type='text')")
+                        input.field-input.datepicker(type="text", name="user_date", placeholder="Дата рождения")
                 .cols.cols-6.cols-sm-6
                     .account-info__wrap.field-select-wrapper
                         select.field-select(name="user_country")

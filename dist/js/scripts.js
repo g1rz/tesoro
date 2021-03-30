@@ -1,3 +1,23 @@
+/* Локализация datepicker */
+$.datepicker.regional['ru'] = {
+	closeText: 'Закрыть',
+	prevText: 'Предыдущий',
+	nextText: 'Следующий',
+	currentText: 'Сегодня',
+	monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+	monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+	dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+	dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+	dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+	weekHeader: 'Не',
+	dateFormat: 'dd.mm.yy',
+	firstDay: 1,
+	isRTL: false,
+	showMonthAfterYear: false,
+	yearSuffix: ''
+};
+$.datepicker.setDefaults($.datepicker.regional['ru']);
+
 function mf_height_function() {
     if ($(window).width() > 991) {
         var mt_height = $('.toolbar').innerHeight();
@@ -8,6 +28,8 @@ function mf_height_function() {
     var mf_height = $('footer').innerHeight();
     $('body').css('padding-bottom', mf_height + 'px');
 }
+
+
 
 $(window).on('load resize change', function () {
     mf_height_function();
@@ -105,6 +127,43 @@ $(document).ready(function () {
         },
     });
 
+    var newsSlider = new Swiper('.news-slider', {
+        loop: true,
+        // effect: 'fade',
+        speed: 500,
+        autoplay: {
+            delay: 10000,
+        },
+        navigation: {
+            nextEl: '.n-slide-nav--next',
+            prevEl: '.n-slide-nav--prev',
+        },
+        pagination: {
+            el: '.n-slide-dots',
+        },
+    });
+
+    var readMoreSlider = new Swiper('.read-more-slider', {
+        loop: true,
+        
+        // slidesPerView: 2,
+        navigation: {
+            nextEl: '.read-more-nav__item--next',
+            prevEl: '.read-more-nav__item--prev',
+        },
+        breakpoints: {
+            767: {
+                slidesPerView: 1,
+                slidesPerColumn: 2,
+                // spaceBetween: 30
+            }, 
+            768: {
+                slidesPerView: 2,
+                slidesPerColumn: 1,
+            }
+        },
+    });
+
 
     $('.card-wish').click(function(e) {
         e.preventDefault();
@@ -197,5 +256,115 @@ $(document).ready(function () {
             $('.selector__body').slideUp(300);
         }
     });
+
+
+    $('.amount__btn').click(function() {
+        var el = $(this);
+        var quanity = el.siblings('input');
+        var quanityNum = parseInt(quanity.val());
+        if (el.hasClass('amount__btn--minus')) {
+            quanityNum--;
+        } else {
+            quanityNum++;
+        }
+        quanityNum = quanityNum <= 0 ? 1 : quanityNum;
+
+        quanity.val(quanityNum);
+        quanity.trigger('change')
+    });
+
+    $('.amount__input').change(function() {
+        console.log('change');
+        this.style.width = ((this.value.length + 1) * 5) + 'px';
+    });
+
+
+    $('.tab-links__item--goto').click(function(e) {
+        e.preventDefault();
+
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+        var content = $(this).attr('href');
+        $('.sign-form-wrap').not(content).removeClass('active');
+        $(content).addClass('active');
+    });
+
+    $('.history-item__head').click(function() {
+        $(this).parent().toggleClass('active');
+        $(this).siblings('.history-item__content').slideToggle();
+    });
+
+    $('.history-item').eq(0).addClass('active')
+    $('.history-item').eq(0).find('.history-item__content').slideDown();
+
+    // $('.menu-main__item.dropdown').mouseover(function() {
+    //     console.log('enter');
+    //     $(this).find('.submenu').slideDown();
+    // })
+
+    // $('.menu-main__item.dropdown').mouseout(function() {
+    //     console.log('exit');
+    //     $(this).find('.submenu').slideUp();
+    // })
+
+    $('.del-item-basket').click(function(e) {
+        e.preventDefault();
+        var $line = $(this).closest('.basket-table__line');
+        var newProductCount = parseInt($('.product-count').text()) - 1;
+
+        $('.product-count').text(newProductCount);
+
+
+        $line.fadeOut(600);
+        
+        setTimeout(function() {
+            $line.remove();
+
+            if (newProductCount === 0) {
+                $('.basket-table__head').fadeOut();
+                $('.basket-bottom').fadeOut();
+                
+                $('.basket-content').append($('<div class="text-center"><p>Корзина пуста</p><a class="btn btn--active" href="#">Перейти в каталог</a></div>'))
+            }
+        }, 600);
+
+        
+    });
+
+    $('.delete-link').click(function(e) {
+        e.preventDefault();
+        $('.basket-table').fadeOut();
+        $('.basket-bottom').fadeOut();
+
+        setTimeout(function() {
+            $('.basket-table').remove();
+            $('.basket-bottom').remove();
+        }, 600);
+        
+        $('.basket-content').append($('<div class="text-center"><p>Корзина пуста</p><a class="btn btn--active" href="#">Перейти в каталог</a></div>'));
+    });
+
+    $('.card-del').click(function(e) {
+        var $card = $(this).closest('.cols');
+
+        $card.fadeOut(600);
+
+        setTimeout(function() {
+            $card.remove();
+        }, 600);
+    });
+
+    $('.search-pc').click(function(e){
+        e.preventDefault();
+        $('.header-search').slideToggle();
+    });
+
+    $(window).on('scroll load', function () {
+        $(this).scrollTop() > 1000
+          ? $('.to-top').addClass('active')
+          : $('.to-top').removeClass('active');
+    });
+
+    $(".datepicker").datepicker();
 });
 

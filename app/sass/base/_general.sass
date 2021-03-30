@@ -267,7 +267,7 @@ p
         border: 1px solid #CDCDCD
 
 .to-top
-    display: flex
+    display: none
     flex-direction: column
     align-items: center
     width: 60px
@@ -276,6 +276,8 @@ p
     text-align: center
     cursor: pointer
     +transitionDefault
+    &.active 
+        display: flex
     &__icon
         height: 30px
         width: 8px
@@ -286,12 +288,17 @@ p
         .to-top__icon
             fill: $activeColor
     &--catalog
-        position: absolute
-        left: 60px
-        bottom: 100px
+        position: fixed
+        // left: 60px
+        left: 120px
+        bottom: 50px
     &--center
+        display: none
         margin: 15px auto 0
-
+        position: fixed
+        bottom: 50px
+        left: 50%
+        transform: translateY(-50%)
 
 .main-content
     margin-bottom: 100px
