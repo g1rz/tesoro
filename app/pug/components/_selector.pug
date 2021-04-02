@@ -1,12 +1,13 @@
 
 
 mixin selector(title, name, arProperties, checked, classes)
+    - var checkClass = title === '' ? 'selector__check--title' : ''
     .selector-wrap(class=classes)
         .selector
             .selector__head
                 span.selector__name !{title}
                 if (checked)
-                    span.selector__check !{checked}
+                    span.selector__check(class=checkClass) !{checked}
             ul.selector__body 
                 each item, index in arProperties
                     li.selector__item 

@@ -1180,6 +1180,10 @@ p {
   font-size: 12px;
   line-height: 28px;
   letter-spacing: 0.02em; }
+  .copyright a {
+    color: inherit; }
+    .copyright a:hover {
+      text-decoration: none; }
 
 .footer-menu {
   margin-right: 48px;
@@ -2788,6 +2792,9 @@ p {
     margin-right: 8px; }
   .selector__check {
     margin-left: 10px; }
+    .selector__check--title {
+      margin-left: 0;
+      font-size: 13px; }
   .selector ::-webkit-scrollbar {
     background: transparent;
     width: 2px; }
