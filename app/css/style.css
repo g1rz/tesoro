@@ -94,10 +94,12 @@ body {
 a[href^="tel:"] {
   white-space: nowrap; }
 
-input, button, textarea {
+input, button, textarea, select {
   font-family: "Suisse Intl", sans-serif;
   outline: none;
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0; }
 
 button {
   background: none; }
@@ -450,7 +452,9 @@ p {
     margin-top: -140px; }
   .more-block {
     margin-top: 45px;
-    font-size: 16px; } }
+    font-size: 16px; }
+  .to-top {
+    display: none !important; } }
 
 @media (max-width: 768px) {
   h1 {
@@ -3143,6 +3147,8 @@ p {
       border-bottom: 1px solid #DEDEDE; }
       .basket-table__line:first-child .b-col {
         padding-top: 0; }
+      .basket-table__line .price {
+        border-bottom: none; }
     .basket-table--history .b-col {
       padding-top: 0;
       padding-bottom: 0; }
@@ -4027,7 +4033,8 @@ p {
             justify-content: center;
     padding: 5px 0;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box; }
+            box-sizing: border-box;
+    cursor: pointer; }
     .card-thumbs__item.swiper-slide-thumb-active {
       position: relative; }
       .card-thumbs__item.swiper-slide-thumb-active::after {

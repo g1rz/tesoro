@@ -28,11 +28,13 @@ body
 a[href^="tel:"]
     white-space: nowrap
 
-input, button, textarea
+input, button, textarea, select
     font-family: $fontMain
     // border: none 
     outline: none
     -webkit-appearance: none
+    -moz-appearance: none
+    border-radius: 0
 
 button
     background: none
@@ -338,6 +340,9 @@ p
     .more-block
         margin-top: 45px
         font-size: 16px
+
+    .to-top
+        display: none !important
 // max-width: 991px
 
 @media (max-width: 768px)
