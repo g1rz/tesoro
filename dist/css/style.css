@@ -94,10 +94,12 @@ body {
 a[href^="tel:"] {
   white-space: nowrap; }
 
-input, button, textarea {
+input, button, textarea, select {
   font-family: "Suisse Intl", sans-serif;
   outline: none;
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0; }
 
 button {
   background: none; }
@@ -450,7 +452,9 @@ p {
     margin-top: -140px; }
   .more-block {
     margin-top: 45px;
-    font-size: 16px; } }
+    font-size: 16px; }
+  .to-top {
+    display: none !important; } }
 
 @media (max-width: 768px) {
   h1 {
@@ -1180,6 +1184,10 @@ p {
   font-size: 12px;
   line-height: 28px;
   letter-spacing: 0.02em; }
+  .copyright a {
+    color: inherit; }
+    .copyright a:hover {
+      text-decoration: none; }
 
 .footer-menu {
   margin-right: 48px;
@@ -2566,11 +2574,11 @@ p {
   .review-item__share {
     display: block;
     margin: 0 auto;
-    width: 23px;
-    height: 21px; }
+    width: 25px;
+    height: 25px; }
     .review-item__share svg {
-      width: 100%;
-      height: 100%;
+      width: 20px;
+      height: 20px;
       fill: #1C1C1C;
       -webkit-transition: 0.3s ease;
       -o-transition: 0.3s ease;
@@ -2788,6 +2796,9 @@ p {
     margin-right: 8px; }
   .selector__check {
     margin-left: 10px; }
+    .selector__check--title {
+      margin-left: 0;
+      font-size: 13px; }
   .selector ::-webkit-scrollbar {
     background: transparent;
     width: 2px; }
@@ -3136,6 +3147,8 @@ p {
       border-bottom: 1px solid #DEDEDE; }
       .basket-table__line:first-child .b-col {
         padding-top: 0; }
+      .basket-table__line .price {
+        border-bottom: none; }
     .basket-table--history .b-col {
       padding-top: 0;
       padding-bottom: 0; }
@@ -4020,7 +4033,8 @@ p {
             justify-content: center;
     padding: 5px 0;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box; }
+            box-sizing: border-box;
+    cursor: pointer; }
     .card-thumbs__item.swiper-slide-thumb-active {
       position: relative; }
       .card-thumbs__item.swiper-slide-thumb-active::after {
