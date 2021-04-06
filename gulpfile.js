@@ -42,14 +42,7 @@ gulp.task('pug', function() {
 });
 
 gulp.task('scripts', function() {
-    // return gulp.src([ // Берем все необходимые библиотеки
-    //         'app/libs/jquery/dist/jquery.min.js', // Берем jQuery
-    //         'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup           
-    //         'app/libs/jquery.inputmask/dist/jquery.inputmask.min.js',
-    //     ] )
-    //     .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
-    //     .pipe(uglify()) // Сжимаем JS файл
-    //     .pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
+
     return gulp.src('app/js/vendors/*.js')
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())
@@ -83,10 +76,7 @@ gulp.task('imgSprite', function() {
 });
 
 gulp.task('css-libs', ['sass'], function() {
-    // return gulp.src('app/css/libs.css') // Выбираем файл для минификации
-    //     .pipe(cssnano()) // Сжимаем
-    //     .pipe(rename({ suffix: '.min' })) // Добавляем суффикс .min
-    //     .pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
+
     return gulp.src('app/css/vendors/*.css')
 		.pipe(concat('libs.min.css'))
 		.pipe(cssnano())
